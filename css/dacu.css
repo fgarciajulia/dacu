@@ -12,6 +12,13 @@ p{
     font-size: 20px;
     font-weight: 600;
 }
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 .logo tspan {
     font-weight: 600;
 }
@@ -136,6 +143,9 @@ p.Items-home::before{
     margin-top: 1px;
     margin-right: 5px;
 }
+.Responsive p.Items-home::before{
+    background: #D18C63;
+}
 svg#Line2-SVG {
     position: absolute;
     z-index: 25;
@@ -200,9 +210,14 @@ ul.navbar-right {
 .HomeWospress{
     padding-top: 374px;
 }
-
+.Z-1{
+    z-index: -1;
+}
 .Z-index{
     z-index: 15;
+}
+.events{
+    pointer-events: none;
 }
 .BG-Phone {
     background-image: url("../img/Mockup2-0.gif");
@@ -247,7 +262,39 @@ img.logo {
     background-color: #D18D63;
     overflow: hidden;
 }
+.sombra{
+-webkit-box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+    animation: Sombra 5s;
+}
 
+@-webkit-keyframes Sombra {
+  0% {
+-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+  }
+  100% {
+-webkit-box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+
+  }
+}
+@keyframes Sombra {
+  0% {
+-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+  }
+  100% {
+-webkit-box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 59px 0px rgba(0,0,0,0.75);
+
+  }
+}
 /* Footer */
 
 .contenedor-Redes {
@@ -308,4 +355,10 @@ svg#Line11-SVG line {
 }
 svg:not(:root) {
     overflow: visible;
+}
+.seconds2{
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
