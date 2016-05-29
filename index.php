@@ -51,8 +51,8 @@
       </div>
     </nav>
     <div class="container-fluid">
-        <div class="row ">
-            <div class="seconds2 fadeIn events">
+        <div class="row">
+            <div class="seconds2 fadeIn">
                 <?php include("img/Line1.svg"); ?>
             </div>
             <div class="seconds2 fadeIn col-xs-offset-1 col-xs-6 Z-1">
@@ -91,12 +91,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-offset-1 col-xs-10 Line5Col">
+                <div class="col-xs-offset-1 col-xs-8 Line5Col">
                     <?php include("img/line5.svg"); ?>
                 </div>
                 <div class="col-xs-offset-2 col-xs-3 Padding-Diseño Responsive">
                     <h1>Responsive</h1>
-                    <p>Hoy en día las páginas web se visualizan en multitud de dispositivos, una página que no se adapta no sirve. Tampoco alcanza con adaptar el tamaño, tiene que estar optimizada para aprovechar al máximo la coneccion a internet.</p>
+                    <p>Hoy en día las páginas web se visualizan en multitud de dispositivos, una página que no se adapta no sirve. Tampoco alcanza con adaptar el tamaño, tiene que estar optimizada para aprovechar al máximo la conexion a internet.</p>
                     <p class="Items-home">Css3 Media Queries</p>
                     <p class="Items-home">imagenes en SVG</p>
                     <p class="Items-home">Experiencia de usuario</p>
@@ -108,7 +108,7 @@
     <div class="container-fluid">
         <div class="row">
              <div class="col-xs-offset-5 col-xs-7 Up-wordpress">
-                    <div class="row wow wordpress-BG">
+                    <div class="row wordpress-BG">
                         <div class="col-xs-offset-2 col-xs-7 HomeWospress">
                             <h1>wordpress</h1>
                             <p class="col-xs-offset-3">Me especializo en el área de diseño web, tanto en el diseño mismo como en la programación, manteniénzzdome constantemente actualizado en las distintas tecnologías para poder dar una solución integral.</p>
@@ -118,33 +118,34 @@
                         </div>
                 </div>
             </div>
-            <div class="col-xs-offset-1 col-xs-10 BG-white">
+            <div class="col-xs-offset-1 col-xs-8 BG-white">
             </div>
-            <div class="col-xs-offset-1 col-xs-10 Line6Col">
+            <div class="col-xs-offset-1 col-xs-8 Line6Col">
                 <?php include("img/line6.svg"); ?>
             </div>
-            <div class="col-xs-offset-2 col-xs-4 Line7Col">
+            <div class="col-xs-offset-1 col-xs-8 Line7Col">
                 <?php include("img/line8.svg"); ?>
             </div>
             <div class="col-xs-offset-1 col-xs-10 Line9Col">
                 <?php include("img/line9.svg"); ?>
             </div>
-            <div class="col-xs-offset-1 col-xs-6 Line10Col">
+            <div class="col-xs-offset-2 col-xs-5 Line10Col">
                 <?php include("img/line10.svg"); ?>
                 <img class="img-responsive Mockup3 Mockup3-img" src="img/Mockup3-0.png" alt="Mockup3">
             </div>
             
         </div>
     </div>
+    
     <?php include("php/footer.php"); ?>
 </body>
 
 </html>
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
 <script src="js/jquery.min.js"></script>
+  	<script src="js/jquery.superscrollorama.js"></script>
 <script src="js/TweenMax.min.js"></script>
 <script src="js/DrawSVGPlugin.min.js"></script>
-<script src="js/wow.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.js"></script>
   	<script src="js/jquery.superscrollorama.js"></script>
