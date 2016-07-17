@@ -13,6 +13,10 @@ nav{
     }
 }
 .navbar-default {
+            -webkit-transition: width 1s ease-in-out;
+            -moz-transition: width 1s ease-in-out;
+            -o-transition: width 1s ease-in-out;
+            transition: width 1s ease-in-out; 
     .navbar-nav{
         & > li > a {
             color: $color-Celeste;
@@ -50,18 +54,25 @@ nav{
             }
         }
         & > li.web a{
-            display: none;
-            opacity:0;
+            overflow: hidden;
             transition:opacity 2s linear;
+            -webkit-transition: width 1s ease-in-out;
+            -moz-transition: width 1s ease-in-out;
+            -o-transition: width 1s ease-in-out;
+            transition: width 1s ease-in-out; 
         }
-        &:hover > li.web a{
-            display: block;
-            opacity:1;
+        &:hover > li.web:first-child a{
+            border-left: 2px solid $color-Celeste!important;
         }
         & > li.web.active a{
-            display: block;
+            display: block!important;
             opacity:1;
             border-left: 2px solid $color-Celeste;
+            border-right: 2px solid $color-Celeste!important;
+            width: auto!important;
+        }
+        &:hover > li.web.active a{
+            border-left: 0px solid $color-Celeste;
         }
         & > .active{
             & > a{
