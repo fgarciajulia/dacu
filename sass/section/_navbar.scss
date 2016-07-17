@@ -1,0 +1,89 @@
+
+/* navbar */
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    min-height: 71px;
+    padding-top: 10px;
+}
+nav{
+    &.Fondo {
+        background-color: fade-out($color-Celeste, $amount);
+        height: 85px;
+    }
+}
+.navbar-default {
+    .navbar-nav{
+        & > li > a {
+            color: $color-Celeste;
+            font-weight: 700;
+            font-size: 20px;
+            border-right: 2px solid $color-Celeste;
+            border-bottom: 2px solid $color-Celeste;
+            border-top: 2px solid $color-Celeste;
+            opacity: 1;
+            transition: opacity 50ms cubic-bezier(.25,.25,.75,.75),visibility 0s linear;
+            visibility: visible;
+            transition-delay: 50ms,50ms;
+            &:hover, &:focus {
+                color: $color-Blanco;
+            }
+            &:before {
+                top: 25%;
+                bottom: 25%;
+                left: 25%;
+                right: 25%;
+                position: absolute;
+                content: '';
+                background: $color-Celeste;
+                visibility: hidden;
+                transition-duration: 0s;
+                z-index: -1;
+            }
+            &:hover:before {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                transition: all 230ms cubic-bezier(.165,.84,.44,1);
+                visibility: visible;
+            }
+        }
+        & > li.web a{
+            display: none;
+            opacity:0;
+            transition:opacity 2s linear;
+        }
+        &:hover > li.web a{
+            display: block;
+            opacity:1;
+        }
+        & > li.web.active a{
+            display: block;
+            opacity:1;
+            border-left: 2px solid $color-Celeste;
+        }
+        & > .active{
+            & > a{
+                color: $color-Naranja;
+                background-color: transparent;
+                &:hover, &:focus {
+                    color: $color-Naranja;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+ul.navbar-right {
+    padding-top: 14px;
+}
+/* navbar */
+
+
+@media (max-width: 768px){
+    .nav-Resp {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

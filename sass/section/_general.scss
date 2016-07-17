@@ -1,0 +1,54 @@
+
+body{
+    @extend %font-family;
+    padding-top: 132px;
+}
+.Up {
+    top: -132px;
+    position: relative;
+    height: 0px;
+}
+
+/* Texto */
+h1{
+    font-size: 60px;
+    font-weight: 600;
+    color:#484754;
+    text-transform: uppercase;
+}
+p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.Padding-Diseño {
+    padding-top: 225px;
+    z-index: 35;
+}
+p.Items-home {
+    margin: 25px 0;
+    padding-top: 5px;
+}
+.logo tspan {
+    font-weight: 600;
+}
+p.Items-home::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    background: #9FCBDD;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+.HomeWospress h1{
+    color: #F7FAFC;
+    margin-bottom: 45px;
+}
+.HomeWospress p{
+    color: #F7FAFC;
+}
+.HomeWospress p.Items-home {
+    margin-left: 25%;
+}
+/* Texto */

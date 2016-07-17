@@ -1,0 +1,44 @@
+%font-family{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+%font-H1{
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+%font-P1{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 1750px){
+    %font-H1{
+        font-size: 28px;
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+}
+@media (max-width: 1560px){
+    %font-H1{
+        font-size: 22px;
+    }
+    %font-P1{
+        font-size: 15px;
+        letter-spacing: 0.03em;
+    }
+}
+@media (max-width: 1360px){
+    %font-H1{
+        font-size: 21px;
+        line-height: 31px;
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: 1200px){
+}
+@media  (max-width: 991px){
+}

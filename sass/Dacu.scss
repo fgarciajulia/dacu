@@ -1,94 +1,13 @@
-body{
-    font-family: 'Titillium Web', sans-serif;
-    padding-top: 142px;
-}
-/* Texto */
-h1{
-    font-size: 60px;
-    font-weight: 600;
-    color:#484754;
-    text-transform: uppercase;
-}
-p{
-    font-size: 20px;
-    font-weight: 600;
-}
-.Padding-Diseño {
-    padding-top: 225px;
-    z-index: 35;
-}
-p.Items-home {
-    margin: 25px 0;
-    padding-top: 5px;
-}
-.logo tspan {
-    font-weight: 600;
-}
-p.Items-home::before{
-    content: "";
-    width: 30px;
-    height: 30px;
-    display: block;
-    float: left;
-    background: #9FCBDD;
-    margin-top: 1px;
-    margin-right: 5px;
-}
-.HomeWospress h1{
-    color: #F7FAFC;
-    margin-bottom: 45px;
-}
-.HomeWospress p{
-    color: #F7FAFC;
-}
-.HomeWospress p.Items-home {
-    margin-left: 25%;
-}
-/* Texto */
-/* navbar */
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-    min-height: 71px;
-    padding-top: 10px;
-}
-nav.Fondo {
-    background-color: rgba(0, 0, 0, 0.18);
-    height: 85px;
-}
-.navbar-default .navbar-nav > li > a {
-    color: #484754;
-    font-weight: 700;
-    font-size: 20px;
-}
-.navbar-default .navbar-nav > li > a::before {
-    content: "";
-    width: 5px;
-    height: 5px;
-    display: block;
-    float: left;
-    background: #484754;
-    margin-top: 8px;
-    margin-right: 5px;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #D18C63;
-    background-color: transparent;
-}
-.navbar-default .navbar-nav > li.active > a::before {
-    background: #9FCBDD;
-    width: 7px;
-    height: 7px;
-    margin-top: 7px;
-    margin-right: 4px;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #D18C63;
-}
-ul.navbar-right {
-    padding-top: 14px;
-}
-/* navbar */
+@import "helper/placeholders";
+@import "helper/mixins";
+/* Values */
+ @import "helper/variables";
+ @import "helper/txt";
+ /* sections */
+ @import "section/general";
+ @import "section/navbar";
+ @import "section/home";
+ 
 /* Animacion */
  .animated {
     -webkit-animation-duration: 1s;
