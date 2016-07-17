@@ -1,0 +1,26 @@
+{
+  "name": "www.interlinksoluciones.com.ar",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "root <fgarciajulia@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery-easing": "*",
+    "letteringjs": "https://github.com/davatron5000/Lettering.js.git#^0.7.0",
+    "SuperScrollorama": "https://github.com/johnpolacek/superscrollorama.git#^1.0.3",
+    "jquery-validation": "jquery-validate#^1.15.0",
+    "owl.carousel": "https://github.com/OwlCarousel2/OwlCarousel2.git#^2.1.6"
+  }
+}

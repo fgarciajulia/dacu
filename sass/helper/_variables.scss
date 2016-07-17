@@ -1,0 +1,121 @@
+$color-Blanco:#FCFCFC;
+$color-Azul: #544DF4;
+$color-Celeste: #5CA6FF;
+$color-Negro:#201C26;
+$color-Gris:#E8E8E8;
+$color-Transparent:transparent;
+%font-family{
+    font-family: 'Oxygen Mono', ;
+}
+%font-family2{
+font-family: 'Ubuntu', sans-serif;
+}
+%font-Max{
+    font-size: 45px;
+}
+%font-PandH2{
+    font-size: 17px;
+}
+%font-Max{
+    font-size: 45px;
+}
+
+%font-H1{
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+%font-P1{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+%font-P2{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    span{
+        font-weight: 500;
+    }
+}
+%font-P3{
+    font-size: 24px;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+}
+%font-P4{
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+}
+%font-Nota{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+
+@media (max-width: 1750px){
+    %font-H1{
+        font-size: 28px;
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+}
+@media (max-width: 1560px){
+    %font-H1{
+        font-size: 22px;
+    }
+    %font-P1{
+        font-size: 15px;
+        letter-spacing: 0.03em;
+    }
+    %font-P2{
+        letter-spacing: 0.09em;
+    }
+    %font-P3{
+        font-size: 20px;
+        letter-spacing: 0.03em;
+    }
+}
+@media (max-width: 1360px){
+    %font-H1{
+        font-size: 21px;
+        line-height: 31px;
+        margin-bottom: 24px;
+    }
+    %font-P2{
+        font-size: 13px;
+    }
+}
+@media (max-width: 1200px){
+    %font-P3{
+        font-size: 15px;
+    }
+}
+@media  (max-width: 991px){
+    %font-P3{
+    }
+}
+%BG-Transparente{
+   background-color: transparent;
+}
+%Text-Mayuscula{
+   text-transform: uppercase;
+}
+
+%positionAb{
+    position: absolute;
+}
+$amount: 0.3;
+%No-Touch{
+pointer-events: none;
+}
+.Up {
+    top: -78px;
+    position: relative;
+    height: 0px;
+}
