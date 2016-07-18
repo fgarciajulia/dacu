@@ -1,41 +1,70 @@
-
-body{
-    @extend %font-family;
-    padding-top: 142px;
-}
-
-/* Texto */
-h1{
-    font-size: 60px;
-    font-weight: 600;
-    color:#484754;
-    text-transform: uppercase;
-}
-p{
-    font-size: 20px;
-    font-weight: 600;
+.home{
+    h1{
+        color: $color-Celeste;
+    }
+    p{
+        color: $color-Azul;
+        &.Items{
+            @extend %Text-Mayuscula;
+            margin: 25px 0;
+            padding-top: 5px;
+            &::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                display: block;
+                float: left;
+                background: $color-Naranja;
+                margin-top: 9px;
+                margin-right: 5px;
+            }
+            span{
+                color: $color-Blanco;
+                background-color: $color-Celeste;
+                padding: 0px 12px;
+            }
+        }
+    }
+    .Mockup1.Mockup1-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .Mockup1-imgAde{
+        margin: auto;
+    }
+    .otrocss{
+        margin: auto;
+    }
+    .Margin-Left1 {
+        margin-left: 2.66666667%;
+    }
+    svg#Line1-SVG {
+        position: absolute;
+        z-index: 10;
+        pointer-events: none;
+        margin-left: 8.33333333%;
+    }
+    svg#misela1 {
+        padding-left: 30px;
+        margin-bottom: -6px;
+    }
 }
 .Padding-Diseño {
     padding-top: 225px;
     z-index: 35;
 }
-p.Items-home {
-    margin: 25px 0;
-    padding-top: 5px;
-}
 .logo tspan {
     font-weight: 600;
 }
-p.Items-home::before{
-    content: "";
-    width: 30px;
-    height: 30px;
-    display: block;
-    float: left;
-    background: #9FCBDD;
-    margin-top: 1px;
-    margin-right: 5px;
-}
+
+
+
 .HomeWospress h1{
     color: #F7FAFC;
     margin-bottom: 45px;
@@ -46,4 +75,3 @@ p.Items-home::before{
 .HomeWospress p.Items-home {
     margin-left: 25%;
 }
-/* Texto */

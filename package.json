@@ -12,6 +12,7 @@
     "bower": "^1.7.9",
     "eslint": "^3.0.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.11",
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
@@ -21,6 +22,7 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.8",
     "run-sequence": "^1.2.2",
+    "scss-utils": "^1.0.1",
     "typescript": "^1.8.10"
   }
 }

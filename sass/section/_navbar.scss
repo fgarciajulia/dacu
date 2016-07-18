@@ -1,11 +1,6 @@
 
 /* navbar */
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-    min-height: 71px;
-    padding-top: 10px;
-}
+
 nav{
     &.Fondo {
         background-color: fade-out($color-Celeste, $amount);
@@ -13,18 +8,19 @@ nav{
     }
 }
 .navbar-default {
-            -webkit-transition: width 1s ease-in-out;
-            -moz-transition: width 1s ease-in-out;
-            -o-transition: width 1s ease-in-out;
-            transition: width 1s ease-in-out; 
+    background-color: transparent;
+    border-color: transparent;
+    min-height: 71px;
+    padding-top: 20px;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    -o-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out; 
     .navbar-nav{
         & > li > a {
             color: $color-Celeste;
             font-weight: 700;
             font-size: 20px;
-            border-right: 2px solid $color-Celeste;
-            border-bottom: 2px solid $color-Celeste;
-            border-top: 2px solid $color-Celeste;
             opacity: 1;
             transition: opacity 50ms cubic-bezier(.25,.25,.75,.75),visibility 0s linear;
             visibility: visible;
@@ -49,38 +45,50 @@ nav{
                 bottom: 0;
                 left: 0;
                 right: 0;
-                transition: all 230ms cubic-bezier(.165,.84,.44,1);
+                -webkit-transition: all .5s cubic-bezier(.165,.84,.44,1);
+                -moz-transition: all .5s cubic-bezier(.165,.84,.44,1);
+                -o-transition: all .5s cubic-bezier(.165,.84,.44,1);
+                transition: all .5s cubic-bezier(.165,.84,.44,1);
                 visibility: visible;
             }
         }
         & > li.web a{
             overflow: hidden;
             transition:opacity 2s linear;
-            -webkit-transition: width 1s ease-in-out;
-            -moz-transition: width 1s ease-in-out;
-            -o-transition: width 1s ease-in-out;
-            transition: width 1s ease-in-out; 
+                span{
+                    -webkit-transition: width .5s ease-in-out;
+                    -moz-transition: width .5s ease-in-out;
+                    -o-transition: width .5s ease-in-out;
+                    transition: width .5s ease-in-out; 
+                    float: right;
+                    overflow: hidden;
+                }
         }
-        &:hover > li.web:first-child a{
-            border-left: 2px solid $color-Celeste!important;
+        &:hover > li.web a{
+                span{
+                    -webkit-transition: width .5s ease-in-out;
+                    -moz-transition: width .5s ease-in-out;
+                    -o-transition: width .5s ease-in-out;
+                    transition: width .5s ease-in-out; 
+                }
         }
-        & > li.web.active a{
-            display: block!important;
-            opacity:1;
-            border-left: 2px solid $color-Celeste;
-            border-right: 2px solid $color-Celeste!important;
+        & > li.web.active a span{
             width: auto!important;
         }
-        &:hover > li.web.active a{
-            border-left: 0px solid $color-Celeste;
+        &:hover > li.web.active a span{
+            display: block!important;
+        //    border-left: 0px solid $color-Celeste;
         }
-        & > .active{
+        & > li.active{
             & > a{
                 color: $color-Naranja;
                 background-color: transparent;
                 &:hover, &:focus {
                     color: $color-Naranja;
                     background-color: transparent;
+                }   
+                span{
+ //                   width: 0px;
                 }
             }
         }

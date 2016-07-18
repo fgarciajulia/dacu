@@ -70,29 +70,24 @@ controller.addTween(".wordpress-BG", TweenMax.fromTo (".wordpress-BG" , 3, {heig
 
 
 /*
-var staggerTween = new TimelineMax();
-staggerTween.append(TweenMax.staggerFrom(misela1, 1, {css:{opacity:0, y:200, x:200 , scale:2, delay:0.5}}, 0.25),0,0);
-controller.addTween(misela1, staggerTween);
-*/
-
-    
-    var width_Home = $( '.Nav-Home a' ).width();
-    var width_Servicios = $( '.Nav-Servicios a' ).width();
-    var width_Porfolio = $( '.Nav-Porfolio a' ).width();
-    var width_Contacto = $( '.Nav-Contacto a' ).width();
+    var width_Home = $( '.Nav-Home a span' ).width();
+    var width_Servicios = $( '.Nav-Servicios a span' ).width();
+    var width_Porfolio = $( '.Nav-Porfolio a span' ).width();
+    var width_Contacto = $( '.Nav-Contacto a span' ).width();
 
     function pepe() {
-        $( ".Nav-Home:not(.active) a" ).css({ "width": width_Home + 16 ,  "padding-left": 15 ,  "padding-right": 15 , "border-right-width": 2 });
-        $( ".Nav-Servicios:not(.active) a" ).css({ "width": width_Servicios + 16 ,  "padding-left": 15 ,  "padding-right": 15 , "border-right-width": 2 });
-        $( ".Nav-Porfolio:not(.active) a" ).css({ "width": width_Porfolio + 16 ,  "padding-left": 15 ,  "padding-right": 15 , "border-right-width": 2 });
-        $( ".Nav-Contacto:not(.active) a" ).css({ "width": width_Contacto + 16 ,  "padding-left": 15 ,  "padding-right": 15 , "border-right-width": 2 });
+        $( ".Nav-Home:not(.active) a span" ).css({ "width": width_Home });
+        $( ".Nav-Servicios:not(.active) a span" ).css({ "width": width_Servicios });
+        $( ".Nav-Porfolio:not(.active) a span" ).css({ "width": width_Porfolio    });
+        $( ".Nav-Contacto:not(.active) a span" ).css({ "width": width_Contacto   });
     };
     function pepe2() {
-        $( ".Nav-Home:not(.active) a" ).css({ "width": 0 , "padding-left": 0 , "padding-right": 0 , "border-right-width": 0 });
-        $( ".Nav-Servicios:not(.active) a" ).css({ "width": 0  ,  "padding-left": 0 ,  "padding-right": 0 , "border-right-width": 0 });
-        $( ".Nav-Porfolio:not(.active) a" ).css({ "width": 0 , "padding-left": 0 , "padding-right": 0 , "border-right-width": 0 });
-        $( ".Nav-Contacto:not(.active) a" ).css({ "width": 0 , "padding-left": 0 , "padding-right": 0 , "border-right-width": 0 });
+        $( ".Nav-Home:not(.active) a span" ).css({ "width": 0 });
+        $( ".Nav-Servicios:not(.active) a span" ).css({ "width": 0 });
+        $( ".Nav-Porfolio:not(.active) a span" ).css({ "width": 0  });
+        $( ".Nav-Contacto:not(.active) a span" ).css({ "width": 0 });
     };
     $( "nav" ).mouseenter( pepe );
     $( "nav" ).mouseleave( pepe2 ) ;
     pepe2();
+    */

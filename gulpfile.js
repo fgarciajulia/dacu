@@ -5,6 +5,8 @@ var gutil = require('gulp-util');
 var runSequence = require('run-sequence');
 var cleanCSS = require('gulp-clean-css');
 var fileinclude = require('gulp-file-include');
+var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass');
 
 gulp.task('css', function () {
   return gulp.src([
@@ -14,6 +16,7 @@ gulp.task('css', function () {
     'css/font-awesome.min.css',
     'css/Dacu.css'
   ])
+    .pipe(autoprefixer())
     .pipe(sourcemaps.init())
     .pipe(concat('app.min.css'))
     .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -45,11 +48,11 @@ gulp.task('js', function () {
     .pipe(gulp.dest('_dist'));
 });
 
-var sass = require('gulp-sass');
 
 gulp.task('sass', function () {
   return gulp.src('sass/Dacu.scss')
     .pipe(sass.sync().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('css'));
 });
 
