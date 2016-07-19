@@ -35,22 +35,34 @@
         z-index: 35;
     }
     .Line5Col {
-        background: $color-Celeste;
         position: absolute;
         margin-top: 306px;
         padding-left: 0;
         padding-right: 0;
         z-index: 29;
     }
-}
-
-.HomeWospress h1{
-    color: #F7FAFC;
-    margin-bottom: 45px;
-}
-.HomeWospress p{
-    color: #F7FAFC;
-}
-.HomeWospress p.Items-home {
-    margin-left: 25%;
+    .BG-Phone {
+        background-image: url("../img/Mockup2-0.gif");
+        height: 892px;
+        background-position: 50% 0%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    svg#Line2-SVG {
+        position: absolute;
+        z-index: 25;
+        margin-left: 8.33333333%;
+    }
+    svg#responsive_misela_cuadraditos_02 {
+        margin-top: 209px;
+        left: 40px;
+        position: absolute;
+    }
+    .Mockup2{
+        max-width: 360px;
+        -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
+        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
+        z-index: 60;
+        top: 45px;
+    }
 }

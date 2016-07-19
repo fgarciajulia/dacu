@@ -18,6 +18,10 @@ p {
   font-size: 20px;
   font-weight: 500; }
 
+.servicios p {
+  font-size: 27px;
+  font-weight: 500; }
+
 @media (max-width: 1750px) {
   h1 {
     font-size: 28px;
@@ -81,7 +85,6 @@ p {
  */
 .owl-carousel {
   display: none;
-  width: 100%;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
@@ -110,8 +113,6 @@ p {
     -webkit-touch-callout: none; }
   .owl-carousel .owl-item img {
     display: block;
-    /* Tener en cuenta */
-    max-width: 100%;
     -webkit-transform-style: preserve-3d; }
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
@@ -396,7 +397,10 @@ ul.navbar-right {
   pointer-events: none;
   margin-left: 8.33333333%; }
 
-svg#misela1 {
+.home .Mockup1 {
+  margin: 55px auto 7px; }
+
+svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   padding-left: 30px;
   margin-bottom: -6px; }
 
@@ -429,22 +433,73 @@ svg#misela1 {
     padding-top: 205px;
     z-index: 35; }
   .responsive .Line5Col {
-    background: #333399;
     position: absolute;
     margin-top: 306px;
     padding-left: 0;
     padding-right: 0;
     z-index: 29; }
+  .responsive .BG-Phone {
+    background-image: url("../img/Mockup2-0.gif");
+    height: 892px;
+    background-position: 50% 0%;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+  .responsive svg#Line2-SVG {
+    position: absolute;
+    z-index: 25;
+    margin-left: 8.33333333%; }
+  .responsive svg#responsive_misela_cuadraditos_02 {
+    margin-top: 209px;
+    left: 40px;
+    position: absolute; }
+  .responsive .Mockup2 {
+    max-width: 360px;
+    -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
+    z-index: 60;
+    top: 45px; }
 
-.HomeWospress h1 {
-  color: #F7FAFC;
-  margin-bottom: 45px; }
+.servicios h1 {
+  color: #333399;
+  margin-top: 138px; }
 
-.HomeWospress p {
-  color: #F7FAFC; }
+.servicios p {
+  color: #333399;
+  margin-bottom: 85px; }
 
-.HomeWospress p.Items-home {
-  margin-left: 25%; }
+.servicios .BG {
+  height: 283px;
+  position: absolute;
+  background: #fff;
+  z-index: 35;
+  width: 300px; }
+
+.servicios .z-index-50 {
+  z-index: 50; }
+
+.servicios .servicio_line,
+.servicios .servicio_misela {
+  position: absolute;
+  padding-left: 0;
+  padding-right: 0;
+  pointer-events: none; }
+
+.servicios .owl-carousel .owl-item.center svg {
+  opacity: 1;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0; }
+
+.servicios .owl-carousel .owl-item svg {
+  opacity: 0.6;
+  -webkit-transition: all 1500ms ease;
+  transition: all 1500ms ease; }
+
+.servicios .owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  margin-bottom: 5%; }
 
 /* Animacion */
 .animated {
@@ -530,36 +585,6 @@ svg:not(:root) {
 
 /* Footer */
 /* SVG */
-svg#misela2 {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  margin-right: 50px;
-  margin-top: 160px;
-  opacity: 0.8; }
-
-svg#Line2-SVG {
-  position: absolute;
-  z-index: 25;
-  margin-left: 8.33333333%; }
-
-svg#Line4-SVG {
-  margin-top: 209px;
-  left: 40px;
-  position: absolute; }
-
-svg#Line6-SVG {
-  position: absolute; }
-
-svg#Line7-SVG {
-  z-index: -1;
-  width: 100%; }
-
-svg#Line8-SVG {
-  position: absolute;
-  z-index: 25;
-  top: 160px; }
-
 .Line6Col {
   position: absolute;
   padding-left: 0;
@@ -584,62 +609,5 @@ svg#Line8-SVG {
   margin-top: 270px; }
 
 /* SVG */
-.BG-white {
-  height: 500px;
-  position: absolute;
-  background: #fff;
-  z-index: 35; }
-
-.Mockup1 {
-  margin: 55px auto 7px; }
-
-.Mockup3 {
-  margin: 15px auto 0; }
-
-.Mockup3.Mockup3-img {
-  position: absolute;
-  top: 0;
-  left: -8px;
-  right: 0;
-  padding-left: 15px;
-  padding-right: 15px;
-  pointer-events: none;
-  z-index: 2; }
-
-.col-xs2-4 {
-  width: 30.6666666%; }
-
-.HomeWospress {
-  padding-top: 264px; }
-
 .Z-index {
   z-index: 15; }
-
-.BG-Phone {
-  background-image: url("../img/Mockup2-0.gif");
-  height: 892px;
-  background-position: 50% 0%;
-  background-size: 100%;
-  background-repeat: no-repeat; }
-
-.Mockup2 {
-  max-width: 360px;
-  -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
-  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
-  z-index: 60;
-  top: 45px; }
-
-.Up-wordpress {
-  margin-top: -130px;
-  position: absolute;
-  z-index: 36; }
-
-img.logo {
-  margin-left: -16px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  position: absolute; }
-
-.wordpress-BG {
-  background-color: #D18D63;
-  overflow: hidden; }

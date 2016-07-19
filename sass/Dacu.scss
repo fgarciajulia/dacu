@@ -11,6 +11,8 @@
  @import "section/navbar";
  @import "section/home";
  @import "section/responsive";
+ @import "section/servicios";
+ 
 /* Animacion */
  .animated {
     -webkit-animation-duration: 1s;
@@ -84,36 +86,6 @@ svg:not(:root) {
 
 
 /* SVG */
-svg#misela2 {
-    position: absolute;
-    z-index: -1;
-    right: 0;
-    margin-right: 50px;
-    margin-top: 160px;
-    opacity: 0.8;
-}
-svg#Line2-SVG {
-    position: absolute;
-    z-index: 25;
-    margin-left: 8.33333333%;
-}
-svg#Line4-SVG {
-    margin-top: 209px;
-    left: 40px;
-    position: absolute;
-}
-svg#Line6-SVG {
-    position: absolute;
-}
-svg#Line7-SVG {
-    z-index: -1;
-    width: 100%;
-}
-svg#Line8-SVG {
-    position: absolute;
-    z-index: 25;
-    top: 160px;
-}
 .Line6Col {
     position: absolute;
     padding-left: 0;
@@ -139,63 +111,6 @@ svg#Line8-SVG {
 }
 /* SVG */
 
-.BG-white {
-    height: 500px;
-    position: absolute;
-    background: #fff;
-    z-index: 35;
-}
-.Mockup1{
-    margin: 55px auto 7px;
-}
-.Mockup3{
-    margin: 15px auto 0;
-}
-.Mockup3.Mockup3-img {
-    position: absolute;
-    top: 0;
-    left: -8px;
-    right: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    pointer-events: none;
-    z-index: 2;
-}
-.col-xs2-4 {
-    width: 30.6666666%;
-}
-.HomeWospress{
-    padding-top: 264px;
-}
 .Z-index{
     z-index: 15;
-}
-.BG-Phone {
-    background-image: url("../img/Mockup2-0.gif");
-    height: 892px;
-    background-position: 50% 0%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-.Mockup2{
-    max-width: 360px;
-    -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
-    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
-    z-index: 60;
-    top: 45px;
-}
-.Up-wordpress{
-    margin-top: -130px;
-    position: absolute;
-    z-index: 36;
-}
-img.logo {
-    margin-left: -16px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    position: absolute;
-}
-.wordpress-BG {
-    background-color: #D18D63;
-    overflow: hidden;
 }

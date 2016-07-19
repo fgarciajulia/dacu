@@ -32,7 +32,7 @@ gulp.task('jsDeps', function () {
     'js/jquery.easing.min.js',
     'js/TM.min.js',
     'js/DSVGP.min.js',
-    'js/owl.carousel.js',
+    'js/owl.carousel.js'
   ]) 
     .pipe(concat('app.deps.min.js'))
     .pipe(gulp.dest('_dist'));

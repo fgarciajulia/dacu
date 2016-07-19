@@ -1,5 +1,5 @@
 $(document).ready(function(){
-$('.owl-carousel').owlCarousel({
+$('#owl-carousel1').owlCarousel({
     loop:true,
     items:1,
     autoplay: true,
@@ -44,8 +44,8 @@ TweenLite.to("#Line4-poly",1,{drawSVG:"30% 100%", delay:0});
 
 
 /* DiseÃ±o Grafico */
-var misela1 = $("#misela1 > rect"); 
-var minela2 = $("#Line4-SVG > rect"); 
+var misela1 = $(".cuadraditos_sereados > rect"); 
+var minela2 = $("#responsive_misela_cuadraditos_02 > rect"); 
 var miselaSlider = $(".owl-dot");
 
 
@@ -59,17 +59,26 @@ var staggerTween = new TimelineMax();
 controller.addTween(minela2, staggerTween);
 controller.addTween(line5,TweenLite.from(line5, 3, {drawSVG:"85% 85%"}));
 controller.addTween(line5,TweenLite.from($(".line-responsive"), 3, {drawSVG:"0% 0%"}));
-
-/* Wordpress */
-var AltoCuadrado = ( $(".wordpress-BG")[0].scrollHeight );
-
-controller.addTween(".wordpress-BG", TweenMax.fromTo (".wordpress-BG" , 3, {height:0, width:0},  {width:"100%", height: AltoCuadrado , ease: Power3.easeOut}));
-        $('.wordpress-BG').delay( 800 ).addClass('sombra');
 });
 
-
-
+$(document).ready(function(){
+    $('#owl-carousel2').owlCarousel({
+        loop:true,
+        items:3,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        center: true,
+        margin:80,
+        dragEndSpeed:1000, //speed when touch
+        dotsSpeed:1000, //speed with dots
+        autoplaySpeed:1000,
+    })
+});
 /*
+--- NAV ---
+
+
     var width_Home = $( '.Nav-Home a span' ).width();
     var width_Servicios = $( '.Nav-Servicios a span' ).width();
     var width_Porfolio = $( '.Nav-Porfolio a span' ).width();

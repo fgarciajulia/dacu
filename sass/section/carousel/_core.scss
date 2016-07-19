@@ -3,7 +3,7 @@
  */
 .owl-carousel {
 	display: none;
-	width: 100%;
+//	width: 100%;
 	-webkit-tap-highlight-color: transparent;
 	/* position relative and z-index fix webkit rendering fonts issue */
 	position: relative;
@@ -40,8 +40,8 @@
 	}
 	.owl-item img {
 		display: block;
-	/* Tener en cuenta */
-  		max-width: 100%;
+// 		Tener en cuenta
+// 		max-width: 100%;
 		-webkit-transform-style: preserve-3d;
 	}
 
