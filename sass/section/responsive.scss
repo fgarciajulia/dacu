@@ -1,0 +1,56 @@
+.responsive{
+    background: url(img/BG-Azul.png);
+    background-repeat: no-repeat;
+    background-size: 94%;
+    background-position: 73%;
+    h1{
+        color: $color-Blanco;
+    }
+    p:first-of-type{
+        margin-top: 50px;
+    }
+    p{
+        color: $color-Blanco;
+        &.Items{
+            @extend %Text-Mayuscula;
+            margin: 25px 0;
+            padding-top: 5px;
+            span{
+                color: $color-Celeste;
+                background-color: $color-Blanco;
+                padding: 0px 12px;
+            }
+        }
+    }
+    .cuadrado{
+        background-color: $color-Celeste;
+        width: 155px;
+        height: 65px;
+        position: absolute;
+        right: 14%;
+        margin-top: -26px;
+    }
+    .Padding-Diseño {
+        padding-top: 205px;
+        z-index: 35;
+    }
+    .Line5Col {
+        background: $color-Celeste;
+        position: absolute;
+        margin-top: 306px;
+        padding-left: 0;
+        padding-right: 0;
+        z-index: 29;
+    }
+}
+
+.HomeWospress h1{
+    color: #F7FAFC;
+    margin-bottom: 45px;
+}
+.HomeWospress p{
+    color: #F7FAFC;
+}
+.HomeWospress p.Items-home {
+    margin-left: 25%;
+}

@@ -3,7 +3,7 @@
   height: 5px; }
 
 /* Values */
-.home p.Items {
+.home p.Items, .responsive p.Items {
   text-transform: uppercase; }
 
 body {
@@ -16,7 +16,7 @@ h1 {
 
 p {
   font-size: 20px;
-  font-weight: 600; }
+  font-weight: 500; }
 
 @media (max-width: 1750px) {
   h1 {
@@ -341,6 +341,9 @@ ul.navbar-right {
   padding-top: 14px; }
 
 /* navbar */
+.logo text {
+  font-weight: 600; }
+
 @media (max-width: 768px) {
   .nav-Resp {
     padding-right: 0;
@@ -393,12 +396,45 @@ ul.navbar-right {
   pointer-events: none;
   margin-left: 8.33333333%; }
 
-.Padding-Diseño {
-  padding-top: 225px;
-  z-index: 35; }
+svg#misela1 {
+  padding-left: 30px;
+  margin-bottom: -6px; }
 
-.logo tspan {
-  font-weight: 600; }
+.responsive {
+  background: url(img/BG-Azul.png);
+  background-repeat: no-repeat;
+  background-size: 94%;
+  background-position: 73%; }
+  .responsive h1 {
+    color: #FCFCFC; }
+  .responsive p:first-of-type {
+    margin-top: 50px; }
+  .responsive p {
+    color: #FCFCFC; }
+    .responsive p.Items {
+      margin: 25px 0;
+      padding-top: 5px; }
+      .responsive p.Items span {
+        color: #333399;
+        background-color: #FCFCFC;
+        padding: 0px 12px; }
+  .responsive .cuadrado {
+    background-color: #333399;
+    width: 155px;
+    height: 65px;
+    position: absolute;
+    right: 14%;
+    margin-top: -26px; }
+  .responsive .Padding-Diseño {
+    padding-top: 205px;
+    z-index: 35; }
+  .responsive .Line5Col {
+    background: #333399;
+    position: absolute;
+    margin-top: 306px;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 29; }
 
 .HomeWospress h1 {
   color: #F7FAFC;
@@ -494,10 +530,6 @@ svg:not(:root) {
 
 /* Footer */
 /* SVG */
-svg#misela1 {
-  padding-left: 30px;
-  margin-bottom: -6px; }
-
 svg#misela2 {
   position: absolute;
   z-index: -1;
@@ -516,9 +548,6 @@ svg#Line4-SVG {
   left: 40px;
   position: absolute; }
 
-svg#Line5-SVG {
-  background: #9fcbdd; }
-
 svg#Line6-SVG {
   position: absolute; }
 
@@ -530,13 +559,6 @@ svg#Line8-SVG {
   position: absolute;
   z-index: 25;
   top: 160px; }
-
-.Line5Col {
-  position: absolute;
-  margin-top: 255px;
-  padding-left: 0;
-  padding-right: 0;
-  z-index: 29; }
 
 .Line6Col {
   position: absolute;
@@ -586,9 +608,6 @@ svg#Line8-SVG {
 
 .col-xs2-4 {
   width: 30.6666666%; }
-
-.BG1 {
-  background-color: #9FCBDD; }
 
 .HomeWospress {
   padding-top: 264px; }

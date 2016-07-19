@@ -10,7 +10,7 @@
  @import "section/general";
  @import "section/navbar";
  @import "section/home";
- 
+ @import "section/responsive";
 /* Animacion */
  .animated {
     -webkit-animation-duration: 1s;
@@ -102,9 +102,6 @@ svg#Line4-SVG {
     left: 40px;
     position: absolute;
 }
-svg#Line5-SVG {
-    background: rgb(159, 203, 221);
-}
 svg#Line6-SVG {
     position: absolute;
 }
@@ -116,13 +113,6 @@ svg#Line8-SVG {
     position: absolute;
     z-index: 25;
     top: 160px;
-}
-.Line5Col {
-    position: absolute;
-    margin-top: 255px;
-    padding-left: 0;
-    padding-right: 0;
-    z-index: 29;
 }
 .Line6Col {
     position: absolute;
@@ -173,9 +163,6 @@ svg#Line8-SVG {
 }
 .col-xs2-4 {
     width: 30.6666666%;
-}
-.BG1{
-    background-color: #9FCBDD;
 }
 .HomeWospress{
     padding-top: 264px;
