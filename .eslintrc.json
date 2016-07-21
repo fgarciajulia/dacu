@@ -14,7 +14,11 @@
         "angular": true,
         "Highcharts": true,
         "gulp": true,
-        "require": true
+        "require": true,
+        "$": true,
+        "TweenLite": true,
+        "TweenMax": true,
+        "TimelineMax": true
     },
     "extends": "eslint:recommended",
     "rules": {

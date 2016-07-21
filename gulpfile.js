@@ -60,25 +60,37 @@ gulp.task('sass', function () {
 var watchLogger = function (event) {
   gutil.log('[' + event.type + '] ' + event.path);
 };
-
-gulp.task('watch', ['build'], function () {
-  var wCSS = gulp.watch(['css/*.css'], ['css']);
-  wCSS.on('change', watchLogger);
-  wCSS.on('add', watchLogger);
-  wCSS.on('unlink', watchLogger);
-
-  var wSASS = gulp.watch('./sass/**/*.scss', ['sass']);
-  wSASS.on('change', watchLogger);
-  wSASS.on('add', watchLogger);
-  wSASS.on('unlink', watchLogger);
-}); 
-
 gulp.task('fileinclude', function () {
   gulp.src(['html/index.html'])
     .pipe(fileinclude())
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('_dist'));
 });
+
+gulp.task('watch', ['build'], function () {
+
+  var wCSS = gulp.watch(['css/*.css'], ['css']);
+  wCSS.on('change', watchLogger);
+  wCSS.on('add', watchLogger);
+  wCSS.on('unlink', watchLogger);
+
+  var wSASS = gulp.watch('sass/**/*.scss', ['sass']);
+  wSASS.on('change', watchLogger);
+  wSASS.on('add', watchLogger);
+  wSASS.on('unlink', watchLogger);
+
+  var wJS = gulp.watch(['js/Dacu.js'], ['js']);
+  wJS.on('change', watchLogger);
+  wJS.on('add', watchLogger);
+  wJS.on('unlink', watchLogger);
+
+  var hJS = gulp.watch(['html/*.html', 'svg.embedded/**'], ['fileinclude']);
+  hJS.on('change', watchLogger);
+  hJS.on('add', watchLogger);
+  hJS.on('unlink', watchLogger);
+
+}); 
+
 
 gulp.task('build', function (cb) {
   runSequence(['fileinclude'], ['sass'],['jsDeps'],['js'], ['css'], cb);
