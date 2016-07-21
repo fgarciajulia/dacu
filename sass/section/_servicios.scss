@@ -3,7 +3,10 @@
         color: $color-Celeste;
         margin-top: 138px;
     }
-    
+    h2{
+        color: $color-Celeste;
+        @extend %font-H2;
+    }
     p{
         color: $color-Celeste;
         @extend %font-P2;
@@ -26,13 +29,13 @@
         padding-right: 0;
         pointer-events: none;
     }
-    .owl-carousel .owl-item.center svg{
+    .owl-carousel .owl-item.center {
         opacity: 1;
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
         transform-origin: 50% 0;
     }
-    .owl-carousel .owl-item svg{
+    .owl-carousel .owl-item {
         opacity:0.6;
         transition:all 1500ms ease;
     }

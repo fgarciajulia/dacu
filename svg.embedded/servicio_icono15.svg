@@ -1,11 +1,14 @@
-<svg version="1.1" class="img-responsive servicios_icono" id="servicios_icono1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="878.1px" height="456.7px" viewBox="0 0 878.1 456.7" enable-background="new 0 0 878.1 456.7"
+<svg version="1.1" class="img-responsive servicios_icono" id="servicios_icono1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="878.1px" height="456.7px" viewBox="0 0 878.1 456.7" enable-background="new 0 0 878.1 456.7"
 	 xml:space="preserve">
-<g id="Reloj-min">
+<defs>
+</defs>
+<g id="Reloj-min_1_">
 	<circle fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" cx="436.8" cy="95.6" r="52.5"/>
 	<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="436.8" y1="95.6" x2="436.8" y2="60.2"/>
 </g>
-<g id="Reloj-Hora">
+<g id="Reloj-Hora_1_">
 	<circle fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" cx="436.8" cy="95.6" r="61.8"/>
 	<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="420.6" y1="111.8" x2="436.8" y2="95.6"/>
 </g>
@@ -131,9 +134,9 @@
 	<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="733.3" y1="244.5" x2="746.4" y2="244.5"/>
 </g>
 <rect x="811.4" y="29.8" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="11.5" height="10.5"/>
-<rect x="554.5" y="80.4" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 1016.5374 -249.7091)" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="10.9" height="10.5"/>
-<rect x="459.7" y="12.3" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 806.5077 -298.9928)" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="10.9" height="10.5"/>
-<rect x="712.6" y="292.3" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 1436.2622 0.2269)" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="10.9" height="10.5"/>
+<rect x="554.5" y="80.4" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 1016.5375 -249.709)" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="10.9" height="10.5"/>
+<rect x="459.7" y="12.3" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 806.5078 -298.9927)" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="10.9" height="10.5"/>
+<rect x="712.6" y="292.3" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 1436.2622 0.227)" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="10.9" height="10.5"/>
 <path fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" d="M803.6,361.8c0,7.2-5.9,13.1-13.1,13.1l0,0
 	c-7.2,0-13.1-5.9-13.1-13.1V290c0-7.2,5.9-13.1,13.1-13.1l0,0c7.2,0,13.1,5.9,13.1,13.1V361.8z"/>
 <rect x="741" y="364.3" fill="#AA958A" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="104.7" height="17.3"/>
@@ -213,10 +216,12 @@
 <polygon fill="#AA958A" stroke="#333399" stroke-miterlimit="10" points="72.6,359.6 71.2,347 79.8,355.2 "/>
 <polygon fill="#AA958A" stroke="#333399" stroke-miterlimit="10" points="91.7,348.8 96.7,337.1 100.1,348.5 "/>
 <polygon fill="#AA958A" stroke="#333399" stroke-miterlimit="10" points="107.1,360.8 112.4,349.2 115.5,360.8 "/>
-<rect x="77.5" y="356.4" transform="matrix(-0.888 0.4599 -0.4599 -0.888 323.6547 657.2937)" fill="none" stroke="#333399" stroke-width="2" stroke-miterlimit="10" width="8.5" height="23.3"/>
+<rect x="77.5" y="356.4" transform="matrix(-0.888 0.4599 -0.4599 -0.888 323.6547 657.2938)" fill="none" stroke="#333399" stroke-width="2" stroke-miterlimit="10" width="8.5" height="23.3"/>
 <rect x="91.3" y="349" fill="none" stroke="#333399" stroke-width="2" stroke-miterlimit="10" width="9.2" height="27.4"/>
 <rect x="106.4" y="360.7" fill="none" stroke="#333399" stroke-width="2" stroke-miterlimit="10" width="9.1" height="16.8"/>
 <rect x="62.8" y="376.4" fill="#AA958A" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="59.7" height="10.6"/>
+<rect x="641.2" y="31.4" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="19.5" height="11.3"/>
+<rect x="708.1" y="40.9" fill="#333399" width="5.6" height="5.6"/>
 <rect x="134.9" y="66.7" fill="#BADBD8" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="106.4" height="132.6"/>
 <g>
 	<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="156.8" y1="99" x2="219.6" y2="99"/>
@@ -226,13 +231,12 @@
 	<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="156.8" y1="156" x2="219.5" y2="156"/>
 	<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="156.8" y1="170.9" x2="219.5" y2="170.9"/>
 </g>
-<g id="Books">
+<g id="Books_1_">
 	<rect x="572.9" y="143.5" fill="#AFAEB4" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="258" height="18"/>
 	<rect x="599.2" y="33.8" fill="#73ADA8" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="34.5" height="109.7"/>
+	<rect x="641.2" y="17.5" fill="#789E6A" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="19.5" height="126"/>
 	<rect x="666.7" y="33.8" fill="#C9BB9E" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="27" height="109.7"/>
 	<rect x="701.9" y="33.8" fill="#AA958A" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="18.8" height="109.7"/>
-	<rect x="641.2" y="17.5" fill="#789E6A" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="19.5" height="126"/>
-	<rect x="708.1" y="40.9" fill="#333399" width="5.6" height="5.6"/>
 	<rect x="673.4" y="43.4" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="12.7" height="11.3"/>
 	<rect x="708.1" y="48.2" fill="#333399" width="5.6" height="5.6"/>
 	<rect x="708.1" y="55.5" fill="#333399" width="5.6" height="5.6"/>
@@ -249,5 +253,4 @@
 <path fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" d="M582.3,437.1c0,2.6-2.1,4.6-4.6,4.6l0,0
 	c-2.6,0-4.6-2.1-4.6-4.6l0,0c0-2.6,2.1-4.6,4.6-4.6l0,0C580.2,432.5,582.3,434.6,582.3,437.1L582.3,437.1z"/>
 <circle fill="none" stroke="#333399" stroke-width="1.182880e-002" stroke-miterlimit="10" cx="436.8" cy="95.6" r="0.2"/>
-<rect x="641.2" y="31.4" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="19.5" height="11.3"/>
 </svg>

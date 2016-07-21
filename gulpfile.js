@@ -7,6 +7,7 @@ var cleanCSS = require('gulp-clean-css');
 var fileinclude = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('css', function () {
   return gulp.src([
@@ -75,6 +76,7 @@ gulp.task('watch', ['build'], function () {
 gulp.task('fileinclude', function () {
   gulp.src(['html/index.html'])
     .pipe(fileinclude())
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('_dist'));
 });
 

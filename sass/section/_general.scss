@@ -12,6 +12,9 @@ body{
 h1{
     @extend %font-H1;
 }
+h2{
+    @extend %font-H2;
+}
 p{
     @extend %font-P1;
 }

@@ -14,6 +14,12 @@ h1 {
   font-weight: 600;
   text-transform: uppercase; }
 
+h2, .servicios h2 {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center; }
+
 p {
   font-size: 20px;
   font-weight: 500; }
@@ -463,6 +469,9 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   color: #333399;
   margin-top: 138px; }
 
+.servicios h2 {
+  color: #333399; }
+
 .servicios p {
   color: #333399;
   margin-bottom: 85px; }
@@ -484,14 +493,14 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   padding-right: 0;
   pointer-events: none; }
 
-.servicios .owl-carousel .owl-item.center svg {
+.servicios .owl-carousel .owl-item.center {
   opacity: 1;
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0; }
 
-.servicios .owl-carousel .owl-item svg {
+.servicios .owl-carousel .owl-item {
   opacity: 0.6;
   -webkit-transition: all 1500ms ease;
   transition: all 1500ms ease; }

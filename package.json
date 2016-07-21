@@ -16,6 +16,7 @@
     "gulp-clean-css": "^2.0.11",
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
+    "gulp-htmlmin": "^2.0.0",
     "gulp-run-sequence": "^0.3.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",

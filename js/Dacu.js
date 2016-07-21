@@ -1,5 +1,8 @@
+var owl_Home = $('#owl-carousel1');
+var owl_Servicios = $('#owl-carousel2');
+
 $(document).ready(function(){
-$('#owl-carousel1').owlCarousel({
+    owl_Home.owlCarousel({
     loop:true,
     items:1,
     autoplay: true,
@@ -24,10 +27,10 @@ $(window).scroll(function() {
 
 
 $(window).ready(function(){
-			var controller = $.superscrollorama({
+    var controller = $.superscrollorama({
         triggerAtCenter:false ,
         playoutAnimations: true,
-		});
+    });
         
         
 var line5 = $(" #Line5-SVG > polyline"); 
@@ -56,13 +59,14 @@ TweenMax.staggerFrom(miselaSlider, 0.5, {opacity:0, y:200, x:200, rotation:680  
 
 var staggerTween = new TimelineMax();
     staggerTween.append(TweenMax.staggerFrom(minela2, 1, {css:{opacity:0, y:200, x:200 , scale:2}}, 0.25),0,0);
-controller.addTween(minela2, staggerTween);
-controller.addTween(line5,TweenLite.from(line5, 3, {drawSVG:"85% 85%"}));
-controller.addTween(line5,TweenLite.from($(".line-responsive"), 3, {drawSVG:"0% 0%"}));
+    controller.addTween(minela2, staggerTween);
+    controller.addTween(line5,TweenLite.from(line5, 3, {drawSVG:"85% 85%"}));
+    controller.addTween(line5,TweenLite.from($(".line-responsive"), 3, {drawSVG:"0% 0%"}));
 });
 
+/* SErvicios */
 $(document).ready(function(){
-    $('#owl-carousel2').owlCarousel({
+    owl_Servicios.owlCarousel({
         loop:true,
         items:3,
         autoplay:true,
@@ -73,8 +77,38 @@ $(document).ready(function(){
         dragEndSpeed:1000, //speed when touch
         dotsSpeed:1000, //speed with dots
         autoplaySpeed:1000,
+        onTranslated: callback,
+        onTranslate: cerrar,
     })
+    var width_Contacto_Books = $( '#servicios_icono1 > #Books rect' );
+    var width_Contacto_Reloj_min = $( '#servicios_icono1 > #Reloj-min' );
+    
+    function callback(event) {
+        
+    var TimeIcon1 = new TimelineMax();
+        TimeIcon1.append(TweenMax.staggerTo(width_Contacto_Books, .5, {scaleX:1, transformOrigin:"0% 0%"}, 0.1),0,0);
+        TweenLite.to(width_Contacto_Reloj_min, 2, {rotation:180, transformOrigin:"center center"}); 
+
+    }
+    function cerrar(event) {
+    var TimeCloseIcon1 = new TimelineMax();
+        TimeCloseIcon1.append(TweenMax.staggerTo(width_Contacto_Books, .5, {scaleX:0, transformOrigin:"0% 0%"}, 0.1),0,0);
+        TweenLite.to(width_Contacto_Reloj_min, 1, {rotation:0, transformOrigin:"center center"}); 
+
+    }
 });
+
+
+/*
+owl_Servicios.on('changed.owl.carousel', function(e) {
+    var element   = event.target;  
+    alert(element);
+});
+*/
+
+
+/* Iconos Icon grafic design */
+
 /*
 --- NAV ---
 
