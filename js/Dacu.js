@@ -25,6 +25,17 @@ $(window).scroll(function () {
   }
 });
 
+$(function () {
+  $('nav a').bind('click', function (event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top
+    }, 1500, 'easeInOutExpo');
+    event.preventDefault();
+  });
+});
+
+
 
 $(window).ready(function () {
   var controller = $.superscrollorama({
@@ -79,7 +90,7 @@ $(document).ready(function () {
     autoplaySpeed: 1000
   });
 
-  var elementoAnterior = 0; 
+  var elementoAnterior = 0;
   var width_Contacto_Books = $('#servicios_icono1 > #Books rect');
   var width_Contacto_Reloj_min = $('#servicios_icono1 > #Reloj-min');
   owl_Servicios.on('translated.owl.carousel', onTranslatedEvent);
@@ -90,8 +101,8 @@ $(document).ready(function () {
       TimeCloseIcon1.append(TweenMax.staggerTo(width_Contacto_Books, .5, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1), 0, 0);
       TweenLite.to(width_Contacto_Reloj_min, 1, { rotation: 0, transformOrigin: 'center center' });
     }
-    elementoAnterior = event.page.index; 
-    
+    elementoAnterior = event.page.index;
+
     // Elemento Nuevo
     if (event.page.index == 0) {
       var TimeIcon1 = new TimelineMax();

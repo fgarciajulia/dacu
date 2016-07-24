@@ -1,0 +1,121 @@
+.porfolio-content{
+    /* Common style */
+
+    .grid li {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+    }
+    .grid li img {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        opacity: 0.8;
+    }
+    .grid li figcaption {
+        padding: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.25em;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .grid li figcaption::before,
+    .grid li figcaption::after {
+        pointer-events: none;
+    }
+    .grid li figcaption,
+    .grid li figcaption > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    -webkit-animation-name: figcap;
+    animation-name: figcap;
+    }
+
+    /* Anchor will cover the whole item by default */
+
+    .grid li figcaption > a {
+        z-index: 1000;
+        text-indent: 200%;
+        white-space: nowrap;
+        font-size: 0;
+        opacity: 0;
+    }
+    .grid li h2 {
+        word-spacing: 0.15em;
+        font-weight: 300;
+    }
+    .grid li h2 span {
+        font-weight: 800;
+    }
+    .grid li h2,
+    .grid li p {
+        margin: 0;
+    }
+    .grid li p {
+        letter-spacing: 1px;
+        font-size: 68.5%;
+    }
+    @media (max-width: 768px) {
+        .grid li figcaption p {
+            display: none;
+        }
+    }
+    li.effect-milo {
+        background: #000;
+    }
+    li.effect-milo img {
+        max-width: none;
+        width: 100%;
+        opacity: 1;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
+        transform: translate3d(-30px, 0, 0) scale(1.12);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    li.effect-milo:hover img {
+        opacity: 0.3;
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    li.effect-milo:hover h2 {
+        color: #fff;
+    }
+    li.effect-milo h2 {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 1em 1.2em;
+        font-weight: 700;
+        font-size: 34px;
+        text-align: right;
+    }
+    li.effect-milo p {
+        padding: 0 10px 0 0;
+        width: 40%;
+        border-right: 2px solid #fff;
+        text-align: right;
+        opacity: 0;
+        font-size: 22px;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-200px, 0, 0);
+        transform: translate3d(-200px, 0, 0);
+        font-weight: 600;
+        line-height: 31px;
+    }
+    li.effect-milo:hover p {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

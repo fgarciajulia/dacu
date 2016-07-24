@@ -1,4 +1,5 @@
 .servicios{
+    margin-bottom: 75px;
     h1{
         color: $color-Celeste;
         margin-top: 138px;
@@ -8,14 +9,14 @@
         @extend %font-H2;
     }
     p{
-        color: $color-Celeste;
+        color: $color-Azul;
         @extend %font-P2;
         margin-bottom: 85px;
     }
     .BG {
         height: 283px;
         position: absolute;
-        background: #fff;
+        background: $color-Blanco;
         z-index: 35;
         width: 300px;
     }
@@ -23,11 +24,21 @@
         z-index: 50;
     }
     .servicio_line,
-    .servicio_misela{
+    .servicio_misela,
+    .servicio_cuadrado_content{
         position: absolute;
         padding-left: 0;
         padding-right: 0;
         pointer-events: none;
+    }
+    .servicio_misela{
+        margin-top: 150px;
+    }
+    .servicio_cuadrado{
+        width: 70%;
+        margin-left: 15%;
+        background-color: $color-Celeste;
+        height: 105px;
     }
     .owl-carousel .owl-item.center {
         opacity: 1;

@@ -1,7 +1,6 @@
 <div class="container-fluid Footer">
     <div class="row">
         <div class="col-xs-12 Line11Col">
-            <?php include("img/line11.svg"); ?>
         </div>
     </div>
     <div class="row sub-Footer">

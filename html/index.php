@@ -7,6 +7,7 @@
     @@include('./head.meta.html')
 
     <link rel="stylesheet" type="text/css" href="app.min.css">
+  <script type="text/javascript" src="app.deps.min.js"></script>
 </head>
 
 <body data-spy="scroll" id="page-top" data-target=".navbar-fixed-top">
@@ -14,21 +15,11 @@
   @@include('./body.home.html')
   @@include('./body.responsive.html')
   @@include('./body.servicios.html')
-    
-    @@include('../php/footer.php')
+  @@include('./body.porfolio.html')
+  @@include('../php/footer.php')
 </body>
 
 </html>
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
-<!--<script src="js/jquery.min.js"></script>
-  	<script src="js/jquery.superscrollorama.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/DrawSVGPlugin.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.js"></script>
-  	<script src="js/jquery.superscrollorama.js"></script>
-		 cuarta 
-    <script src="js/cuarta.js"></script> 
 			<!-- cuarta -->  
-  <script type="text/javascript" src="app.deps.min.js"></script>
-  <script type="text/javascript" src="app.min.js"></script>
+  <script type="text/javascript" src="app.min.js"></script> 

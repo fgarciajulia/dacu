@@ -33,7 +33,8 @@ gulp.task('jsDeps', function () {
     'js/jquery.easing.min.js',
     'js/TM.min.js',
     'js/DSVGP.min.js',
-    'js/owl.carousel.js'
+    'js/owl.carousel.js',
+    'js/jquery.magnific-popup.js'
   ]) 
     .pipe(concat('app.deps.min.js'))
     .pipe(gulp.dest('_dist'));
@@ -61,9 +62,8 @@ var watchLogger = function (event) {
   gutil.log('[' + event.type + '] ' + event.path);
 };
 gulp.task('fileinclude', function () {
-  gulp.src(['html/index.html'])
+  gulp.src(['html/index.php'])
     .pipe(fileinclude())
-    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('_dist'));
 });
 
@@ -84,7 +84,7 @@ gulp.task('watch', ['build'], function () {
   wJS.on('add', watchLogger);
   wJS.on('unlink', watchLogger);
 
-  var hJS = gulp.watch(['html/*.html', 'svg.embedded/**'], ['fileinclude']);
+  var hJS = gulp.watch(['html/**', 'svg.embedded/**', 'php/**'], ['fileinclude']);
   hJS.on('change', watchLogger);
   hJS.on('add', watchLogger);
   hJS.on('unlink', watchLogger);

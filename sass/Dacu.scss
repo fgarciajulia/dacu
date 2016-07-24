@@ -12,6 +12,9 @@
  @import "section/home";
  @import "section/responsive";
  @import "section/servicios";
+ @import "section/porfolio";
+ @import "section/Porfolio-Content";
+ @import "section/milo-Efect";
  
 /* Animacion */
  .animated {
@@ -115,3 +118,4 @@ svg:not(:root) {
 .Z-index{
     z-index: 15;
 }
+
