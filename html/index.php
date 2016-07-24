@@ -7,7 +7,6 @@
     @@include('./head.meta.html')
 
     <link rel="stylesheet" type="text/css" href="app.min.css">
-  <script type="text/javascript" src="app.deps.min.js"></script>
 </head>
 
 <body data-spy="scroll" id="page-top" data-target=".navbar-fixed-top">
@@ -15,6 +14,7 @@
   @@include('./body.home.html')
   @@include('./body.responsive.html')
   @@include('./body.servicios.html')
+  <script type="text/javascript" src="app.deps.min.js"></script>
   @@include('./body.porfolio.html')
   @@include('../php/footer.php')
 </body>

@@ -64,6 +64,7 @@ var watchLogger = function (event) {
 gulp.task('fileinclude', function () {
   gulp.src(['html/index.php'])
     .pipe(fileinclude())
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('_dist'));
 });
 

@@ -38,7 +38,7 @@
 						'</div>'+
 						'<div class="col-xs-12 col-md-5 col-lg-5 margin-galeria">'+
                             '<h4 class="azul titulo"><?php echo $data[1];?></h4>'+
-                            '<p class="naranja"><?php echo $data[6];?></p>'+
+                            '<p><?php echo $data[6];?></p>'+
                             '<a target="_blank" class="link" href="<?php echo $data[4];?>"><?php echo $data[3];?></a>'+
                             '<div class="items">'+
                                 <?php
@@ -46,7 +46,7 @@
                                         while (($caracteristicas = fgetcsv($hand, 1000, ";")) !== FALSE) {
                                         if ($caracteristicas[0]==$id_proyecto){
                                 ?>
-                                '<p class="naranja items"><?php echo $caracteristicas[1];?></p>'+
+                                '<p class="items"><?php echo $caracteristicas[1];?></p>'+
                                 <?php
                                         }
                                     }

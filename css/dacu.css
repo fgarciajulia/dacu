@@ -938,7 +938,8 @@ img.mfp-img {
     color: #C99F7E;
     line-height: 26px;
     font-weight: 500;
-    cursor: text; }
+    cursor: text;
+    font-size: 16px; }
   .margin-galeria h4 {
     color: #F3F3F3;
     font-size: 27px;
@@ -953,6 +954,82 @@ img.mfp-img {
     position: relative;
     display: table;
     width: 100%; }
+    .margin-galeria .items p.items:first-child {
+      font-size: 25px;
+      clear: both;
+      width: 100%;
+      margin-top: 21px;
+      margin-bottom: 15px; }
+    .margin-galeria .items p.items {
+      float: left;
+      width: 33%;
+      font-weight: 700;
+      text-transform: capitalize; }
+  .margin-galeria a.link2:hover, .margin-galeria a.link:hover {
+    text-decoration: initial;
+    color: #FCFCFC; }
+  .margin-galeria a.link, .margin-galeria a.link2 {
+    display: block;
+    font-size: 21px;
+    font-weight: 700;
+    color: #D7D9DD;
+    line-height: 10px; }
+  .margin-galeria a.link2 {
+    padding-top: 15px;
+    float: left;
+    padding-left: 10px; }
+  .margin-galeria a.link2:after {
+    content: " / ";
+    padding-left: 6px; }
+
+@media (max-width: 1117px) {
+  .mfp-title {
+    width: 100%; } }
+
+.mfp-pager button {
+  border-width: 3px;
+  padding: 0; }
+
+.mfp-pager .active button {
+  border-color: #E09E63;
+  border-style: solid;
+  border-width: 3px; }
+
+.mfp-pager ol, .mfp-pager ul {
+  margin-bottom: 0px;
+  padding: 0; }
+
+.mfp-pager ul.dots li {
+  float: left;
+  margin-left: 5px;
+  margin-bottom: 6px;
+  display: block; }
+
+.mfp-title {
+  text-align: left;
+  line-height: 18px;
+  color: #F3F3F3;
+  word-wrap: break-word;
+  right: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  bottom: 30px;
+  right: 5px; }
+
+@media (max-width: 992px) {
+  .margin-galeria {
+    margin: -20px 0 0px 0; }
+  .mfp-title {
+    margin: 20px 0 5px 0; } }
+
+.mfp-content {
+  width: 100%; }
+
+.h4San {
+  line-height: 15px;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 0px; }
 
 .porfolio-content {
   /* Common style */
