@@ -1,12 +1,11 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="189.3px" height="42.7px" viewBox="0 0 189.3 42.7" enable-background="new 0 0 189.3 42.7" xml:space="preserve">
 <g id="Capa_2">
 	<g>
-		<rect x="22.5" y="0" fill="#333399" width="19.4" height="19.4"/>
-		<rect x="22.5" y="23.3" fill="#D7D9DD" width="19.4" height="19.4"/>
-		<rect x="0" y="23.3" fill="#0099FF" width="19.4" height="19.4"/>
-		<rect x="0" y="0" fill="#C99F7E" width="19.4" height="19.4"/>
+		<rect x="22.5" y="0" stroke="#4848BC"  fill="#333399" width="19.4" height="19.4"/>
+		<rect x="22.5" y="23.3" stroke="#D7D9DD" fill="#D7D9DD" width="19.4" height="19.4"/>
+		<rect x="0" y="23.3" stroke="#0099FF" fill="#0099FF" width="19.4" height="19.4"/>
+		<rect x="0" y="0" stroke="#C99F7E" fill="#C99F7E" width="19.4" height="19.4"/>
 	</g>
-	<rect x="47.4" y="0" fill="none" width="182.4" height="43.3"/>
 	<text transform="matrix(1 0 0 1 47.417 41.8397)" fill="#333399" font-family="'Titillium Web', sans-serif;''" font-size="59.0754">DACU</text>
 </g>
 </svg>

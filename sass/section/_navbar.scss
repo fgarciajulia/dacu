@@ -3,23 +3,45 @@
 
 nav{
     &.Fondo {
-        background-color: fade-out($color-Celeste, $amount);
-        height: 85px;
+        background-color: $color-Celeste;
+        height: 95px;
+        .navbar-nav{
+            & > li > a {
+                color: $color-Blanco;
+                &:hover, &:focus {
+                    color: $color-Naranja;
+                }
+            }
+        }
+        .logo{
+            text {
+                fill: $color-Blanco;
+            }
+            rect {
+                fill: none;
+                stroke-width: 2px;
+            }
+        }
     }
 }
 .navbar-default {
+    height: 95px;
     background-color: transparent;
     border-color: transparent;
     min-height: 71px;
-    padding-top: 20px;
+    padding-top: 16px;
     -webkit-transition: width .5s ease-in-out;
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out; 
+    .logo text {
+        font-weight: 600;
+        stroke-width: 0px;
+    }
     .navbar-nav{
         & > li > a {
             color: $color-Celeste;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 20px;
             opacity: 1;
             transition: opacity 50ms cubic-bezier(.25,.25,.75,.75),visibility 0s linear;
@@ -99,9 +121,6 @@ ul.navbar-right {
 }
 /* navbar */
 
-.logo text {
-    font-weight: 600;
-}
 
 @media (max-width: 768px){
     .nav-Resp {
