@@ -4,19 +4,19 @@
 <head>
     <title>Dacu. | Transformando ideas</title>
 
-    @@include('./head.meta.html')
+    @@include('head.meta.html')
 
     <link rel="stylesheet" type="text/css" href="app.min.css">
 </head>
 
 <body data-spy="scroll" id="page-top" data-target=".navbar-fixed-top">
-  @@include('./body.navbar.html')  
-  @@include('./body.home.html')
-  @@include('./body.responsive.html')
-  @@include('./body.servicios.html')
+  @@include('body.navbar.html')  
+  @@include('body.home.html')
+  @@include('body.responsive.html')
+  @@include('body.servicios.html')
   <script type="text/javascript" src="app.deps.min.js"></script>
-  @@include('./body.porfolio.html')
-  @@include('../php/footer.php')
+  @@include('body.porfolio.html')
+  @@include('body.contacto.html')
 </body>
 
 </html>

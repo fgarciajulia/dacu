@@ -34,7 +34,8 @@ gulp.task('jsDeps', function () {
     'js/TM.min.js',
     'js/DSVGP.min.js',
     'js/owl.carousel.js',
-    'js/jquery.magnific-popup.js'
+    'js/jquery.magnific-popup.js',
+    'js/jquery.validate.min.js'
   ]) 
     .pipe(concat('app.deps.min.js'))
     .pipe(gulp.dest('_dist'));

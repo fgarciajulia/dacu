@@ -112,16 +112,60 @@ $(document).ready(function () {
   }
 });
 
-/*
-owl_Servicios.on('changed.owl.carousel', function(e) {
-    var element   = event.target;  
-    alert(element);
+function PorfolioAltoMiselanea() {
+  var AltoMap = $('.porfolio-content').height();
+  $('.porfolio #XMLID_1_ rect').css('height', AltoMap);
+}
+PorfolioAltoMiselanea();
+
+
+/*===========================================================*/
+/*  Contact Form
+/*===========================================================*/
+$(document).ready(function () {
+  $('#contact-form').validate({
+    rules: {
+      name: {
+        minlength: 3,
+        required: true
+      },
+      email: {
+        minlength: 5,
+        required: true
+      },
+      message: {
+        minlength: 10,
+        required: true
+      },
+    },
+    highlight: function (element) {
+      $(element).closest('.control-group').removeClass('success').addClass('error');
+    },
+    success: function (element) {
+      element
+        .text('✓').addClass('valid')
+        .closest('.control-group').removeClass('error').addClass('success');
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: 'POST',
+        url: 'php/contacto.php',
+        data: $(form).serialize(),
+        success: function () {
+          $('.oculto').fadeOut(300);
+          $('.enviado').delay(400).fadeIn(300);
+
+          $('.Input').val('');
+          $('.error').text('');
+          $('.enviado').delay(5000).fadeOut(300);
+          $('.oculto').delay(6000).fadeIn(300);
+        }
+      });
+      return false; // required to block normal submit since you used ajax
+    }
+  });
+
 });
-*/
-
-
-/* Iconos Icon grafic design */
-
 /*
 --- NAV ---
 

@@ -3,12 +3,13 @@
 
 nav{
     &.Fondo {
+        border-bottom: 6px solid $color-Naranja; 
         background-color: $color-Celeste;
         height: 95px;
         .navbar-nav{
             & > li > a {
                 color: $color-Blanco;
-                &:hover, &:focus {
+                &:hover{
                     color: $color-Naranja;
                 }
             }
@@ -47,7 +48,7 @@ nav{
             transition: opacity 50ms cubic-bezier(.25,.25,.75,.75),visibility 0s linear;
             visibility: visible;
             transition-delay: 50ms,50ms;
-            &:hover, &:focus {
+            &:hover {
                 color: $color-Blanco;
             }
             &:before {

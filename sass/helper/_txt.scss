@@ -21,6 +21,10 @@
     font-size: 27px;
     font-weight: 500;
 }
+%font-P3{
+    font-size: 16px;
+    font-weight: 500;
+}
 
 @media (max-width: 1750px){
     %font-H1{
@@ -28,6 +32,10 @@
     }
     %font-P2{
         font-size: 22px;
+    }
+    %font-P3{
+        font-size: 13px;
+        font-weight: 500;
     }
 }
 @media (max-width: 1560px){
@@ -40,6 +48,9 @@
     }
     %font-P2{
         font-size: 18px;
+    }
+    %font-P3{
+        font-size: 12px;
     }
 }
 @media (max-width: 1360px){

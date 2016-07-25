@@ -42,7 +42,7 @@
                             '<a target="_blank" class="link" href="<?php echo $data[4];?>"><?php echo $data[3];?></a>'+
                             '<div class="items">'+
                                 <?php
-                                    if (($hand = fopen("caracteristicas.csv", "r")) !== FALSE) {
+                                    if (($hand = fopen("php/caracteristicas.csv", "r")) !== FALSE) {
                                         while (($caracteristicas = fgetcsv($hand, 1000, ";")) !== FALSE) {
                                         if ($caracteristicas[0]==$id_proyecto){
                                 ?>

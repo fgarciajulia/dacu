@@ -19,9 +19,12 @@
                 margin-right: 5px;
             }
             span{
-                color: $color-Blanco;
-                background-color: $color-Celeste;
                 padding: 0px 12px;
+                &.marcado{
+                    color: $color-Blanco;
+                    background-color: $color-Celeste;
+                    padding: 0px 12px;
+                }
             }
         }
     }
@@ -57,4 +60,15 @@
 svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
     padding-left: 30px;
     margin-bottom: -6px;
+}
+@media (max-width: 1560px){
+    .home{
+        p{
+            &.Items{
+                &::before {
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
 }

@@ -1,17 +1,17 @@
 			<div class="row porfolio-content">
-				<div class="col-xs-12">
+				<div class="col-xs-12" style="width: 90%;margin-left: 5%;">
                 
                 <?php
                 $fila = 1;
-                if (($handle = fopen("test.csv", "r")) !== FALSE) {
+                if (($handle = fopen("php/test.csv", "r")) !== FALSE) {
                     while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
                         $id_proyecto = $data[0];
                         $numero = count($data); if ($numero > 1){
                 ?>
-                    <div class="col-xs-12 col-md-4 porfolio">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 margin">
                         <div class="grid gallery<?php echo $id_proyecto;?>">
                             <?php
-                                if (($handl = fopen("img.csv", "r")) !== FALSE) {
+                                if (($handl = fopen("php/img.csv", "r")) !== FALSE) {
                                     while (($img = fgetcsv($handl, 1000, ";")) !== FALSE) {
                                     if ($img[0]==$id_proyecto){
                             ?>
@@ -21,11 +21,11 @@
                                     <figcaption>
                                     <h2><?php echo $data[1];?></h2>
                                         <?php
-                                            if (($hand = fopen("caracteristicas.csv", "r")) !== FALSE) {
+                                            if (($hand = fopen("php/caracteristicas.csv", "r")) !== FALSE) {
                                                 while (($caracteristicas = fgetcsv($hand, 1000, ";")) !== FALSE) {
                                                 if ($caracteristicas[0]==$id_proyecto){
                                         ?>
-                                        <p><?php echo $caracteristicas[1];?></p>
+                                        <p><?php echo $caracteristicas[1];?></p> 
                                         <?php
                                                 }
                                             }
@@ -43,7 +43,7 @@
                                 }
                             fclose($handl);}
                             ?>
-                            <?php include("js/magnificGalery.php"); ?>
+                            <?php include("php/magnificGalery.php"); ?>
                             
                         </div>
                     </div>

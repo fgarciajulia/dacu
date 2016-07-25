@@ -553,7 +553,7 @@ button {
         border-style: solid;
         border-width: 0;
     }
-    .porfolio {
+    .margin {
         margin-bottom: 10px;
         margin-top: 10px; 
     }
@@ -685,6 +685,11 @@ img.mfp-img {
     right: 5px;
 }
 
+@media (max-width: 1500px) and (min-width: 992px){
+    .col-lg-4-2{
+        width: 50%
+    }
+}
 @media (max-width: 992px) {
     .margin-galeria {
         margin: -20px 0 0px 0;
@@ -698,7 +703,7 @@ img.mfp-img {
     width: 100%;
 }
 
-/// Explusivo
+/// Exclusivo
 
 .h4San {
     line-height: 15px;

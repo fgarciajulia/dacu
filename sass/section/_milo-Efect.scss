@@ -76,8 +76,8 @@
         opacity: 1;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
-        -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
-        transform: translate3d(-30px, 0, 0) scale(1.12);
+        -webkit-transform: translate3d(-23, 0, 0) scale(1.12);
+        transform: translate3d(-23px, 0, 0) scale(1.12);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
@@ -101,7 +101,7 @@
     }
     li.effect-milo p {
         padding: 0 10px 0 0;
-        width: 40%;
+        width: 44%;
         border-right: 2px solid #fff;
         text-align: right;
         opacity: 0;
@@ -117,5 +117,37 @@
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+    }
+}
+@media (max-width: 1750px) and (min-width: 1500px){
+    .porfolio-content{
+        li.effect-milo{
+            p{
+                line-height: 28px;
+                font-size: 18px;
+                width: 50%;
+            }
+            h2{
+                font-size: 29px;
+            }
+        }
+    }
+}
+@media (max-width: 1500px){
+    .porfolio-content{
+        li.effect-milo p{
+            width: 40%;
+            line-height: 30px;
+            font-size: 23px;
+        }
+    }
+}
+@media (max-width: 1200px){
+    .porfolio-content{
+        li.effect-milo p{
+            width: 50%;
+            line-height: 26px;
+            font-size: 20px;
+        }
     }
 }
