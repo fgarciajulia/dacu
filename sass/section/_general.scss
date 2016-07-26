@@ -11,6 +11,10 @@ body{
     position: relative;
     height: 0px;
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $color-Celeste inset;
+    -webkit-text-fill-color: $color-Blanco;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }

@@ -290,6 +290,10 @@ body {
   position: relative;
   height: 0px; }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333399 inset;
+  -webkit-text-fill-color: #FCFCFC; }
+
 ::-webkit-scrollbar {
   width: 10px; }
 
@@ -446,8 +450,7 @@ ul.navbar-right {
   margin: 55px auto 7px; }
 
 svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
-  padding-left: 30px;
-  margin-bottom: -6px; }
+  margin-left: 30px; }
 
 @media (max-width: 1560px) {
   .home p.Items::before {
@@ -1278,6 +1281,144 @@ img.mfp-img {
   .contacto button.enviar {
     background-color: transparent;
     border: 0; }
+
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top; }
+
+.input {
+  margin-top: 41px; }
+
+textarea {
+  height: 150px; }
+
+.input:first-of-type {
+  margin-top: 0px; }
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */ }
+
+.input__field:focus {
+  outline: none; }
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #FCFCFC;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none; }
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 0.6em 0;
+  width: 100%;
+  font-size: 19px; }
+
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none; }
+
+/* Individual styles */
+/* Madoka */
+.input__field--madoka {
+  width: 100%;
+  background: transparent;
+  color: #FCFCFC; }
+
+.input__label--madoka {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #FCFCFC;
+  text-align: left;
+  cursor: text; }
+
+.input__label-content--madoka {
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
+
+.graphic--madoka {
+  -webkit-transform: scale3d(1, -1, 1);
+  transform: scale3d(1, -1, 1);
+  -webkit-transition: stroke-dashoffset 0.3s;
+  transition: stroke-dashoffset 0.3s;
+  pointer-events: none;
+  stroke: #C99F7E;
+  stroke-width: 4px;
+  stroke-dasharray: 1246;
+  stroke-dashoffset: 679; }
+
+.graphic--madoka2 {
+  -webkit-transform: scale3d(1, -1, 1);
+  transform: scale3d(1, -1, 1);
+  -webkit-transition: stroke-dashoffset 0.3s;
+  transition: stroke-dashoffset 0.3s;
+  pointer-events: none;
+  stroke: #C99F7E;
+  stroke-width: 4px;
+  stroke-dasharray: 1433;
+  stroke-dashoffset: 865; }
+
+.input__field--madoka:focus + .input__label--madoka,
+.input--filled .input__label--madoka {
+  cursor: default;
+  pointer-events: none; }
+
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
+.input--filled .graphic--madoka {
+  stroke-dashoffset: 0; }
+
+.input__field--madoka:focus + .input__label--madoka .graphic--madoka2,
+.input--filled .graphic--madoka2 {
+  stroke-dashoffset: 0; }
+
+.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
+.input--filled .input__label-content--madoka {
+  -webkit-transform: scale3d(0.2 0.2em, 0.81, 1) translate3d(0, 2.2em, 0);
+  transform: scale3d(0.81, 0.81, 1) translate3d(0, 2.2em, 0);
+  color: rgba(252, 252, 252, 0.56); }
+
+textarea.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
+.input--filled textarea ~ label .input__label-content--madoka {
+  color: rgba(252, 252, 252, 0); }
+
+input.error {
+  color: #E88356; }
+
+input.error ~ label svg {
+  stroke: #E88356; }
 
 /* Animacion */
 .animated {
