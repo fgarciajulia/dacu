@@ -90,24 +90,46 @@ $(document).ready(function () {
     autoplaySpeed: 1000
   });
 
+
   var elementoAnterior = 0;
-  var width_Contacto_Books = $('#servicios_icono1 > #Books rect');
-  var width_Contacto_Reloj_min = $('#servicios_icono1 > #Reloj-min');
+  var servicios_icono1_Books = $(['#servicios_icono1 > #Books_1_ rect', '#servicios_icono1 > #cuadrados_1_ rect']);
+  var servicios_icono1_Reloj_min = $('#servicios_icono1 > #Reloj-min_1_');
+  var servicios_icono1_Line_start = $('#servicios_icono1 > #Lineas_x5F_Start_1_ line');
+  var servicios_icono1_Humo = $('#servicios_icono1 > #humo_1_ path');
+
   owl_Servicios.on('translated.owl.carousel', onTranslatedEvent);
   function onTranslatedEvent(event) {
     // Elemento Anterior 
     if (elementoAnterior == 0) {
       var TimeCloseIcon1 = new TimelineMax();
-      TimeCloseIcon1.append(TweenMax.staggerTo(width_Contacto_Books, .5, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1), 0, 0);
-      TweenLite.to(width_Contacto_Reloj_min, 1, { rotation: 0, transformOrigin: 'center center' });
+      TimeCloseIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, .5, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1), 0, 0);
+      TweenLite.to(servicios_icono1_Reloj_min, 1, { rotation: 0, transformOrigin: 'center center' });
+      TweenLite.to(servicios_icono1_Line_start, 1, { drawSVG: '50% 50%' });
+      TweenLite.to(servicios_icono1_Humo, 1, { drawSVG: '100% 100%' });
     }
     elementoAnterior = event.page.index;
 
-    // Elemento Nuevo
+    // Elemento Nuevo --> Apertura
     if (event.page.index == 0) {
       var TimeIcon1 = new TimelineMax();
-      TimeIcon1.append(TweenMax.staggerTo(width_Contacto_Books, .5, { scaleX: 1, transformOrigin: '0% 0%' }, 0.1), 0, 0);
-      TweenLite.to(width_Contacto_Reloj_min, 2, { rotation: 180, transformOrigin: 'center center' });
+      TimeIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, .5, { scaleX: 1, transformOrigin: '0% 0%' }, 0.1), 0, 0);
+      TweenLite.to(servicios_icono1_Reloj_min, 2, { rotation: 180, transformOrigin: 'center center' });
+      TweenLite.to(servicios_icono1_Line_start, 1, { drawSVG: '0% 100%' });
+      TimeIcon1.set(servicios_icono1_Humo, {
+        drawSVG: '0% 0%'
+      })
+        .to(servicios_icono1_Humo, 1, {
+          drawSVG: '10% 50%',
+          ease: Linear.easeNone
+        })
+        .to(servicios_icono1_Humo, 1, {
+          drawSVG: '35% 80%',
+          ease: Linear.easeNone
+        })
+        .to(servicios_icono1_Humo, 2, {
+          drawSVG: '100% 100%',
+          ease: Linear.easeNone
+        });
     }
   }
 });
@@ -148,7 +170,7 @@ $(document).ready(function () {
     submitHandler: function (form) {
       $.ajax({
         type: 'POST',
-        url: 'php/contacto.php', 
+        url: 'php/contacto.php',
         data: $(form).serialize(),
         success: function () {
           $('.oculto').fadeOut(300);
@@ -158,9 +180,9 @@ $(document).ready(function () {
           $('.enviado').delay(5000).fadeOut(300);
           $('.oculto').delay(6000).fadeIn(300);
         }
-      }); 
+      });
       return false; // required to block normal submit since you used ajax
-    } 
+    }
   });
 
 });
