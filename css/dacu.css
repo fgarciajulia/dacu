@@ -279,7 +279,7 @@ p {
 
 /* sections */
 body {
-  padding-top: 162px;
+  padding-top: 124px;
   background-color: #FCFCFC; }
 
 #HOME.Up {
@@ -291,7 +291,6 @@ body {
   height: 0px; }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #333399 inset;
   -webkit-text-fill-color: #FCFCFC; }
 
 ::-webkit-scrollbar {
@@ -1177,8 +1176,8 @@ img.mfp-img {
 
 @media (max-width: 1750px) and (min-width: 1500px) {
   .porfolio-content li.effect-milo p {
-    line-height: 28px;
-    font-size: 18px;
+    line-height: 24px;
+    font-size: 16px;
     width: 50%; }
   .porfolio-content li.effect-milo h2 {
     font-size: 29px; } }

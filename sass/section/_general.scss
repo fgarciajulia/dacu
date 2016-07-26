@@ -1,6 +1,6 @@
 body{
     @extend %font-family;
-    padding-top: 162px;
+    padding-top: 124px;
     background-color: $color-Blanco;
 }
 #HOME.Up {
@@ -12,7 +12,6 @@ body{
     height: 0px;
 }
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $color-Celeste inset;
     -webkit-text-fill-color: $color-Blanco;
 }
 ::-webkit-scrollbar {

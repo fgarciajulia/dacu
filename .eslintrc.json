@@ -18,7 +18,8 @@
         "$": true,
         "TweenLite": true,
         "TweenMax": true,
-        "TimelineMax": true
+        "TimelineMax": true,
+        "classie": true
     },
     "extends": "eslint:recommended",
     "rules": {
