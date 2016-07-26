@@ -3,14 +3,14 @@
 	 x="0px" y="0px" width="1248.4px" height="466.3px" viewBox="0 0 1248.4 466.3" enable-background="new 0 0 1248.4 466.3"
 	 xml:space="preserve">
 <defs>
-<linearGradient id="SVGID2" gradientUnits="userSpaceOnUse" x1="858.9029" y1="91.5472" x2="931.4877" y2="91.5472">
+<linearGradient id="SVGID2" gradientUnits="userSpaceOnUse" x1="858.9029" y1="91.5472" x2="909.3" y2="91.5472">
 	<stop  offset="0.1626" style="stop-color:#333399"/>
 	<stop  offset="1" style="stop-color:#FFFFFF"/>
 </linearGradient>
 </defs>
-<rect x="787.1" y="83.6" fill="#333399" width="17.6" height="16"/>
-<rect x="823.8" y="83.6" fill="#333399" width="17.6" height="16"/>
-<rect x="858.9" y="83.6" fill="url(#SVGID2)" width="72.6" height="16"/>
+<rect x="787.1" y="86" fill="#333399" width="11.9" height="10.8"/>
+<rect x="811.9" y="86" fill="#333399" width="11.9" height="10.8"/>
+<rect x="836.7" y="86" fill="url(#SVGID2)" width="72.6" height="10.8"/>
 <polyline fill="none" stroke="#333399" stroke-width="7" stroke-miterlimit="10" points="111,0 111,91.5 771.4,91.5 "/>
 <line fill="none" stroke="#C99F7E" stroke-width="8" stroke-miterlimit="10" x1="4" y1="164.9" x2="4" y2="466.3"/>
 <line fill="none" stroke="#333399" stroke-width="7" stroke-miterlimit="10" x1="41.2" y1="0" x2="41.2" y2="301.4"/>

@@ -44,7 +44,7 @@ $(window).ready(function () {
   });
 
 
-  var line5 = $(' #Line5-SVG > polyline');
+  var line5 = $(' #Line5-SVG polyline');
 
 
   /* Mockup 1 */
@@ -84,7 +84,7 @@ $(document).ready(function () {
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     center: true,
-    margin: 80,
+    margin: 118,
     dragEndSpeed: 1000, //speed when touch
     dotsSpeed: 1000, //speed with dots
     autoplaySpeed: 1000

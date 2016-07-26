@@ -1,8 +1,13 @@
-<svg id="responsive_misela_cuadraditos_02" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="125.3px" height="46.5px" viewBox="0 0 125.3 46.5" enable-background="new 0 0 125.3 46.5" xml:space="preserve">
-    <rect x="75.8" y="32" fill="#D18D63" width="14.5" height="14.5"/>
-    <rect x="106.1" y="32" fill="#D18D63" width="14.5" height="14.5"/>
-    <rect x="0" y="0" fill="#FFFFFF" width="14.5" height="14.5"/>
-    <rect x="36.7" y="0" fill="#FFFFFF" width="14.5" height="14.5"/>
-    <rect x="71" y="0" fill="#FFFFFF" width="14.5" height="14.5"/>
-    <rect x="107.7" y="0" fill="#FFFFFF" width="14.5" height="14.5"/>
+<svg id="responsive_misela_cuadraditos_02" version="1.0"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="84.7px" height="32.3px" viewBox="0 0 84.7 32.3" enable-background="new 0 0 84.7 32.3"
+	 xml:space="preserve">
+<defs>
+</defs>
+	<rect x="0" y="0" fill="#FFFFFF" width="11.9" height="10.8"/>
+	<rect x="24.8" y="0" fill="#FFFFFF" width="11.9" height="10.8"/>
+	<rect x="48" y="0" fill="#FFFFFF" width="11.9" height="10.8"/>
+	<rect x="72.8" y="0" fill="#FFFFFF" width="11.9" height="10.8"/>
+	<rect x="48" y="21.5" fill="#C99F7E" width="11.9" height="10.8"/>
+	<rect x="72.8" y="21.5" fill="#C99F7E" width="11.9" height="10.8"/>
 </svg>

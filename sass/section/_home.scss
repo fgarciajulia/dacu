@@ -2,12 +2,15 @@
     h1{
         color: $color-Celeste;
     }
+    p:first-of-type{
+        margin-top: 29px;
+        margin-bottom: 68px;
+    }
     p{
         color: $color-Azul;
-        &.Items{
+        &.Items{ 
             @extend %Text-Mayuscula;
-            margin: 25px 0;
-            padding-top: 5px;
+            margin: 22px 0;
             &::before {
                 content: "";
                 width: 10px;
@@ -46,6 +49,7 @@
     }
     .Margin-Left1 {
         margin-left: 2.66666667%;
+        padding-right: 17px;
     }
     svg#Line1-SVG {
         position: absolute;

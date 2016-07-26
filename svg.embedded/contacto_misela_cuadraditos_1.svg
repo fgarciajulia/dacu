@@ -1,19 +1,17 @@
 <svg id="contacto_misela_cuadraditos_1" version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="44.9px" height="160.4px" viewBox="0 0 44.9 160.4" enable-background="new 0 0 44.9 160.4"
+	 x="0px" y="0px" width="43.3px" height="154.8px" viewBox="0 0 43.3 154.8" enable-background="new 0 0 43.3 154.8"
 	 xml:space="preserve">
-<defs>
-</defs>
-<rect x="30.3" y="24.3" fill="#333399" width="14.5" height="14.5"/>
-<rect x="30.3" y="0" fill="#333399" width="14.5" height="14.5"/>
-<rect x="30.3" y="48.6" fill="#333399" width="14.5" height="14.5"/>
-<rect x="30.3" y="97.2" fill="#FFFFFF" width="14.5" height="14.5"/>
-<rect x="30.3" y="121.5" fill="#FFFFFF" width="14.5" height="14.5"/>
-<rect x="30.3" y="145.8" fill="#FFFFFF" width="14.5" height="14.5"/>
-<rect x="0" y="24.3" fill="#333399" width="14.5" height="14.5"/>
-<rect x="0" y="0" fill="#333399" width="14.5" height="14.5"/>
-<rect x="0" y="48.6" fill="#333399" width="14.5" height="14.5"/>
-<rect x="0" y="97.2" fill="#FFFFFF" width="14.5" height="14.5"/>
-<rect x="0" y="121.5" fill="#FFFFFF" width="14.5" height="14.5"/>
-<rect x="0" y="145.8" fill="#FFFFFF" width="14.5" height="14.5"/>
-</svg>
+	<rect x="29.3" y="23.5" fill="#333399" width="13" height="13"/>
+	<rect x="29.3" y="0" fill="#333399" width="13" height="13"/>
+	<rect x="29.3" y="46.9" fill="#333399" width="13" height="13"/>
+	<rect x="0" y="23.5" fill="#333399" width="13" height="13"/>
+	<rect x="0" y="0" fill="#333399" width="13" height="13"/>
+	<rect x="0" y="46.9" fill="#333399" width="13" height="13"/>
+	<rect x="29.3" y="93.8" fill="#FFFFFF" width="13" height="13"/>
+	<rect x="29.3" y="117.3" fill="#FFFFFF" width="13" height="13"/>
+	<rect x="29.3" y="140.7" fill="#FFFFFF" width="13" height="13"/>
+	<rect x="0" y="93.8" fill="#FFFFFF" width="13" height="13"/>
+	<rect x="0" y="117.3" fill="#FFFFFF" width="13" height="13"/>
+	<rect x="0" y="140.7" fill="#FFFFFF" width="13" height="13"/>
+</svg> 

@@ -5,7 +5,7 @@ nav{
     &.Fondo {
         border-bottom: 6px solid $color-Naranja; 
         background-color: $color-Celeste;
-        height: 95px;
+        height: 70px;
         .navbar-nav{
             & > li > a {
                 color: $color-Blanco;
@@ -26,18 +26,21 @@ nav{
     }
 }
 .navbar-default {
-    height: 95px;
+    height: 70px;
     background-color: transparent;
     border-color: transparent;
     min-height: 71px;
-    padding-top: 16px;
+    padding-top: 0px;
     -webkit-transition: width .5s ease-in-out;
     -moz-transition: width .5s ease-in-out;
     -o-transition: width .5s ease-in-out;
     transition: width .5s ease-in-out; 
-    .logo text {
+    .logo svg{
+        width: 153px;
+        text {
         font-weight: 600;
         stroke-width: 0px;
+        } 
     }
     .navbar-nav{
         & > li > a {

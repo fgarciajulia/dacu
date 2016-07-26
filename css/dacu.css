@@ -311,7 +311,7 @@ input:-webkit-autofill {
 nav.Fondo {
   border-bottom: 6px solid #C99F7E;
   background-color: #333399;
-  height: 95px; }
+  height: 70px; }
   nav.Fondo .navbar-nav > li > a {
     color: #FCFCFC; }
     nav.Fondo .navbar-nav > li > a:hover {
@@ -323,16 +323,18 @@ nav.Fondo {
     stroke-width: 2px; }
 
 .navbar-default {
-  height: 95px;
+  height: 70px;
   background-color: transparent;
   border-color: transparent;
   min-height: 71px;
-  padding-top: 16px;
+  padding-top: 0px;
   -webkit-transition: width .5s ease-in-out;
   transition: width .5s ease-in-out; }
-  .navbar-default .logo text {
-    font-weight: 600;
-    stroke-width: 0px; }
+  .navbar-default .logo svg {
+    width: 153px; }
+    .navbar-default .logo svg text {
+      font-weight: 600;
+      stroke-width: 0px; }
   .navbar-default .navbar-nav > li > a {
     color: #333399;
     font-weight: 600;
@@ -400,11 +402,14 @@ ul.navbar-right {
 .home h1 {
   color: #333399; }
 
+.home p:first-of-type {
+  margin-top: 29px;
+  margin-bottom: 68px; }
+
 .home p {
   color: #14214B; }
   .home p.Items {
-    margin: 25px 0;
-    padding-top: 5px; }
+    margin: 22px 0; }
     .home p.Items::before {
       content: "";
       width: 10px;
@@ -438,7 +443,8 @@ ul.navbar-right {
   margin: auto; }
 
 .home .Margin-Left1 {
-  margin-left: 2.66666667%; }
+  margin-left: 2.66666667%;
+  padding-right: 17px; }
 
 .home svg#Line1-SVG {
   position: absolute;
@@ -464,12 +470,12 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   .responsive h1 {
     color: #FCFCFC; }
   .responsive p:first-of-type {
-    margin-top: 50px; }
+    margin-top: 50px;
+    margin-bottom: 68px; }
   .responsive p {
     color: #FCFCFC; }
     .responsive p.Items {
-      margin: 25px 0;
-      padding-top: 5px; }
+      margin: 22px 0; }
       .responsive p.Items span {
         color: #333399;
         background-color: #FCFCFC;
@@ -500,7 +506,9 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
     position: absolute;
     z-index: 25;
     margin-left: 8.33333333%; }
-  .responsive svg#responsive_misela_cuadraditos_02 {
+  .responsive #responsive_misela_cuadraditos_01 {
+    margin-top: 11px; }
+  .responsive #responsive_misela_cuadraditos_02 {
     margin-top: 209px;
     left: 40px;
     position: absolute; }
@@ -518,7 +526,8 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   margin-bottom: 75px; }
   .servicios h1 {
     color: #333399;
-    margin-top: 138px; }
+    margin-top: 147px;
+    margin-bottom: 35px; }
   .servicios h2 {
     color: #333399; }
   .servicios p {
@@ -541,6 +550,8 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
     pointer-events: none; }
   .servicios .servicio_misela {
     margin-top: 150px; }
+    .servicios .servicio_misela svg.img-responsive {
+      margin: auto; }
   .servicios .servicio_cuadrado {
     width: 70%;
     margin-left: 15%;
@@ -548,10 +559,10 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
     height: 105px; }
   .servicios .owl-carousel .owl-item.center {
     opacity: 1;
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-    -webkit-transform-origin: 50% 0;
-            transform-origin: 50% 0; }
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    -webkit-transform-origin: 50% -50%;
+            transform-origin: 50% -50%; }
   .servicios .owl-carousel .owl-item {
     opacity: 0.6;
     -webkit-transition: all 1500ms ease;
@@ -559,7 +570,7 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   .servicios .owl-carousel .owl-stage {
     position: relative;
     -ms-touch-action: pan-Y;
-    margin-bottom: 5%; }
+    margin-bottom: 11%; }
 
 .porfolio {
   /*
@@ -590,7 +601,7 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   .porfolio .porfolio_misela_right,
   .porfolio .porfolio_misela_left {
     position: absolute;
-    margin-top: -103px; }
+    margin-top: -82px; }
   .porfolio #porfolio_misela_right {
     margin: auto; }
 
@@ -1293,7 +1304,7 @@ img.mfp-img {
   margin-top: 41px; }
 
 textarea {
-  height: 150px; }
+  height: 140px; }
 
 .input:first-of-type {
   margin-top: 0px; }

@@ -4,15 +4,15 @@
 	 xml:space="preserve">
 <defs>
 </defs>
-<rect x="0" y="61.2" fill="#333399" width="17.6" height="16"/>
-<rect x="36.7" y="61.2" fill="#333399" width="17.6" height="16"/>
-<rect x="71" y="61.2" fill="#333399" width="17.6" height="16"/>
-<linearGradient id="SVGID" gradientUnits="userSpaceOnUse" x1="107.7021" y1="7.9834" x2="180.2868" y2="7.9834">
+<rect x="0" y="41.4" fill="#333399" width="11.9" height="10.8"/>
+<rect x="24.8" y="41.4" fill="#333399" width="11.9" height="10.8"/>
+<rect x="48" y="41.4" fill="#333399" width="11.9" height="10.8"/>
+<linearGradient id="SVGID" gradientUnits="userSpaceOnUse" x1="107.7021" y1="7.9834" x2="142.8" y2="7.9834">
 	<stop  offset="0.1626" style="stop-color:#333399"/>
 	<stop  offset="1" style="stop-color:#FFFFFF"/>
 </linearGradient>
-<rect x="107.7" y="0" fill="url(#SVGID)" width="72.6" height="16"/>
-<rect x="107.7" y="61.2" fill="#333399" width="17.6" height="16"/>
-<rect x="71" y="93.1" fill="#0099FF" width="17.6" height="16"/>
-<rect x="107.7" y="93.1" fill="#0099FF" width="17.6" height="16"/>
+<rect x="72.8" y="0" fill="url(#SVGID)" width="70" height="10.8"/>
+<rect x="72.8" y="41.4" fill="#333399" width="11.9" height="10.8"/>
+<rect x="72.8" y="62.9" fill="#0099FF" width="11.9" height="10.8"/>
+<rect x="48" y="62.9" fill="#0099FF" width="11.9" height="10.8"/>
 </svg>

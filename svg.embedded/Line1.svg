@@ -1,5 +1,5 @@
 
-<svg class="col-xs-6" id="Line1-SVG" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 841 717.3" enable-background="new 0 0 841 717.3" xml:space="preserve">
+<svg class="col-xs-6" id="Line1-SVG" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 841 717.3" enable-background="new 0 0 841 717.3" xml:space="preserve">
 <defs>
 </defs>
 <polyline id="Line1-poly"  fill="none" stroke="#333399" stroke-width="7" stroke-miterlimit="10" points="6,765 6,6 835,6 835,765 6,765 "/>
