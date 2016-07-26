@@ -92,9 +92,9 @@ $(document).ready(function () {
 
 
   var elementoAnterior = 0;
-  var servicios_icono1_Books = $(['#servicios_icono1 > #Books_1_ rect', '#servicios_icono1 > #cuadrados_1_ rect']);
+  var servicios_icono1_Books = $(['#servicios_icono1 > #Books_1_ rect', '#servicios_icono1 > #cuadrados_1_ rect', '#servicios_icono1 > #Diploma_1_ rect']);
   var servicios_icono1_Reloj_min = $('#servicios_icono1 > #Reloj-min_1_');
-  var servicios_icono1_Line_start = $('#servicios_icono1 > #Lineas_x5F_Start_1_ line');
+  var servicios_icono1_Line_start = $(['#servicios_icono1 > #Lineas_x5F_Start_1_ line','#servicios_icono1 >  #Diploma_1_ line']);
   var servicios_icono1_Humo = $('#servicios_icono1 > #humo_1_ path');
 
   owl_Servicios.on('translated.owl.carousel', onTranslatedEvent);
@@ -102,19 +102,19 @@ $(document).ready(function () {
     // Elemento Anterior 
     if (elementoAnterior == 0) {
       var TimeCloseIcon1 = new TimelineMax();
-      TimeCloseIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, .5, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1), 0, 0);
-      TweenLite.to(servicios_icono1_Reloj_min, 1, { rotation: 0, transformOrigin: 'center center' });
-      TweenLite.to(servicios_icono1_Line_start, 1, { drawSVG: '50% 50%' });
-      TweenLite.to(servicios_icono1_Humo, 1, { drawSVG: '100% 100%' });
+      TimeCloseIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, 1, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1), 0, 0);
+      TweenLite.to(servicios_icono1_Reloj_min, 2, { rotation: 0, transformOrigin: 'center center' });
+      TweenLite.to(servicios_icono1_Line_start, 2, { drawSVG: '50% 50%' });
+      TweenLite.to(servicios_icono1_Humo, 2, { drawSVG: '100% 100%' });
     }
     elementoAnterior = event.page.index;
 
     // Elemento Nuevo --> Apertura
     if (event.page.index == 0) {
       var TimeIcon1 = new TimelineMax();
-      TimeIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, .5, { scaleX: 1, transformOrigin: '0% 0%' }, 0.1), 0, 0);
+      TimeIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, 1, { scaleX: 1, transformOrigin: '0% 0%' }, 0.1), 0, 0);
       TweenLite.to(servicios_icono1_Reloj_min, 2, { rotation: 180, transformOrigin: 'center center' });
-      TweenLite.to(servicios_icono1_Line_start, 1, { drawSVG: '0% 100%' });
+      TweenLite.to(servicios_icono1_Line_start, 2, { drawSVG: '0% 100%' });
       TimeIcon1.set(servicios_icono1_Humo, {
         drawSVG: '0% 0%'
       })
