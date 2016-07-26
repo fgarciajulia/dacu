@@ -291,6 +291,7 @@ body {
   height: 0px; }
 
 input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #333399 inset;
   -webkit-text-fill-color: #FCFCFC; }
 
 ::-webkit-scrollbar {
@@ -1323,7 +1324,7 @@ textarea {
   display: block;
   padding: 0.6em 0;
   width: 100%;
-  font-size: 19px; }
+  font-size: 18px; }
 
 .graphic {
   position: absolute;
