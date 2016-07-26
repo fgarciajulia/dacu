@@ -31,10 +31,6 @@ nav{
     border-color: transparent;
     min-height: 71px;
     padding-top: 0px;
-    -webkit-transition: width .5s ease-in-out;
-    -moz-transition: width .5s ease-in-out;
-    -o-transition: width .5s ease-in-out;
-    transition: width .5s ease-in-out; 
     .logo svg{
         width: 153px;
         text {
@@ -46,64 +42,27 @@ nav{
         & > li > a {
             color: $color-Celeste;
             font-weight: 600;
-            font-size: 20px;
+            font-size: 19px;
             opacity: 1;
             transition: opacity 50ms cubic-bezier(.25,.25,.75,.75),visibility 0s linear;
             visibility: visible;
             transition-delay: 50ms,50ms;
-            &:hover {
-                color: $color-Blanco;
-            }
             &:before {
-                top: 25%;
-                bottom: 25%;
-                left: 25%;
-                right: 25%;
-                position: absolute;
-                content: '';
-                background: $color-Celeste;
-                visibility: hidden;
-                transition-duration: 0s;
-                z-index: -1;
+                content: "";
+                margin-top: 7px;
+                margin-right: 9px;
+                display: block;
+                float: left;
+                background: $color-Blanco;
+                width: 8px;
+                height: 8px;
+            }
+            &:hover {
+                color: $color-Naranja;
             }
             &:hover:before {
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                -webkit-transition: all .5s cubic-bezier(.165,.84,.44,1);
-                -moz-transition: all .5s cubic-bezier(.165,.84,.44,1);
-                -o-transition: all .5s cubic-bezier(.165,.84,.44,1);
-                transition: all .5s cubic-bezier(.165,.84,.44,1);
-                visibility: visible;
+                background: $color-Naranja;
             }
-        }
-        & > li.web a{
-            overflow: hidden;
-            transition:opacity 2s linear;
-                span{
-                    -webkit-transition: width .5s ease-in-out;
-                    -moz-transition: width .5s ease-in-out;
-                    -o-transition: width .5s ease-in-out;
-                    transition: width .5s ease-in-out; 
-                    float: right;
-                    overflow: hidden;
-                }
-        }
-        &:hover > li.web a{
-                span{
-                    -webkit-transition: width .5s ease-in-out;
-                    -moz-transition: width .5s ease-in-out;
-                    -o-transition: width .5s ease-in-out;
-                    transition: width .5s ease-in-out; 
-                }
-        }
-        & > li.web.active a span{
-            width: auto!important;
-        }
-        &:hover > li.web.active a span{
-            display: block!important;
-        //    border-left: 0px solid $color-Celeste;
         }
         & > li.active{
             & > a{
@@ -112,9 +71,9 @@ nav{
                 &:hover, &:focus {
                     color: $color-Naranja;
                     background-color: transparent;
-                }   
-                span{
- //                   width: 0px;
+                }
+                &:before {
+                    background: $color-Naranja;
                 }
             }
         }
