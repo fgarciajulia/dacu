@@ -62,15 +62,45 @@
         position: absolute;
     }
     .Mockup2{
-        max-width: 360px;
         -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
         z-index: 60;
         top: 45px;
     }
+    .Mockup2 img{
+        max-width: 80%;
+    }
+    @media (max-width: 1620px){
+        .hidder-Responsive{
+            display: none;
+        }
+        .Mockup2 img{
+            max-width: 100%;
+        }
+    }
     @media (max-width: 1360px){
         .Padding-Diseño {
-            padding-top: 230px;
+            padding-top: 170px;
+        }
+        .Line5Col{
+            margin-top: 238px;
+        }
+        #responsive_misela_cuadraditos_02 {
+            margin-top: 162px;
+        }
+        .cuadrado{
+            margin-top: -12px;
+        }
+    }
+    @media (max-width: 992px){
+        .cuadrado{
+            display: none;
+        }
+        #responsive_misela_cuadraditos_02 {
+            margin-top: 122px;
+        }
+        p:first-of-type{
+            margin-bottom: 46px;
         }
     }
 }

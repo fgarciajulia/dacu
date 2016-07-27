@@ -36,10 +36,7 @@ p {
   h1 {
     font-size: 52px; }
   .servicios p, .porfolio p.PPL {
-    font-size: 22px; }
-  .contacto p {
-    font-size: 13px;
-    font-weight: 500; } }
+    font-size: 22px; } }
 
 @media (max-width: 1560px) {
   h1 {
@@ -50,13 +47,15 @@ p {
   .servicios p, .porfolio p.PPL {
     font-size: 18px; }
   .contacto p {
-    font-size: 12px; } }
+    font-size: 15px; } }
 
 @media (max-width: 1360px) {
   h1 {
     font-size: 41px;
     line-height: 31px;
-    margin-bottom: 24px; } }
+    margin-bottom: 24px; }
+  h2, .servicios h2 {
+    font-size: 18px; } }
 
 /* carousel */
 /*
@@ -418,7 +417,6 @@ ul.navbar-right {
   margin: auto; }
 
 .home .Margin-Left1 {
-  margin-left: 2.66666667%;
   padding-right: 17px; }
 
 .home svg#Line1-SVG {
@@ -436,6 +434,18 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
 @media (max-width: 1560px) {
   .home p.Items::before {
     margin-top: 8px; } }
+
+@media (min-width: 992px) {
+  .Margin-Left1 {
+    margin-left: 2.66666667%; } }
+
+@media (max-width: 940px) {
+  .home p:first-of-type {
+    margin-bottom: 32px; }
+  svg#home_misela_cuadraditos_01 {
+    margin-top: 41px; }
+  svg#responsive_misela_cuadraditos_01 {
+    display: none; } }
 
 .responsive {
   background: url(img/BG-Azul.png);
@@ -488,14 +498,33 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
     left: 40px;
     position: absolute; }
   .responsive .Mockup2 {
-    max-width: 360px;
     -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
     filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
     z-index: 60;
     top: 45px; }
+  .responsive .Mockup2 img {
+    max-width: 80%; }
+  @media (max-width: 1620px) {
+    .responsive .hidder-Responsive {
+      display: none; }
+    .responsive .Mockup2 img {
+      max-width: 100%; } }
   @media (max-width: 1360px) {
     .responsive .Padding-Diseño {
-      padding-top: 230px; } }
+      padding-top: 170px; }
+    .responsive .Line5Col {
+      margin-top: 238px; }
+    .responsive #responsive_misela_cuadraditos_02 {
+      margin-top: 162px; }
+    .responsive .cuadrado {
+      margin-top: -12px; } }
+  @media (max-width: 992px) {
+    .responsive .cuadrado {
+      display: none; }
+    .responsive #responsive_misela_cuadraditos_02 {
+      margin-top: 122px; }
+    .responsive p:first-of-type {
+      margin-bottom: 46px; } }
 
 .servicios {
   margin-bottom: 75px; }
@@ -579,6 +608,10 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
 
 .porfolio #porfolio_misela_right {
   margin: auto; }
+
+@media (max-width: 992px) {
+  .porfolio p.PPL {
+    margin-top: 45px; } }
 
 /* Magnific Popup CSS */
 .mfp-bg {
@@ -935,7 +968,8 @@ img.mfp-img {
   display: block;
   border-bottom: #547796;
   border-style: solid;
-  border-width: 0; }
+  border-width: 0;
+  border: 7px solid #C99F7E; }
 
 .porfolio-content .margin {
   margin-bottom: 10px;
@@ -1136,8 +1170,8 @@ img.mfp-img {
     transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-    -webkit-transform: translate3d(-23, 0, 0) scale(1.12);
-    transform: translate3d(-23px, 0, 0) scale(1.12);
+    -webkit-transform: translate3d(0, 0, 0) scale(1.12);
+    transform: translate3d(0, 0, 0) scale(1.12);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
   .porfolio-content li.effect-milo:hover img {
@@ -1161,7 +1195,7 @@ img.mfp-img {
     border-right: 2px solid #fff;
     text-align: right;
     opacity: 0;
-    font-size: 20px;
+    font-size: 17px;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
@@ -1169,7 +1203,7 @@ img.mfp-img {
     -webkit-transform: translate3d(-200px, 0, 0);
     transform: translate3d(-200px, 0, 0);
     font-weight: 600;
-    line-height: 31px; }
+    line-height: 30px; }
   .porfolio-content li.effect-milo:hover p {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -1183,17 +1217,26 @@ img.mfp-img {
   .porfolio-content li.effect-milo h2 {
     font-size: 29px; } }
 
-@media (max-width: 1500px) {
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .porfolio-content li.effect-milo h2 {
+    padding: 0.4em 1.2em;
+    font-size: 26px; }
   .porfolio-content li.effect-milo p {
-    width: 40%;
-    line-height: 30px;
-    font-size: 23px; } }
+    width: 55%;
+    line-height: 16px;
+    font-size: 13px; } }
 
 @media (max-width: 1200px) {
   .porfolio-content li.effect-milo p {
     width: 50%;
-    line-height: 26px;
-    font-size: 20px; } }
+    line-height: 24px;
+    font-size: 18px; } }
+
+@media (max-width: 992px) {
+  .porfolio-content li.effect-milo p {
+    width: 40%;
+    line-height: 40px;
+    font-size: 25px; } }
 
 .contacto {
   margin-top: 120px;
@@ -1226,7 +1269,7 @@ img.mfp-img {
             color: #C99F7E;
             text-decoration: none; }
     .contacto p.contacto-padding {
-      padding: 25px 0 45px; }
+      padding: 25px 0 24px; }
   .contacto i.fa {
     color: #333399;
     font-size: 47px;
@@ -1235,9 +1278,9 @@ img.mfp-img {
     text-align: center;
     height: 72px;
     padding-top: 9px;
-    margin-right: 34px;
+    margin-right: 7%;
     margin-bottom: 25px;
-    margin-top: 25px;
+    margin-top: 68px;
     border: 4px solid #C99F7E;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease; }
@@ -1267,6 +1310,23 @@ img.mfp-img {
   .contacto button.enviar {
     background-color: transparent;
     border: 0; }
+
+@media (max-width: 1560px) {
+  .contacto p.Items {
+    float: none;
+    margin-left: 0px;
+    margin-bottom: 18px; } }
+
+@media (max-width: 1200px) {
+  .contacto i.fa {
+    font-size: 27px;
+    width: 63px;
+    height: 54px;
+    margin-right: 5%; } }
+
+@media (max-width: 992px) {
+  #contacto_misela_lineas_1 {
+    width: 145px; } }
 
 .input {
   position: relative;

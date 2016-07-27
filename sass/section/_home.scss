@@ -48,7 +48,6 @@
         margin: auto;
     }
     .Margin-Left1 {
-        margin-left: 2.66666667%;
         padding-right: 17px;
     }
     svg#Line1-SVG {
@@ -73,5 +72,23 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
                 }
             }
         }
+    }
+}
+@media (min-width: 992px){
+    .Margin-Left1 {
+        margin-left: 2.66666667%;
+    }
+}
+@media (max-width: 940px){
+    .home{
+        p:first-of-type {
+            margin-bottom: 32px;
+        }
+    }
+    svg#home_misela_cuadraditos_01{
+        margin-top: 41px;
+    }
+    svg#responsive_misela_cuadraditos_01 {
+        display: none;
     }
 }
