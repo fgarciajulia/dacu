@@ -43,6 +43,7 @@ gulp.task('jsDeps', function () {
 
 gulp.task('js', function () {
   return gulp.src([
+    'js/Servicios.Animation.js',
     'js/Dacu.js',
   ]) 
     .pipe(sourcemaps.init())
@@ -81,7 +82,7 @@ gulp.task('watch', ['build'], function () {
   wSASS.on('add', watchLogger);
   wSASS.on('unlink', watchLogger);
 
-  var wJS = gulp.watch(['js/Dacu.js'], ['js']);
+  var wJS = gulp.watch(['js/Dacu.js', 'js/Servicios.Animation.js'], ['js']);
   wJS.on('change', watchLogger);
   wJS.on('add', watchLogger);
   wJS.on('unlink', watchLogger);
