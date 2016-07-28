@@ -17,32 +17,33 @@ var servicios_icono2_nubes = $('#servicios_icono2 #Nubes_1_ g');
 
 function CierreIcon1() {
   var TimeCloseIcon1 = new TimelineMax();
-  TimeCloseIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, 1, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1), 0, 0);
-  TweenLite.to(servicios_icono1_Reloj_min, 2, { rotation: 0, transformOrigin: 'center center' });
-  TweenLite.to(servicios_icono1_Lamp, 1, { fill: '#fff' });
-  TweenLite.to(servicios_icono1_regla, 1, { rotation: 0, transformOrigin: '100% 100%' });
-  TweenLite.to(servicios_icono1_pluma, 1, { rotation: 0, transformOrigin: '0 10' });
-  TweenLite.to(servicios_icono1_headerLamp, 1, { rotation: 0, transformOrigin: '18 0' });
-  TweenLite.to(servicios_icono1_Pantone3, 1, { rotation: 0, transformOrigin: '10 19' });
-  TweenLite.to(servicios_icono1_Pantone2, 1, { rotation: 0, transformOrigin: '10 19' });
-  TweenLite.to(servicios_icono1_Pantone1, 1, { rotation: 0, transformOrigin: '10 19' });
-  TweenLite.to(servicios_icono1_Line_start, 2, { drawSVG: '50% 50%' });
-  TweenLite.to(servicios_icono1_Humo, 2, { drawSVG: '100% 100%' });
+  TimeCloseIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, 1, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1), 0, 0)
+  .to(servicios_icono1_Reloj_min, 2, { rotation: 0, transformOrigin: 'center center' }, 0)
+  .to(servicios_icono1_Lamp, 1, { fill: '#fff' }, 0)
+  .to(servicios_icono1_regla, 1, { rotation: 0, transformOrigin: '100% 100%' }, 0)
+  .to(servicios_icono1_pluma, 1, { rotation: 0, transformOrigin: '0 10' }, 0)
+  .to(servicios_icono1_headerLamp, 1, { rotation: 0, transformOrigin: '18 0' }, 0)
+  .to(servicios_icono1_Pantone3, 1, { rotation: 0, transformOrigin: '10 19' }, 0)
+  .to(servicios_icono1_Pantone2, 1, { rotation: 0, transformOrigin: '10 19' }, 0)
+  .to(servicios_icono1_Pantone1, 1, { rotation: 0, transformOrigin: '10 19' }, 0)
+  .to(servicios_icono1_Line_start, 2, { drawSVG: '50% 50%' }, 0)
+  .to(servicios_icono1_Humo, 2, { drawSVG: '100% 100%' }, 0);
 }
 
 function OpenIcon1() {
   var TimeIcon1 = new TimelineMax();
-  TimeIcon1.append(TweenMax.staggerTo(servicios_icono1_Books, 1, { scaleX: 1, transformOrigin: '0% 0%' }, 0.1), 0, 0);
-  TweenLite.to(servicios_icono1_Reloj_min, 3, { rotation: 240, transformOrigin: 'center center' });
-  TweenLite.to(servicios_icono1_Lamp, 1, { fill: '#C9BB9E' });
-  TweenLite.to(servicios_icono1_regla, 1, { rotation: 50, transformOrigin: '100% 100%' });
-  TweenLite.to(servicios_icono1_pluma, 1, { rotation: -90, transformOrigin: '0 10' });
-  TweenLite.to(servicios_icono1_headerLamp, 1, { rotation: -25, transformOrigin: '18 0' });
-  TweenLite.to(servicios_icono1_Pantone3, 1, { rotation: -90, transformOrigin: '10 19' });
-  TweenLite.to(servicios_icono1_Pantone2, 1, { rotation: -45, transformOrigin: '10 19' });
-  TweenLite.to(servicios_icono1_Pantone1, 1, { rotation: 0, transformOrigin: '10 19' });
-  TweenLite.to(servicios_icono1_Line_start, 2, { drawSVG: '0% 100%' });
-  TimeIcon1.set(servicios_icono1_Humo, { drawSVG: '0% 0%' }).to(servicios_icono1_Humo, 1, { drawSVG: '10% 50%', ease: Linear.easeNone }).to(servicios_icono1_Humo, 1, { drawSVG: '35% 80%', ease: Linear.easeNone }).to(servicios_icono1_Humo, 2, { drawSVG: '100% 100%', ease: Linear.easeNone });
+  TimeIcon1
+  .set(servicios_icono1_Humo, { drawSVG: '0% 0%' }, 0).to(servicios_icono1_Humo, 1, { drawSVG: '10% 50%', ease: Linear.easeNone }).to(servicios_icono1_Humo, 1, { drawSVG: '35% 80%', ease: Linear.easeNone }).to(servicios_icono1_Humo, 2, { drawSVG: '100% 100%', ease: Linear.easeNone })
+  .staggerTo(servicios_icono1_Books, 1, { scaleX: 1, transformOrigin: '0% 0%' }, 0.2, 0)
+  .to(servicios_icono1_Reloj_min, 3, { rotation: 240, transformOrigin: 'center center' }, 0)
+  .to(servicios_icono1_Lamp, 1, { fill: '#C9BB9E' }, 0)
+  .to(servicios_icono1_regla, 1, { rotation: 50, transformOrigin: '100% 100%' }, 0)
+  .to(servicios_icono1_pluma, 1, { rotation: -90, transformOrigin: '0 10' }, 0)
+  .to(servicios_icono1_headerLamp, 1, { rotation: -25, transformOrigin: '18 0' }, 0)
+  .to(servicios_icono1_Pantone3, 1, { rotation: -90, transformOrigin: '10 19' }, 0)
+  .to(servicios_icono1_Pantone2, 1, { rotation: -45, transformOrigin: '10 19' }, 0)
+  .to(servicios_icono1_Pantone1, 1, { rotation: 0, transformOrigin: '10 19' }, 0)
+  .to(servicios_icono1_Line_start, 2, { drawSVG: '0% 100%' }, 0);
 }
 
 function CierreIcon2() {
