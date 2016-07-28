@@ -87,7 +87,15 @@ $(document).ready(function () {
     margin: 118,
     dragEndSpeed: 1000, //speed when touch
     dotsSpeed: 1000, //speed with dots
-    autoplaySpeed: 1000
+    autoplaySpeed: 1000,
+    responsive: {
+      992: {
+        items: 3,
+      },
+      0: {
+        items: 1,
+      }
+    }
   });
 
 

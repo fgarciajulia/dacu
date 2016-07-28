@@ -1,8 +1,6 @@
 .responsive{
-    background: url(img/BG-Azul.png);
-    background-repeat: no-repeat;
+    background: url(img/BG-Azul.png) 73%  0% no-repeat ;
     background-size: 94%;
-    background-position: 73%;
     h1{
         color: $color-Blanco;
     }
@@ -101,6 +99,11 @@
         }
         p:first-of-type{
             margin-bottom: 46px;
+        }
+    }
+    @media (max-width: 772px){
+        .Padding-Diseño{
+            padding-top: 30px;
         }
     }
 }

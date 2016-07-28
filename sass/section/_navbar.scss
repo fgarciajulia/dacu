@@ -9,6 +9,9 @@ nav{
         .navbar-nav{
             & > li > a {
                 color: $color-Blanco;
+                &:before {
+                background: $color-Blanco;
+                }
                 &:hover{
                     color: $color-Naranja;
                 }
@@ -53,7 +56,7 @@ nav{
                 margin-right: 9px;
                 display: block;
                 float: left;
-                background: $color-Blanco;
+                background: $color-Celeste;
                 width: 8px;
                 height: 8px;
             }
@@ -89,5 +92,29 @@ ul.navbar-right {
     .nav-Resp {
         padding-right: 0;
         padding-left: 0;
+    }
+    .navbar-header{
+        height: 70px;
+    }
+    .navbar-collapse{
+        background-color: $color-Blanco;
+        border-top: 0px solid transparent;
+        box-shadow: inset 0 0px 0 rgba(255,255,255,.1);
+    }
+    nav{
+        &.Fondo {
+            .navbar-collapse{
+                background-color: $color-Celeste;
+            }
+            .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+                background-color: $color-Celeste;
+            }
+        }
+        .navbar-toggle {
+            margin-top: 17px;
+        }
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: $color-Blanco;
     }
 }
