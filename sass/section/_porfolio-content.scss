@@ -700,6 +700,14 @@ img.mfp-img {
     }
 }
 
+@media (max-width: 768px) {
+  .margin-galeria {
+      p{
+          line-height: 20px;
+          font-size: 14px;
+      }
+  }
+}
 .mfp-content {
     width: 100%;
 }

@@ -117,3 +117,26 @@
         width: 145px;
     }
 }
+@media (max-width: 768px){
+    .contacto{
+        i.fa {
+            font-size: 25px;
+            width: 56px;
+            height: 48px;
+            margin-right: 3%;
+        }
+        h1{
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 450px){
+    .contacto{
+        i.fa {
+            font-size: 18px;
+            width: 40px;
+            height: 41px;
+            margin-right: 2%;
+        }
+    }
+}

@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-    <title>Dacu. | Transformando ideas</title>
 
     @@include('head.meta.html')
 

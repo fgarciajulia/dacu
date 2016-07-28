@@ -3,6 +3,12 @@ body{
     padding-top: 124px;
     background-color: $color-Blanco;
 }
+
+@media (max-width: 768px){
+    body{
+        padding-top: 94px;
+    }
+}
 #HOME.Up {
     top: -162px;
 }

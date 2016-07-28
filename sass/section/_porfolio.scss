@@ -41,3 +41,17 @@
         }
     }
 }
+@media (max-width: 768px){
+    .porfolio{
+      p.PPL {
+            margin-top: -25px;
+            border: 7px solid $color-Azul;
+        }
+        .BG{
+            background-color: $color-Celeste;
+        }
+        .Text-margin-top {
+            margin-top: 88px;
+        }
+    }
+}

@@ -57,6 +57,15 @@ p {
   h2, .servicios h2 {
     font-size: 18px; } }
 
+@media (max-width: 360px) {
+  h1 {
+    font-size: 38px;
+    margin-bottom: 11px; }
+  p {
+    font-size: 14px; }
+  .servicios p, .porfolio p.PPL {
+    font-size: 14px; } }
+
 /* carousel */
 /*
  *  Owl Carousel - Animate Plugin
@@ -281,6 +290,10 @@ body {
   padding-top: 124px;
   background-color: #FCFCFC; }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 94px; } }
+
 #HOME.Up {
   top: -162px; }
 
@@ -451,6 +464,10 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   .home p.Items::before {
     margin-top: 8px; } }
 
+@media (min-width: 768px) and (max-width: 890px) {
+  .home h1 {
+    font-size: 35px; } }
+
 @media (min-width: 992px) {
   .Margin-Left1 {
     padding-left: 2.66666667%; } }
@@ -542,7 +559,7 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
         margin-top: 122px; }
       .responsive p:first-of-type {
         margin-bottom: 46px; } }
-  @media (max-width: 772px) {
+  @media (max-width: 768px) {
     .responsive .Padding-Diseño {
       padding-top: 30px; } }
 
@@ -637,6 +654,15 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
 @media (max-width: 992px) {
   .porfolio p.PPL {
     margin-top: 45px; } }
+
+@media (max-width: 768px) {
+  .porfolio p.PPL {
+    margin-top: -25px;
+    border: 7px solid #14214B; }
+  .porfolio .BG {
+    background-color: #333399; }
+  .porfolio .Text-margin-top {
+    margin-top: 88px; } }
 
 /* Magnific Popup CSS */
 .mfp-bg {
@@ -1122,6 +1148,11 @@ img.mfp-img {
   .mfp-title {
     margin: 20px 0 5px 0; } }
 
+@media (max-width: 768px) {
+  .margin-galeria p {
+    line-height: 20px;
+    font-size: 14px; } }
+
 .mfp-content {
   width: 100%; }
 
@@ -1263,6 +1294,12 @@ img.mfp-img {
     line-height: 40px;
     font-size: 25px; } }
 
+@media (max-width: 768px) {
+  .porfolio-content li.effect-milo h2 {
+    padding: 0.1em 1.2em;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.54); } }
+
 .contacto {
   margin-top: 120px;
   border-bottom: 7px solid #C99F7E; }
@@ -1352,6 +1389,22 @@ img.mfp-img {
 @media (max-width: 992px) {
   #contacto_misela_lineas_1 {
     width: 145px; } }
+
+@media (max-width: 768px) {
+  .contacto i.fa {
+    font-size: 25px;
+    width: 56px;
+    height: 48px;
+    margin-right: 3%; }
+  .contacto h1 {
+    text-align: center; } }
+
+@media (max-width: 450px) {
+  .contacto i.fa {
+    font-size: 18px;
+    width: 40px;
+    height: 41px;
+    margin-right: 2%; } }
 
 .input {
   position: relative;

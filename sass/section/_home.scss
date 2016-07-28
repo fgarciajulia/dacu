@@ -74,6 +74,13 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
         }
     }
 }
+@media (min-width: 768px) and (max-width: 890px){
+    .home{
+        h1{
+            font-size: 35px;
+        }
+    }
+}
 @media (min-width: 992px){
     .Margin-Left1 {
         padding-left: 2.66666667%;

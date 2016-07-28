@@ -166,3 +166,12 @@
         }
     }
 }
+@media (max-width: 768px){
+    .porfolio-content{
+        li.effect-milo h2 {
+            padding: 0.1em 1.2em;
+            font-size: 24px;
+            background-color: rgba(255, 255, 255, 0.54);
+        }
+    }
+}
