@@ -533,12 +533,15 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
     .responsive .cuadrado {
       margin-top: -12px; } }
   @media (max-width: 992px) {
-    .responsive .cuadrado {
-      display: none; }
-    .responsive #responsive_misela_cuadraditos_02 {
-      margin-top: 122px; }
-    .responsive p:first-of-type {
-      margin-bottom: 46px; } }
+    .responsive {
+      background-repeat: repeat;
+      background-size: 100%; }
+      .responsive .cuadrado {
+        display: none; }
+      .responsive #responsive_misela_cuadraditos_02 {
+        margin-top: 122px; }
+      .responsive p:first-of-type {
+        margin-bottom: 46px; } }
   @media (max-width: 772px) {
     .responsive .Padding-Diseño {
       padding-top: 30px; } }

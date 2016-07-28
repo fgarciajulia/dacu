@@ -91,6 +91,8 @@
         }
     }
     @media (max-width: 992px){
+        background-repeat: repeat ;
+        background-size: 100%;
         .cuadrado{
             display: none;
         }
@@ -98,8 +100,9 @@
             margin-top: 122px;
         }
         p:first-of-type{
-            margin-bottom: 46px;
+            margin-bottom: 46px; 
         }
+        
     }
     @media (max-width: 772px){
         .Padding-Diseño{

@@ -1,0 +1,8 @@
+<ifmodule mod_expires.c>
+ ExpiresActive On
+ ExpiresDefault A3600
+ <filesmatch ".(jpg|JPG|gif|GIF|png|css|ico|js|woff)$">
+  ExpiresDefault "access plus 7 day"
+ExpiresByType https://www.google-analytics.com/analytics.js "access 2 hour"
+ </filesmatch>
+</ifmodule>
