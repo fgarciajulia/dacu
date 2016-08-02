@@ -200,8 +200,8 @@
 		<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="156.8" y1="108.9" x2="219.6" y2="108.9"/>
 		<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="156.8" y1="122.8" x2="219.5" y2="122.8"/>
 		<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="156.8" y1="137.7" x2="219.5" y2="137.7"/>
-	</g>
-</g>
+	</g> 
+</g> 
 <g id="cuadrados_1_">
 	<rect x="100.9" y="84.6" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="11.5" height="11.2"/>
 	<rect x="811.4" y="29.8" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="11.5" height="10.5"/>
@@ -218,7 +218,7 @@
 			c0-6.6,7.3-6,7.3-6h12.5c2.2,0,3.9-1.8,3.9-3.9l0,0c0-2.2-1.8-3.9-3.9-3.9h-31.1c-2.1,0-3.9-1.7-3.9-3.9l0,0c0-2.1,1.7-3.9,3.9-3.9
 			h13.1l6,0.1h12c2.1,0,3.9-1.7,3.9-3.9l0,0c0-2.1-1.7-3.9-3.9-3.9h-31.1c-2.1,0-3.9-1.7-3.9-3.9l0,0c0-2.1,1.7-3.9,3.9-3.9h41">
 		</path>
-	</g>
+	</g> 
 </g>
 <g id="Pantone2_1_">
 	<polygon fill="#C9BB9E" points="647.5,443.5 644.6,446 617.1,446 617.1,410.3 643,409.5 647.1,411.1 649,413.8 649,441.1 	"/>
