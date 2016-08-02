@@ -82,7 +82,7 @@ $(document).ready(function () {
     items: 3,
     autoplay: true,
     autoplayTimeout: 4500,
-    autoplayHoverPause: true,
+    autoplayHoverPause:false,
     center: true,
     margin: 118,
     dragEndSpeed: 1000, //speed when touch
@@ -110,6 +110,9 @@ $(document).ready(function () {
     if (elementoAnterior == 1) {
       CierreIcon2();
     }
+    if (elementoAnterior == 3) {
+      CierreIcon4();
+    }
     elementoAnterior = event.page.index;
 
     // Elemento Nuevo --> Apertura
@@ -119,6 +122,10 @@ $(document).ready(function () {
     // Elemento Nuevo --> Apertura
     if (event.page.index == 1) {
       OpenIcon2();
+    }
+    // Elemento Nuevo --> Apertura
+    if (event.page.index == 3) {
+      OpenIcon4();
     }
   }
 });

@@ -562,7 +562,7 @@ button {
         color: $color-Azul;
     }
     p{
-        color: $color-Naranja;
+        color: $color-Azul;
         text-transform: capitalize;
     }
 }
@@ -591,14 +591,17 @@ img.mfp-img {
 .margin-galeria {
     margin: 40px 0;
     p{
-        color: $color-Naranja;
+        color: $color-Celeste;
         line-height: 26px;
         font-weight: 500;
         cursor: text;
-        font-size: 16px;
+        font-size: 15px;
+        a{
+          color: $color-Turqueza;
+        }
     }
     h4 {
-        color: #F3F3F3;
+        color: $color-Naranja;
         font-size: 27px;
         font-weight: 700;
     }
@@ -606,7 +609,7 @@ img.mfp-img {
         display: block;
         font-size: 21px;
         font-weight: 700;
-        color: #b3b3b3;
+        color: $color-Turqueza;
         line-height: 10px;
     }
     .items {
@@ -618,35 +621,42 @@ img.mfp-img {
             clear: both;
             width: 100%;
             margin-top: 21px;
-            margin-bottom: 15px;
+            margin-bottom: 15px; 
+            &:before {
+            display: none;
+            }
         }
         p.items {
+            color: $color-Naranja;
             float: left;
             width: 33%;
             font-weight: 700;
             text-transform: capitalize;
+            &:before {
+              content: "";
+              margin-top: 12px;
+              margin-right: 9px;
+              display: block;
+              float: left;
+              background: #339;
+              width: 5px;
+              height: 5px;
+          }
         }
-      }
-      a.link2:hover, a.link:hover {
-          text-decoration: initial;
-          color: $color-Blanco;
-      }
-      a.link, a.link2 {
-          display: block;
-          font-size: 21px;
-          font-weight: 700;
-          color: $color-Gris;
-          line-height: 10px;
-      }
-      a.link2 {
-          padding-top: 15px;
-          float: left;
-          padding-left: 10px;
-      }
-      a.link2:after {
-          content: " / ";
-          padding-left: 6px;
-      }
+    }
+    a.link2:hover, a.link:hover {
+        text-decoration: initial;
+        color: $color-Azul;
+    }
+    a.link2 {
+        padding-top: 15px;
+        float: left;
+        padding-left: 10px;
+    }
+    a.link2:after {
+        content: " / ";
+        padding-left: 6px;
+    }
 }
 @media (max-width: 1117px) {
     .mfp-title {

@@ -68,7 +68,7 @@
         }
     }
     li.effect-milo {
-        background: #0c132c;
+        background: $color-Blanco;
     }
     li.effect-milo img {
         max-width: none;
@@ -87,7 +87,7 @@
         transform: translate3d(0, 0, 0) scale(1);
     }
     li.effect-milo:hover h2 {
-        color: #fff;
+        color: $color-Celeste;
     }
     li.effect-milo h2 {
         position: absolute;
@@ -102,7 +102,7 @@
     li.effect-milo p {
         padding: 0 10px 0 0;
         width: 44%;
-        border-right: 2px solid #fff;
+        border-right: 2px solid $color-Naranja;
         text-align: right;
         opacity: 0;
         font-size: 17px;
