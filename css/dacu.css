@@ -290,7 +290,7 @@ body {
   padding-top: 124px;
   background-color: #FCFCFC; }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body {
     padding-top: 94px; } }
 
@@ -398,7 +398,7 @@ ul.navbar-right {
   padding-top: 14px; }
 
 /* navbar */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .nav-Resp {
     padding-right: 0;
     padding-left: 0; }
@@ -573,7 +573,7 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
         margin-top: 122px; }
       .responsive p:first-of-type {
         margin-bottom: 46px; } }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .responsive .Padding-Diseño {
       padding-top: 30px; } }
 
@@ -645,13 +645,22 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
       height: 100px; } }
   @media (max-width: 992px) {
     .servicios #Icono1 {
-      height: 340px; } }
+      height: 320px; } }
+  @media (max-width: 850px) {
+    .servicios #Icono1 {
+      height: 250px; } }
   @media (max-width: 730px) {
     .servicios #Icono1 {
       height: 260px; } }
-  @media (max-width: 640px) {
+  @media (max-width: 650px) {
     .servicios #Icono1 {
-      height: 250px; } }
+      height: 220px; } }
+  @media (max-width: 500px) {
+    .servicios #Icono1 {
+      height: 161px; } }
+  @media (max-width: 420px) {
+    .servicios #Icono1 {
+      height: 111px; } }
   @media (max-width: 991px) {
     .servicios .owl-carousel .owl-item.center {
       opacity: 1;
@@ -695,7 +704,7 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   .porfolio p.PPL {
     margin-top: 45px; } }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .porfolio p.PPL {
     margin-top: -25px;
     border: 7px solid #14214B; }
@@ -1196,7 +1205,7 @@ img.mfp-img {
   .mfp-title {
     margin: 20px 0 5px 0; } }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .margin-galeria p {
     line-height: 20px;
     font-size: 14px; } }
@@ -1261,7 +1270,7 @@ img.mfp-img {
   .porfolio-content .grid li p {
     letter-spacing: 1px;
     font-size: 68.5%; }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .porfolio-content .grid li figcaption p {
       display: none; } }
   .porfolio-content li.effect-milo {
@@ -1342,7 +1351,7 @@ img.mfp-img {
     line-height: 40px;
     font-size: 25px; } }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .porfolio-content li.effect-milo h2 {
     padding: 0.1em 1.2em;
     font-size: 24px;
@@ -1438,7 +1447,7 @@ img.mfp-img {
   #contacto_misela_lineas_1 {
     width: 145px; } }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .contacto i.fa {
     font-size: 25px;
     width: 56px;

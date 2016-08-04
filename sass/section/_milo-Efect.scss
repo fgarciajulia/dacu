@@ -62,7 +62,7 @@
         letter-spacing: 1px;
         font-size: 68.5%;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .grid li figcaption p {
             display: none;
         }
@@ -166,7 +166,7 @@
         }
     }
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
     .porfolio-content{
         li.effect-milo h2 {
             padding: 0.1em 1.2em;
