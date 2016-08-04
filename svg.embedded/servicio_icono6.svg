@@ -1,7 +1,7 @@
-<svg version="1.1" class="img-responsive servicios_icono" id="servicios_icono6" 
+<svg version="1.1" class="img-responsive-SVG servicios_icono" id="servicios_icono6" 
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="905.8px" height="446.5px" viewBox="0 0 905.8 446.5" enable-background="new 0 0 905.8 446.5"
-	 xml:space="preserve">
+	 xml:space="preserve" preserveAspectRatio="xMinYMin">
 <defs>
 </defs>
 <circle fill="#9B999E" stroke="#333399" stroke-width="2" stroke-miterlimit="10" cx="60.7" cy="423.3" r="19.5"/>

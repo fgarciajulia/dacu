@@ -1,7 +1,7 @@
 <svg version="1.1"
 	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	x="0px" y="0px" width="65.6px" height="309.7px" viewBox="0 0 65.6 309.7" enable-background="new 0 0 65.6 309.7"
-	xml:space="preserve">
+	xml:space="preserve" preserveAspectRatio="xMinYMin">
 <polygon fill="#C99F7E" points="32.3,115.4 21.3,115.4 37.7,144.1 21.3,172.8 32.1,173 48.8,144.2 "/>
 <rect x="4.5" y="4.5" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" width="56.6" height="300.7"/>
 </svg>

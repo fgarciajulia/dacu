@@ -1,7 +1,7 @@
-<svg id="porfolio_BG" class="img-responsive" version="1.0"
+<svg id="porfolio_BG" class="img-responsive-SVG" version="1.0"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="1418.7px" height="1189.7px" viewBox="0 0 1418.7 1189.7" enable-background="new 0 0 1418.7 1189.7"
-	 xml:space="preserve">
+	 xml:space="preserve" preserveAspectRatio="xMinYMin">
 <defs>
 </defs>
 <rect x="708" y="0" fill="#C99F7E" width="137.5" height="145.5"/>

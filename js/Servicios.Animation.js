@@ -93,16 +93,26 @@ function OpenIcon2() {
     .staggerTo(servicios_icono2_nubes, 1, { scaleX: 1, scaleY: 1, transformOrigin: '50% 50%' }, 0.1, 0);
 }
 
-var servicios_icono4_nubes = $('#servicios_icono4 #nubes_1_ g');
-var servicios_icono4_lineas = $('#servicios_icono4 #lineas_1_ line');
-var servicios_icono4_Cuadrado = $('#servicios_icono4 #cuadrados_1_ rect');
-var servicios_icono4_porcentaje = $('#servicios_icono4 #porcentaje_1_');
-var servicios_icono4_porcentaje_Line = $('#servicios_icono4 #porcentaje_1_ g line');
-var servicios_icono4_Humo = $('#servicios_icono4 > #humo_2_ path');
-var servicios_icono4_MacetaTallo = $('#servicios_icono4 > #planta_1_ line#tallo_1_');
-var servicios_icono4_MacetaHojas = $('#servicios_icono4 > #planta_1_ #hojas_1_');
-var servicios_icono4_MacetaFlor = $('#servicios_icono4 > #planta_1_ #Flor_1_');
-var servicios_icono4_Macetapesos = $('#servicios_icono4 > #planta_1_ #pesos_1_');
+var servicios_icono4_nubes = $('#servicios_icono4 #nubes_2_ g');
+var servicios_icono4_lineas = $('#servicios_icono4 #lineas_2_ line');
+var servicios_icono4_Cuadrado = $('#servicios_icono4 #cuadrados_2_ rect');
+var servicios_icono4_porcentaje = $('#servicios_icono4 #porcentaje_2_');
+var servicios_icono4_porcentaje_Line = $('#servicios_icono4 #porcentaje_2_ g line');
+var servicios_icono4_Humo = $('#servicios_icono4 > #humo_1_ path');
+var servicios_icono4_MacetaTallo = $('#servicios_icono4 > #planta_2_ line#tallo_2_');
+var servicios_icono4_MacetaHojas = $('#servicios_icono4 > #planta_2_ #hojas_2_');
+var servicios_icono4_MacetaFlor = $('#servicios_icono4 > #planta_2_ #Flor_2_');
+var servicios_icono4_Macetapesos = $('#servicios_icono4 > #planta_2_ #pesos_2_');
+
+var servicios_icono4_FondoEdi1 = $('#servicios_icono4 > #Edi1_1_ #Fondo_x5F_Edi1_1_');
+var servicios_icono4_LineEdi1 = $('#servicios_icono4 > #Edi1_1_ line');
+var servicios_icono4_TechoEdi1 = $('#servicios_icono4 > #Techo_x5F_Edi1_1_');
+var servicios_icono4_FondoEdi2 = $('#servicios_icono4 > #Edi2_1_ #Fondo_x5F_Edi2_1_');
+var servicios_icono4_LineEdi2 = $('#servicios_icono4 > #Edi2_1_ #LineasEdi2_1_ line');
+var servicios_icono4_Lamp = $('#servicios_icono4 #Lamp_1_');
+
+
+
 
 
 function CierreIcon4() {
@@ -119,6 +129,13 @@ function CierreIcon4() {
     .to(servicios_icono4_MacetaHojas, 1, { scaleX: 0, scaleY: 0, transformOrigin: 'center center' }, 1)
     .to(servicios_icono4_MacetaFlor, 1, { scaleX: 0, scaleY: 0, transformOrigin: 'center 100%' }, .5)
     .to(servicios_icono4_Macetapesos, .5, { scaleX: 0, scaleY: 0, transformOrigin: 'center center' }, 0)
+    .to(servicios_icono4_Lamp, 1, { fill: '#fff' }, 0)
+
+    .to(servicios_icono4_LineEdi1, 1, { drawSVG: '50% 50%' }, 0)
+    .to(servicios_icono4_FondoEdi1, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(servicios_icono4_TechoEdi1, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(servicios_icono4_LineEdi2, 1, { drawSVG: '50% 50%' }, 1)
+    .to(servicios_icono4_FondoEdi2, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 2)
     
 }
 
@@ -138,6 +155,13 @@ function OpenIcon4() {
     .to(servicios_icono4_MacetaHojas, 1, { scaleX: 1, scaleY: 1, transformOrigin: 'center center' }, 1)
     .to(servicios_icono4_MacetaFlor, 1, { scaleX: 1, scaleY: 1, transformOrigin: 'center 100%' }, 2)
     .to(servicios_icono4_Macetapesos, 1, { scaleX: 1, scaleY: 1, transformOrigin: 'center center' }, 2.5)
+    .to(servicios_icono4_Lamp, 1, { fill: '#DDD697' }, 0)
+
+    .to(servicios_icono4_FondoEdi2, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 1)
+    .to(servicios_icono4_LineEdi2, 1, { drawSVG: '0% 100%' }, 2)
+    .to(servicios_icono4_TechoEdi1, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 1)
+    .to(servicios_icono4_FondoEdi1, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 0)
+    .to(servicios_icono4_LineEdi1, 1, { drawSVG: '0% 100%' }, 1)
 }
 CierreIcon1();
 CierreIcon2();

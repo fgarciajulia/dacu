@@ -46,3 +46,20 @@ p{
     @extend %font-P1;
 }
 /* Texto */
+
+svg:not(.graphic){
+    top: 0;
+    left: 0;
+    transform-origin: 0px 0px 0px;
+}
+.img-responsive-SVG{
+  display: block;
+  max-width: 100%;
+    height: initial;
+}
+
+ svg {
+        -ms-transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+}

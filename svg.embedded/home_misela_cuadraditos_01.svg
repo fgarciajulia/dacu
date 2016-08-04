@@ -1,7 +1,7 @@
 <svg id="home_misela_cuadraditos_01" class="cuadraditos_sereados"  version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="70.6px" height="40.4px" viewBox="0 0 70.6 40.4" enable-background="new 0 0 70.6 40.4"
-	 xml:space="preserve">
+	 xml:space="preserve" preserveAspectRatio="xMinYMin">
 	<rect x="0" y="0" fill="#333399" width="9.9" height="9"/>
 	<rect x="20.7" y="0" fill="#333399" width="9.9" height="9"/>
 	<rect x="0" y="15.5" fill="#333399" width="9.9" height="9"/>

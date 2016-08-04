@@ -48,7 +48,7 @@ $(window).ready(function () {
 
 
   /* Mockup 1 */
-  TweenLite.from('#Line1-poly', 7, { drawSVG: '100% 100%', delay: 0.2 });
+  TweenLite.from('#Line1-poly_1_', 7, { drawSVG: '100% 100%', delay: 0.2 });
   TweenLite.from('#Line2-poly', 5, { drawSVG: '0% 0%', delay: 6 });
 
   /* Title  Diseño Grafico */
@@ -59,7 +59,7 @@ $(window).ready(function () {
 
   /* Diseño Grafico */
   var misela1 = $('.cuadraditos_sereados > rect');
-  var minela2 = $('#responsive_misela_cuadraditos_02 > rect');
+  var minela2 = $('#responsive_misela_cuadraditos_02  rect');
   var miselaSlider = $('.owl-dot');
 
 

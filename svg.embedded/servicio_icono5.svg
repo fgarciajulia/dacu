@@ -1,7 +1,7 @@
-<svg version="1.1" class="img-responsive servicios_icono" id="servicios_icono5" 
+<svg version="1.1" class="img-responsive-SVG servicios_icono" id="servicios_icono5" 
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="832.3px" height="450.2px" viewBox="0 0 832.3 450.2" enable-background="new 0 0 832.3 450.2"
-	 xml:space="preserve">
+	 xml:space="preserve" preserveAspectRatio="xMinYMin">
 <defs>
 </defs>
 <line fill="none" stroke="#E88356" stroke-width="3" stroke-miterlimit="10" x1="676.5" y1="426.2" x2="727.4" y2="426.2"/>

@@ -1,7 +1,7 @@
-<svg version="1.1" class="img-responsive"
+<svg version="1.1" class="img-responsive-SVG"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="1248.4px" height="466.3px" viewBox="0 0 1248.4 466.3" enable-background="new 0 0 1248.4 466.3"
-	 xml:space="preserve">
+	 xml:space="preserve" preserveAspectRatio="xMinYMin">
 <defs>
 <linearGradient id="SVGID2" gradientUnits="userSpaceOnUse" x1="858.9029" y1="91.5472" x2="909.3" y2="91.5472">
 	<stop  offset="0.1626" style="stop-color:#333399"/>
