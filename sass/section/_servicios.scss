@@ -61,63 +61,20 @@
             margin-bottom: 11%;
         }
     }
-    #Icono1{
-        height: 170px;
+    #Icono1 {
+        position: relative; 
+        height:0; 
+        width: 100%; 
+        padding: 0;
+        padding-bottom: 100%; 
+        padding: 0 0 55%; /* 100% * 55/60 */
     }
-    @media (max-width: 1700px){
-        #Icono1{
-            height: 150px;
-        }
-    }
-    @media (max-width: 1600px){
-        #Icono1{
-            height: 140px;
-        }
-    }
-    @media (max-width: 1500px){
-        #Icono1{
-            height: 120px;
-        }
-    }
-    @media (max-width: 1400px){
-        #Icono1{
-            height: 110px;
-        }
-    }
-    @media (max-width: 1150px){
-        #Icono1{
-            height: 100px;
-        }
-    }
-    @media (max-width: 992px){
-        #Icono1{
-            height: 320px;
-        }
-    }
-    @media (max-width: 850px){
-        #Icono1{
-            height: 250px;
-        }
-    }
-    @media (max-width: 730px){
-        #Icono1{
-            height: 260px;
-        }
-    }
-    @media (max-width: 650px){
-        #Icono1{
-            height: 220px;
-        }
-    }
-    @media (max-width: 500px){
-        #Icono1{
-            height: 161px;
-        }
-    }
-    @media (max-width: 420px){
-        #Icono1{
-            height: 111px;
-        }
+    #Icono1 svg{
+        position: absolute; 
+        height: 100%; 
+        width: 100%; 
+        left: 0; 
+        top:0;
     }
     @media (max-width: 991px){
         .owl-carousel{
