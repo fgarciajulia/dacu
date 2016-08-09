@@ -334,6 +334,9 @@ svg {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0); }
 
+@-ms-viewport {
+  width: device-width; }
+
 /* navbar */
 nav.Fondo {
   border-bottom: 6px solid #C99f7e;
