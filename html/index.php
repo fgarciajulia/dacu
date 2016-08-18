@@ -6,6 +6,7 @@
     @@include('head.meta.html')
 
     <link rel="stylesheet" type="text/css" href="app.min.css">
+  @@include('body.googleAnalytics.html')
 </head>
 
 <body data-spy="scroll" id="page-top" data-target=".navbar-fixed-top">
