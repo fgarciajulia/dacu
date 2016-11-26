@@ -8,22 +8,8 @@ var fileinclude = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
 var htmlmin = require('gulp-htmlmin');
+var minify = require('gulp-minify');
 
-gulp.task('css', function () {
-  return gulp.src([
-    'css/bootstrap.min.css',
-    'css/owl.carousel.css',
-    'css/animate.css',
-    'css/font-awesome.min.css',
-    'css/Dacu.css'
-  ])
-    .pipe(autoprefixer())
-    .pipe(sourcemaps.init())
-    .pipe(concat('app.min.css'))
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('_dist'));
-});
 
 gulp.task('jsDeps', function () {
   return gulp.src([
@@ -37,7 +23,16 @@ gulp.task('jsDeps', function () {
     'js/jquery.magnific-popup.js',
     'js/jquery.validate.min.js'
   ]) 
-    .pipe(concat('app.deps.min.js'))
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.deps.js'))
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      },
+      exclude: ['tasks'],
+    }))
+    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('_dist'));
 });
 
@@ -47,18 +42,32 @@ gulp.task('js', function () {
     'js/Dacu.js',
   ]) 
     .pipe(sourcemaps.init())
-    .pipe(concat('app.min.js'))
+    .pipe(concat('app.js'))
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      },
+      exclude: ['tasks'],
+    }))
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('_dist'));
 });
 
-
 gulp.task('sass', function () {
   return gulp.src('sass/Dacu.scss')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('css'));
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    //.pipe(autoprefixer()) // desHabilitar para desarrollo
+    .pipe(concat('app.min.css'))
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest('_dist'));
+
 });
+
+
 
 var watchLogger = function (event) {
   gutil.log('[' + event.type + '] ' + event.path);
@@ -71,11 +80,6 @@ gulp.task('fileinclude', function () {
 });
 
 gulp.task('watch', ['build'], function () {
-
-  var wCSS = gulp.watch(['css/*.css'], ['css']);
-  wCSS.on('change', watchLogger);
-  wCSS.on('add', watchLogger);
-  wCSS.on('unlink', watchLogger);
 
   var wSASS = gulp.watch('sass/**/*.scss', ['sass']);
   wSASS.on('change', watchLogger);
@@ -96,7 +100,7 @@ gulp.task('watch', ['build'], function () {
 
 
 gulp.task('build', function (cb) {
-  runSequence(['fileinclude'], ['sass'],['jsDeps'],['js'], ['css'], cb);
+  runSequence(['fileinclude'], ['sass'],['jsDeps'],['js'], cb);
 });
 
 
