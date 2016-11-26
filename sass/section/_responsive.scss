@@ -1,26 +1,26 @@
-.responsive{
-    background: url(img/BG-Azul.png) 73%  0% no-repeat ;
+.responsive {
+    background: url(img/BG-Azul.png) 73% 0% no-repeat;
     background-size: 94%;
-    h1{
+    h1 {
         color: $color-Blanco;
     }
-    p:first-of-type{
+    p:first-of-type {
         margin-top: 50px;
         margin-bottom: 68px;
     }
-    p{
+    p {
         color: $color-Blanco;
-        &.Items{
+        &.Items {
             @extend %Text-Mayuscula;
             margin: 22px 0;
-            span{
+            span {
                 color: $color-Celeste;
                 background-color: $color-Blanco;
                 padding: 0px 12px;
             }
         }
     }
-    .cuadrado{
+    .cuadrado {
         background-color: $color-Celeste;
         width: 155px;
         height: 65px;
@@ -58,53 +58,52 @@
         left: 40px;
         position: absolute;
     }
-    .Mockup2{
+    .Mockup2 {
         -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.58));
         z-index: 60;
         top: 45px;
     }
-    .Mockup2 img{
+    .Mockup2 img {
         max-width: 80%;
     }
-    @media (max-width: 1620px){
-        .hidder-Responsive{
+    @media (max-width: 1620px) {
+        .hidder-Responsive {
             display: none;
         }
-        .Mockup2 img{
+        .Mockup2 img {
             max-width: 100%;
         }
     }
-    @media (max-width: 1360px){
+    @media (max-width: 1360px) {
         .Padding-Diseño {
             padding-top: 170px;
         }
-        .Line5Col{
+        .Line5Col {
             margin-top: 238px;
         }
         #responsive_misela_cuadraditos_02 {
             margin-top: 162px;
         }
-        .cuadrado{
+        .cuadrado {
             margin-top: -12px;
         }
     }
-    @media (max-width: 992px){
-        background-repeat: repeat ;
+    @media (max-width: 992px) {
+        background-repeat: repeat;
         background-size: 100%;
-        .cuadrado{
+        .cuadrado {
             display: none;
         }
         #responsive_misela_cuadraditos_02 {
             margin-top: 122px;
         }
-        p:first-of-type{
-            margin-bottom: 46px; 
+        p:first-of-type {
+            margin-bottom: 46px;
         }
-        
     }
-    @media (max-width: 767px){
-        .Padding-Diseño{
+    @media (max-width: 767px) {
+        .Padding-Diseño {
             padding-top: 30px;
         }
     }

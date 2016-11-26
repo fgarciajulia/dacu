@@ -6,7 +6,7 @@ $(document).ready(function () {
     loop: true,
     items: 1,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 6000,
     autoplayHoverPause: false,
     autoplaySpeed: true,
     animateOut: 'fadeOut',
@@ -26,13 +26,14 @@ $(window).scroll(function () {
 });
 
 $(function () {
-  $('nav a').bind('click', function (event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-      scrollTop: $($anchor.attr('href')).offset().top
-    }, 1500, 'easeInOutExpo');
-    event.preventDefault();
-  });
+  $('nav a').bind('click',
+    function (event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+      }, 1500, 'easeInOutExpo');
+      event.preventDefault();
+    });
 });
 
 
@@ -48,12 +49,28 @@ $(window).ready(function () {
 
 
   /* Mockup 1 */
-  TweenLite.from('#Line1-poly_1_', 7, { drawSVG: '100% 100%', delay: 0.2 });
-  TweenLite.from('#Line2-poly', 5, { drawSVG: '0% 0%', delay: 6 });
+  TweenLite.from('#Line1-poly_1_',
+    7, {
+      drawSVG: '100% 100%',
+      delay: 0.2
+    });
+  TweenLite.from('#Line2-poly',
+    5, {
+      drawSVG: '0% 0%',
+      delay: 6
+    });
 
   /* Title  Diseño Grafico */
-  TweenLite.to('#Line3-poly', 1, { drawSVG: '6% 85%', delay: 0 });
-  TweenLite.to('#Line4-poly', 1, { drawSVG: '30% 100%', delay: 0 });
+  TweenLite.to('#Line3-poly',
+    1, {
+      drawSVG: '6% 85%',
+      delay: 0
+    });
+  TweenLite.to('#Line4-poly',
+    1, {
+      drawSVG: '30% 100%',
+      delay: 0
+    });
 
 
 
@@ -63,16 +80,40 @@ $(window).ready(function () {
   var miselaSlider = $('.owl-dot');
 
 
-  TweenMax.staggerFrom(misela1, 0.5, { opacity: 0, y: 200, x: 200, scale: 3, delay: 0.5 }, 0.2);
-  TweenMax.staggerFrom(miselaSlider, 0.5, { opacity: 0, y: 200, x: 200, rotation: 680, scale: 2, delay: 0.5 }, 0.2);
+  TweenMax.staggerFrom(misela1, 0.5, {
+    opacity: 0,
+    y: 200,
+    x: 200,
+    scale: 3,
+    delay: 0.5
+  }, 0.2);
+  TweenMax.staggerFrom(miselaSlider, 0.5, {
+    opacity: 0,
+    y: 200,
+    x: 200,
+    rotation: 680,
+    scale: 2,
+    delay: 0.5
+  }, 0.2);
 
   /* Responsive */
 
   var staggerTween = new TimelineMax();
-  staggerTween.append(TweenMax.staggerFrom(minela2, 1, { css: { opacity: 0, y: 200, x: 200, scale: 2 } }, 0.25), 0, 0);
+  staggerTween.append(TweenMax.staggerFrom(minela2, 1, {
+    css: {
+      opacity: 0,
+      y: 200,
+      x: 200,
+      scale: 2
+    }
+  }, 0.25), 0, 0);
   controller.addTween(minela2, staggerTween);
-  controller.addTween(line5, TweenLite.from(line5, 3, { drawSVG: '85% 85%' }));
-  controller.addTween(line5, TweenLite.from($('.line-responsive'), 3, { drawSVG: '0% 0%' }));
+  controller.addTween(line5, TweenLite.from(line5, 3, {
+    drawSVG: '85% 85%'
+  }));
+  controller.addTween(line5, TweenLite.from($('.line-responsive'), 3, {
+    drawSVG: '0% 0%'
+  }));
 });
 
 /* Servicios */
@@ -82,7 +123,7 @@ $(document).ready(function () {
     items: 3,
     autoplay: true,
     autoplayTimeout: 4500,
-    autoplayHoverPause:false,
+    autoplayHoverPause: false,
     center: true,
     margin: 118,
     dragEndSpeed: 1000, //speed when touch
@@ -101,7 +142,9 @@ $(document).ready(function () {
 
   var elementoAnterior = 0;
 
-  owl_Servicios.on('translated.owl.carousel', onTranslatedEvent);
+  owl_Servicios.on('translated.owl.carousel',
+    onTranslatedEvent);
+
   function onTranslatedEvent(event) {
     // Elemento Anterior --> cierre
     if (elementoAnterior == 0) {
@@ -132,7 +175,8 @@ $(document).ready(function () {
 
 function PorfolioAltoMiselanea() {
   var AltoMap = $('.porfolio-content').height();
-  $('.porfolio #XMLID_1_ rect').css('height', AltoMap);
+  $('.porfolio #XMLID_1_ rect').css('height',
+    AltoMap);
 }
 PorfolioAltoMiselanea();
 
@@ -187,7 +231,7 @@ $(document).ready(function () {
 
 /*!
  * classie - class helper functions
- * from bonzo https://github.com/ded/bonzo
+ * from bonzohttps://github.com/ded/bonzo
  * 
  * classie.has( elem, 'my-class' ) -> true/false
  * classie.add( elem, 'my-new-class' )
@@ -200,9 +244,8 @@ $(document).ready(function () {
 
 (function (window) {
 
-  'use strict';
 
-  // class helper functions from bonzo https://github.com/ded/bonzo
+  // class helper functions from bonzohttps://github.com/ded/bonzo
 
   function classReg(className) {
     return new RegExp('(^|\\s+)' + className + '(\\s+|$)');
@@ -222,8 +265,7 @@ $(document).ready(function () {
     removeClass = function (elem, c) {
       elem.classList.remove(c);
     };
-  }
-  else {
+  } else {
     hasClass = function (elem, c) {
       return classReg(c).test(elem.className);
     };
@@ -267,7 +309,7 @@ $(document).ready(function () {
 })(window);
 
 (function () {
-  // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+  // trim polyfill :https://developer.mozilla.org/en-US/docs/gjvaScript/Reference/Global_Objects/String/Trim
   if (!String.prototype.trim) {
     (function () {
       // Make sure we trim BOM and NBSP
@@ -285,8 +327,10 @@ $(document).ready(function () {
     }
 
     // events:
-    inputEl.addEventListener('focus', onInputFocus);
-    inputEl.addEventListener('blur', onInputBlur);
+    inputEl.addEventListener('focus',
+      onInputFocus);
+    inputEl.addEventListener('blur',
+      onInputBlur);
   });
 
   function onInputFocus(ev) {
@@ -300,28 +344,102 @@ $(document).ready(function () {
   }
 })();
 
-/*
---- NAV ---
 
+var demoImgArray = ['img/buenpunto1.jpg',
+  'img/infupa04.jpg',
+  'http://www.dacu.com.ar/img/infupa04.jpg',
+  'http://www.dacu.com.ar/img/infupa01.jpg',
+  'http://www.dacu.com.ar/img/infupa03.jpg',
+  'http://www.dacu.com.ar/img/infupa02.jpg',
+  'http://www.dacu.com.ar/img/infupa05.jpg',
+  'http://www.dacu.com.ar/img/gj1.jpg',
+  'http://www.dacu.com.ar/img/gj1.jpg',
+  'http://www.dacu.com.ar/img/gj2.jpg',
+  'http://www.dacu.com.ar/img/gj2.jpg',
+  'http://www.dacu.com.ar/img/gj3.jpg',
+  'http://www.dacu.com.ar/img/gj3.jpg',
+  'http://www.dacu.com.ar/img/gj4.jpg',
+  'http://www.dacu.com.ar/img/gj4.jpg',
+  'http://www.dacu.com.ar/img/sigel1.jpg',
+  'http://www.dacu.com.ar/img/sigel1.jpg',
+  'http://www.dacu.com.ar/img/sigel3.jpg',
+  'http://www.dacu.com.ar/img/sigel5.jpg',
+  'http://www.dacu.com.ar/img/sigel6.jpg',
+  'http://www.dacu.com.ar/img/sigel2.jpg',
+  'http://www.dacu.com.ar/img/sigel4.jpg',
+  'http://www.dacu.com.ar/img/sigel7.jpg',
+  'http://www.dacu.com.ar/img/goloso1.jpg',
+  'http://www.dacu.com.ar/img/goloso1.jpg',
+  'http://www.dacu.com.ar/img/goloso2.jpg',
+  'http://www.dacu.com.ar/img/goloso3.jpg',
+  'http://www.dacu.com.ar/img/goloso4.jpg',
+  'http://www.dacu.com.ar/img/goloso4.jpg',
+  'http://www.dacu.com.ar/img/goloso5.jpg',
+  'http://www.dacu.com.ar/img/goloso6.jpg',
+  'http://www.dacu.com.ar/img/goloso7.jpg',
+  'http://www.dacu.com.ar/img/goloso7.jpg',
+  'http://www.dacu.com.ar/img/goloso8.jpg',
+  'http://www.dacu.com.ar/img/goloso9.jpg',
+  'http://www.dacu.com.ar/img/goloso10.jpg',
+  'http://www.dacu.com.ar/img/unicor2.jpg',
+  'http://www.dacu.com.ar/img/unicor2.jpg',
+  'http://www.dacu.com.ar/img/unicor1.jpg',
+  'http://www.dacu.com.ar/img/unicor3.jpg',
+  'http://www.dacu.com.ar/img/alessandri2.jpg',
+  'http://www.dacu.com.ar/img/alessandri2.jpg',
+  'http://www.dacu.com.ar/img/alessandri1.jpg',
+  'http://www.dacu.com.ar/img/alessandri3.jpg',
+  'http://www.dacu.com.ar/img/alessandri4.jpg',
+  'http://www.dacu.com.ar/img/santelmo5.jpg',
+  'http://www.dacu.com.ar/img/santelmo5.jpg',
+  'http://www.dacu.com.ar/img/santelmo4.jpg',
+  'http://www.dacu.com.ar/img/santelmo3.jpg',
+  'http://www.dacu.com.ar/img/santelmo2.jpg',
+  'http://www.dacu.com.ar/img/santelmo1.jpg',
+  'http://www.dacu.com.ar/img/santelmo6.jpg',
+  'http://www.dacu.com.ar/img/silema3.jpg',
+  'http://www.dacu.com.ar/img/silema3.jpg',
+  'http://www.dacu.com.ar/img/silema1.jpg',
+  'http://www.dacu.com.ar/img/silema2.jpg',
+  'http://www.dacu.com.ar/img/silema4.jpg',
+  'http://www.dacu.com.ar/img/buenpunto1.jpg',
+  'http://www.dacu.com.ar/img/buenpunto1.jpg',
+  'http://www.dacu.com.ar/img/mega1.jpg',
+  'http://www.dacu.com.ar/img/mega1.jpg',
+  'http://www.dacu.com.ar/img/interlink1.jpg',
+  'http://www.dacu.com.ar/img/interlink1.jpg',
+  'http://www.dacu.com.ar/img/cuarta1.jpg',
+  'http://www.dacu.com.ar/img/cuarta1.jpg',
+  'http://www.dacu.com.ar/img/Mockup2-0.gif',
+  'http://www.dacu.com.ar/img/Mockup1-0.png',
+  'http://www.dacu.com.ar/img/Mockup1-1.png',
+  'http://www.dacu.com.ar/img/Mockup1-2.png',
+  'http://www.dacu.com.ar/img/Mockup1-3.png',
+  'http://www.dacu.com.ar/img/Mockup1-4.png',
+  'http://www.dacu.com.ar/img/Mockup1-5.png',
+  'http://www.dacu.com.ar/img/Mockup2-05.png',
+  'http://www.dacu.com.ar/img/Mockup3-0.png'
+];
 
-    var width_Home = $( '.Nav-Home a span' ).width();
-    var width_Servicios = $( '.Nav-Servicios a span' ).width();
-    var width_Porfolio = $( '.Nav-Porfolio a span' ).width();
-    var width_Contacto = $( '.Nav-Contacto a span' ).width();
+var imagenes_totales = demoImgArray.length;
+var imagenes_cargadas = 0;
+var porcentaje_imagenes = 0;
 
-    function pepe() {
-        $( '.Nav-Home:not(.active) a span' ).css({ 'width': width_Home });
-        $( '.Nav-Servicios:not(.active) a span' ).css({ 'width': width_Servicios });
-        $( '.Nav-Porfolio:not(.active) a span' ).css({ 'width': width_Porfolio    });
-        $( '.Nav-Contacto:not(.active) a span' ).css({ 'width': width_Contacto   });
-    };
-    function pepe2() {
-        $( '.Nav-Home:not(.active) a span' ).css({ 'width': 0 });
-        $( '.Nav-Servicios:not(.active) a span' ).css({ 'width': 0 });
-        $( '.Nav-Porfolio:not(.active) a span' ).css({ 'width': 0  });
-        $( '.Nav-Contacto:not(.active) a span' ).css({ 'width': 0 });
-    };
-    $( 'nav' ).mouseenter( pepe );
-    $( 'nav' ).mouseleave( pepe2 ) ;
-    pepe2();
-    */
+preload(demoImgArray);
+
+$(window).load(function () {
+  $('.percentage').text('100%');
+});
+
+/* LOADING */
+function preload(imgArray) {
+  $(imgArray).each(function () {
+    $('<img>').attr('src', this).load(function () {
+      imagenes_cargadas++;
+      porcentaje_imagenes = Math.floor((imagenes_cargadas / imagenes_totales) * 100);
+
+      $('.percentage').text(porcentaje_imagenes + '%');
+
+    });
+  });
+}

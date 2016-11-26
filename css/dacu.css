@@ -373,8 +373,8 @@ nav.Fondo {
     -webkit-transition: opacity 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75), visibility 0s linear;
     transition: opacity 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75), visibility 0s linear;
     visibility: visible;
-    -webkit-transition-delay: 50ms,50ms;
-            transition-delay: 50ms,50ms; }
+    -webkit-transition-delay: 50ms, 50ms;
+            transition-delay: 50ms, 50ms; }
     .navbar-default .navbar-nav > li > a:before {
       content: "";
       margin-top: 7px;
@@ -413,11 +413,13 @@ ul.navbar-right {
     box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.1); }
   nav.Fondo .navbar-collapse {
     background-color: #333399; }
-  nav.Fondo .navbar-default .navbar-toggle:focus, nav.Fondo .navbar-default .navbar-toggle:hover {
+  nav.Fondo .navbar-default .navbar-toggle:focus,
+  nav.Fondo .navbar-default .navbar-toggle:hover {
     background-color: #333399; }
   nav .navbar-toggle {
     margin-top: 17px; }
-  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  .navbar-default .navbar-toggle:focus,
+  .navbar-default .navbar-toggle:hover {
     background-color: #fcfcfc; } }
 
 .home h1 {
@@ -753,12 +755,10 @@ svg#responsive_misela_cuadraditos_01, svg#home_misela_cuadraditos_01 {
   cursor: progress; }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -webkit-zoom-out;
   cursor: zoom-out; }
 
 .mfp-zoom {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
   cursor: zoom-in; }
 
 .mfp-auto-cursor .mfp-content {
