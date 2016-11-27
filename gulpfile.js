@@ -20,7 +20,8 @@ gulp.task('jsDeps', function () {
     'js/DSVGP.min.js',
     'js/owl.carousel.js',
     'js/jquery.magnific-popup.js',
-    'js/jquery.validate.min.js'
+    'js/jquery.validate.min.js',
+    'js/jquery-ui.min.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(concat('app.deps.js'))

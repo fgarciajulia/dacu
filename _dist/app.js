@@ -525,6 +525,7 @@ var demoImgArray = [
 var imagenes_totales = demoImgArray.length;
 var imagenes_cargadas = 0;
 var porcentaje_imagenes = 0;
+var loadingProgress = 0; //timeline progress - starts at 0
 
 preload(demoImgArray);
 
@@ -538,53 +539,33 @@ function preload(imgArray) {
     $('<img>').attr('src', this).load(function () {
       imagenes_cargadas++;
       porcentaje_imagenes = Math.floor((imagenes_cargadas / imagenes_totales) * 100);
+      loadingProgress = (imagenes_cargadas / imagenes_totales);
 
-      $('.percentage').text(porcentaje_imagenes + '%');
-
-    });
-  });
-}
-
-var demoImgArray = [
-  'img/Mockup1-3.png',
-  'img/Mockup1-1.png',
-  'img/Mockup1-2.png',
-  'img/Mockup1-5.png',
-  'img/Mockup1-4.png',
-  'img/Mockup2-0.gif'
-];
-
-var imagenes_totales = demoImgArray.length;
-var imagenes_cargadas = 0;
-var porcentaje_imagenes = 0;
-
-preload(demoImgArray);
-
-$(window).load(function () {
-  $('.percentage').text('100%');
-});
-
-/* LOADING */
-function preload(imgArray) {
-  $(imgArray).each(function () {
-    $('<img>').attr('src', this).load(function () {
-      imagenes_cargadas++;
-      porcentaje_imagenes = Math.floor((imagenes_cargadas / imagenes_totales) * 100);
-
-      $('.percentage').text(porcentaje_imagenes + '%');
-
+      TweenLite.to(progressTl, 0.7, {
+        progress: loadingProgress,
+        ease: Linear.easeNone
+      });
 
     });
   });
 }
-var tl = new TimelineLite({
-  onUpdate: porcentaje_imagenes / 100
+var progressTl = new TimelineMax({
+  paused: true,
+  onUpdate: progressUpdate,
 });
 
-var hola = $('.hola');
-tl
-  .from(hola, 1, {
-    scaleX: 0,
-    transformOrigin: '0% 0%'
-  }, 0.1);
+progressTl
+//tween the progress bar width
+  .to($('.hola'), 1, {
+    width: 100,
+    ease: Linear.easeNone
+  });
+
+//as the progress bar witdh updates and grows we put the precentage loaded in the screen
+function progressUpdate() {
+  //the percentage loaded based on the tween's progress
+  loadingProgress = Math.round(progressTl.progress() * 100);
+  //we put the percentage in the screen
+  $('.percentage').text(loadingProgress + '%');
+}
 //# sourceMappingURL=app.js.map
