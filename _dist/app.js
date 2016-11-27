@@ -513,80 +513,13 @@ $(document).ready(function () {
 })();
 
 
-var demoImgArray = ['img/buenpunto1.jpg',
-  'img/infupa04.jpg',
-  'http://www.dacu.com.ar/img/infupa04.jpg',
-  'http://www.dacu.com.ar/img/infupa01.jpg',
-  'http://www.dacu.com.ar/img/infupa03.jpg',
-  'http://www.dacu.com.ar/img/infupa02.jpg',
-  'http://www.dacu.com.ar/img/infupa05.jpg',
-  'http://www.dacu.com.ar/img/gj1.jpg',
-  'http://www.dacu.com.ar/img/gj1.jpg',
-  'http://www.dacu.com.ar/img/gj2.jpg',
-  'http://www.dacu.com.ar/img/gj2.jpg',
-  'http://www.dacu.com.ar/img/gj3.jpg',
-  'http://www.dacu.com.ar/img/gj3.jpg',
-  'http://www.dacu.com.ar/img/gj4.jpg',
-  'http://www.dacu.com.ar/img/gj4.jpg',
-  'http://www.dacu.com.ar/img/sigel1.jpg',
-  'http://www.dacu.com.ar/img/sigel1.jpg',
-  'http://www.dacu.com.ar/img/sigel3.jpg',
-  'http://www.dacu.com.ar/img/sigel5.jpg',
-  'http://www.dacu.com.ar/img/sigel6.jpg',
-  'http://www.dacu.com.ar/img/sigel2.jpg',
-  'http://www.dacu.com.ar/img/sigel4.jpg',
-  'http://www.dacu.com.ar/img/sigel7.jpg',
-  'http://www.dacu.com.ar/img/goloso1.jpg',
-  'http://www.dacu.com.ar/img/goloso1.jpg',
-  'http://www.dacu.com.ar/img/goloso2.jpg',
-  'http://www.dacu.com.ar/img/goloso3.jpg',
-  'http://www.dacu.com.ar/img/goloso4.jpg',
-  'http://www.dacu.com.ar/img/goloso4.jpg',
-  'http://www.dacu.com.ar/img/goloso5.jpg',
-  'http://www.dacu.com.ar/img/goloso6.jpg',
-  'http://www.dacu.com.ar/img/goloso7.jpg',
-  'http://www.dacu.com.ar/img/goloso7.jpg',
-  'http://www.dacu.com.ar/img/goloso8.jpg',
-  'http://www.dacu.com.ar/img/goloso9.jpg',
-  'http://www.dacu.com.ar/img/goloso10.jpg',
-  'http://www.dacu.com.ar/img/unicor2.jpg',
-  'http://www.dacu.com.ar/img/unicor2.jpg',
-  'http://www.dacu.com.ar/img/unicor1.jpg',
-  'http://www.dacu.com.ar/img/unicor3.jpg',
-  'http://www.dacu.com.ar/img/alessandri2.jpg',
-  'http://www.dacu.com.ar/img/alessandri2.jpg',
-  'http://www.dacu.com.ar/img/alessandri1.jpg',
-  'http://www.dacu.com.ar/img/alessandri3.jpg',
-  'http://www.dacu.com.ar/img/alessandri4.jpg',
-  'http://www.dacu.com.ar/img/santelmo5.jpg',
-  'http://www.dacu.com.ar/img/santelmo5.jpg',
-  'http://www.dacu.com.ar/img/santelmo4.jpg',
-  'http://www.dacu.com.ar/img/santelmo3.jpg',
-  'http://www.dacu.com.ar/img/santelmo2.jpg',
-  'http://www.dacu.com.ar/img/santelmo1.jpg',
-  'http://www.dacu.com.ar/img/santelmo6.jpg',
-  'http://www.dacu.com.ar/img/silema3.jpg',
-  'http://www.dacu.com.ar/img/silema3.jpg',
-  'http://www.dacu.com.ar/img/silema1.jpg',
-  'http://www.dacu.com.ar/img/silema2.jpg',
-  'http://www.dacu.com.ar/img/silema4.jpg',
-  'http://www.dacu.com.ar/img/buenpunto1.jpg',
-  'http://www.dacu.com.ar/img/buenpunto1.jpg',
-  'http://www.dacu.com.ar/img/mega1.jpg',
-  'http://www.dacu.com.ar/img/mega1.jpg',
-  'http://www.dacu.com.ar/img/interlink1.jpg',
-  'http://www.dacu.com.ar/img/interlink1.jpg',
-  'http://www.dacu.com.ar/img/cuarta1.jpg',
-  'http://www.dacu.com.ar/img/cuarta1.jpg',
-  'http://www.dacu.com.ar/img/Mockup2-0.gif',
-  'http://www.dacu.com.ar/img/Mockup1-0.png',
-  'http://www.dacu.com.ar/img/Mockup1-1.png',
-  'http://www.dacu.com.ar/img/Mockup1-2.png',
-  'http://www.dacu.com.ar/img/Mockup1-3.png',
-  'http://www.dacu.com.ar/img/Mockup1-4.png',
-  'http://www.dacu.com.ar/img/Mockup1-5.png',
-  'http://www.dacu.com.ar/img/Mockup2-05.png',
-  'http://www.dacu.com.ar/img/Mockup3-0.png'
+var demoImgArray = [
+  'img/Mockup1-3.png',
+  'img/Mockup1-1.png',
+  'img/Mockup1-2.png',
+  'img/Mockup1-5.png',
+  'img/Mockup1-4.png',
+  'img/Mockup2-0.gif'
 ];
 
 var imagenes_totales = demoImgArray.length;
@@ -611,4 +544,47 @@ function preload(imgArray) {
     });
   });
 }
+
+var demoImgArray = [
+  'img/Mockup1-3.png',
+  'img/Mockup1-1.png',
+  'img/Mockup1-2.png',
+  'img/Mockup1-5.png',
+  'img/Mockup1-4.png',
+  'img/Mockup2-0.gif'
+];
+
+var imagenes_totales = demoImgArray.length;
+var imagenes_cargadas = 0;
+var porcentaje_imagenes = 0;
+
+preload(demoImgArray);
+
+$(window).load(function () {
+  $('.percentage').text('100%');
+});
+
+/* LOADING */
+function preload(imgArray) {
+  $(imgArray).each(function () {
+    $('<img>').attr('src', this).load(function () {
+      imagenes_cargadas++;
+      porcentaje_imagenes = Math.floor((imagenes_cargadas / imagenes_totales) * 100);
+
+      $('.percentage').text(porcentaje_imagenes + '%');
+
+
+    });
+  });
+}
+var tl = new TimelineLite({
+  onUpdate: porcentaje_imagenes / 100
+});
+
+var hola = $('.hola');
+tl
+  .from(hola, 1, {
+    scaleX: 0,
+    transformOrigin: '0% 0%'
+  }, 0.1);
 //# sourceMappingURL=app.js.map
