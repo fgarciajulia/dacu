@@ -3,7 +3,6 @@ var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 var runSequence = require('run-sequence');
-var cleanCSS = require('gulp-clean-css');
 var fileinclude = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
 var sass = require('gulp-sass');
@@ -22,36 +21,36 @@ gulp.task('jsDeps', function () {
     'js/owl.carousel.js',
     'js/jquery.magnific-popup.js',
     'js/jquery.validate.min.js'
-  ]) 
-    .pipe(sourcemaps.init())
-    .pipe(concat('app.deps.js'))
-    .pipe(minify({
-      ext: {
-        src: '.js',
-        min: '.min.js'
-      },
-      exclude: ['tasks'],
-    }))
-    .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('_dist'));
+  ])
+  .pipe(sourcemaps.init())
+  .pipe(concat('app.deps.js'))
+  .pipe(minify({
+    ext: {
+      src: '.js',
+      min: '.min.js'
+    },
+    exclude: ['tasks'],
+  }))
+  .pipe(sourcemaps.write('/'))
+  .pipe(gulp.dest('_dist'));
 });
 
 gulp.task('js', function () {
   return gulp.src([
     'js/Servicios.Animation.js',
     'js/Dacu.js',
-  ]) 
-    .pipe(sourcemaps.init())
-    .pipe(concat('app.js'))
-    .pipe(minify({
-      ext: {
-        src: '.js',
-        min: '.min.js'
-      },
-      exclude: ['tasks'],
-    }))
-    .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('_dist'));
+  ])
+  .pipe(sourcemaps.init())
+  .pipe(concat('app.js'))
+  .pipe(minify({
+    ext: {
+      src: '.js',
+      min: '.min.js'
+    },
+    exclude: ['tasks'],
+  }))
+  .pipe(sourcemaps.write('/'))
+  .pipe(gulp.dest('_dist'));
 });
 
 gulp.task('sass', function () {
@@ -75,7 +74,9 @@ var watchLogger = function (event) {
 gulp.task('fileinclude', function () {
   gulp.src(['html/index.php'])
     .pipe(fileinclude())
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('_dist'));
 });
 
@@ -96,11 +97,11 @@ gulp.task('watch', ['build'], function () {
   hJS.on('add', watchLogger);
   hJS.on('unlink', watchLogger);
 
-}); 
+});
 
 
 gulp.task('build', function (cb) {
-  runSequence(['fileinclude'], ['sass'],['jsDeps'],['js'], cb);
+  runSequence(['fileinclude'], ['sass'], ['jsDeps'], ['js'], cb);
 });
 
 

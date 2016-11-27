@@ -5,15 +5,19 @@
 	width: 100%;
 	vertical-align: top;
 }
+
 .input {
-    margin-top: 41px;
+	margin-top: 41px;
 }
-textarea{
-    height:  140px;
+
+textarea {
+	height: 140px;
 }
+
 .input:first-of-type {
-    margin-top: 0px;
+	margin-top: 0px;
 }
+
 .input__field {
 	position: relative;
 	display: block;
@@ -26,7 +30,8 @@ textarea{
 	color: #aaa;
 	font-weight: bold;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	-webkit-appearance: none; /* for box shadows to show on iOS */
+	-webkit-appearance: none;
+	/* for box shadows to show on iOS */
 }
 
 .input__field:focus {
@@ -42,22 +47,22 @@ textarea{
 	font-weight: bold;
 	font-size: 70.25%;
 	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-    pointer-events: none;
+	pointer-events: none;
 }
 
 .input__label-content {
 	position: relative;
 	display: block;
-    padding: 0.6em 0;
-    width: 100%;
-    font-size: 18px;
+	padding: 0.6em 0;
+	width: 100%;
+	font-size: 18px;
 }
 
 .graphic {
@@ -69,6 +74,7 @@ textarea{
 
 
 /* Individual styles */
+
 
 /* Madoka */
 
@@ -100,55 +106,56 @@ textarea{
 	-webkit-transition: stroke-dashoffset 0.3s;
 	transition: stroke-dashoffset 0.3s;
 	pointer-events: none;
-
 	stroke: $color-Naranja;
 	stroke-width: 4px;
 	stroke-dasharray: 1246;
 	stroke-dashoffset: 679;
 }
+
 .graphic--madoka2 {
 	-webkit-transform: scale3d(1, -1, 1);
 	transform: scale3d(1, -1, 1);
 	-webkit-transition: stroke-dashoffset 0.3s;
 	transition: stroke-dashoffset 0.3s;
 	pointer-events: none;
-
 	stroke: $color-Naranja;
 	stroke-width: 4px;
 	stroke-dasharray: 1433;
 	stroke-dashoffset: 865;
 }
 
-.input__field--madoka:focus + .input__label--madoka,
+.input__field--madoka:focus+.input__label--madoka,
 .input--filled .input__label--madoka {
 	cursor: default;
 	pointer-events: none;
 }
 
-.input__field--madoka:focus + .input__label--madoka .graphic--madoka,
+.input__field--madoka:focus+.input__label--madoka .graphic--madoka,
 .input--filled .graphic--madoka {
 	stroke-dashoffset: 0;
 }
-.input__field--madoka:focus + .input__label--madoka .graphic--madoka2,
+
+.input__field--madoka:focus+.input__label--madoka .graphic--madoka2,
 .input--filled .graphic--madoka2 {
 	stroke-dashoffset: 0;
 }
 
-.input__field--madoka:focus + .input__label--madoka .input__label-content--madoka,
+.input__field--madoka:focus+.input__label--madoka .input__label-content--madoka,
 .input--filled .input__label-content--madoka {
 	-webkit-transform: scale3d(0.2.2em, 0.81, 1) translate3d(0, 2.2em, 0);
 	transform: scale3d(0.81, 0.81, 1) translate3d(0, 2.2em, 0);
-    color: rgba(252, 252, 252,0.56);
+	color: rgba(252, 252, 252, 0.56);
 }
-textarea.input__field--madoka:focus +  .input__label--madoka .input__label-content--madoka,
-.input--filled textarea ~ label .input__label-content--madoka {
-    color: rgba(252, 252, 252, 0);
+
+textarea.input__field--madoka:focus+.input__label--madoka .input__label-content--madoka,
+.input--filled textarea~label .input__label-content--madoka {
+	color: rgba(252, 252, 252, 0);
 }
 
 input.error {
-    color: #E88356;
+	color: #E88356;
 }
-input.error ~ label svg{
-    
-    stroke: #E88356;
+
+input.error~label svg {
+	stroke: #E88356;
 }

@@ -1,4 +1,3 @@
-
 /* Footer */
 
 .contenedor-Redes {
@@ -27,7 +26,7 @@
   }
 }
 
-@include keyframes(line) {
+@keyframes line {
   0% {
     background-color: #F7FAFC;
     color: #D18C63;

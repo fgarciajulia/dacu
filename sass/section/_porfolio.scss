@@ -1,57 +1,59 @@
-.porfolio{
-    h1{
-        color: $color-Blanco;
-    margin-bottom: 54px;
-    margin-top: -34px;
-    }
-    p.PPL{
-        color: $color-Azul;
-        @extend %font-P2;
-        margin-bottom: 85px;
-        background-color: $color-Blanco;
-        padding: 4%;
-        border: 7px solid $color-Celeste;
-        color: #14214B;
-        margin-top: 105px;
-        text-align: center;
-    }
-    .Text-margin-top {
-        margin-top: 138px;
-    }
-    .BG-SVG{
-        position: absolute;
-        padding-left: 0px;
-    }
-    #porfolio_icon{
-        margin: auto;
-    }
-    .porfolio_misela_right,
-    .porfolio_misela_left{
-        position: absolute;
-        margin-top: -82px;
-     }
-    #porfolio_misela_right{
-        margin: auto;
-    }
+.porfolio {
+	h1 {
+		color: $color-Blanco;
+		margin-bottom: 54px;
+		margin-top: -34px;
+	}
+	p.PPL {
+		color: $color-Azul;
+		@extend %font-P2;
+		margin-bottom: 85px;
+		background-color: $color-Blanco;
+		padding: 4%;
+		border: 7px solid $color-Celeste;
+		color: #14214B;
+		margin-top: 105px;
+		text-align: center;
+	}
+	.Text-margin-top {
+		margin-top: 138px;
+	}
+	.BG-SVG {
+		position: absolute;
+		padding-left: 0px;
+	}
+	#porfolio_icon {
+		margin: auto;
+	}
+	.porfolio_misela_right,
+	.porfolio_misela_left {
+		position: absolute;
+		margin-top: -82px;
+	}
+	#porfolio_misela_right {
+		margin: auto;
+	}
 }
-@media (max-width: 992px){
-    .porfolio{
-      p.PPL {
-        margin-top: 45px;
-        }
-    }
+
+@media (max-width: 992px) {
+	.porfolio {
+		p.PPL {
+			margin-top: 45px;
+		}
+	}
 }
-@media (max-width: 767px){
-    .porfolio{
-      p.PPL {
-            margin-top: -25px;
-            border: 7px solid $color-Azul;
-        }
-        .BG{
-            background-color: $color-Celeste;
-        }
-        .Text-margin-top {
-            margin-top: 88px;
-        }
-    }
+
+@media (max-width: 767px) {
+	.porfolio {
+		p.PPL {
+			margin-top: -25px;
+			border: 7px solid $color-Azul;
+		}
+		.BG {
+			background-color: $color-Celeste;
+		}
+		.Text-margin-top {
+			margin-top: 88px;
+		}
+	}
 }

@@ -1,88 +1,89 @@
-.servicios{
-    margin-bottom: 75px;
-    h1{
-        color: $color-Celeste;
-        margin-top: 147px;
-        margin-bottom: 35px;
-    }
-    h2{
-        color: $color-Celeste;
-        @extend %font-H2;
-    }
-    p{
-        color: $color-Azul;
-        @extend %font-P2;
-        margin-bottom: 85px;
-    }
-    .BG {
-        height: 283px;
-        position: absolute;
-        background: $color-Blanco;
-        z-index: 35;
-        width: 300px;
-    }
-    .z-index-50{
-        z-index: 50;
-    }
-    .servicio_line,
-    .servicio_misela,
-    .servicio_cuadrado_content{
-        position: absolute;
-        padding-left: 0;
-        padding-right: 0;
-        pointer-events: none;
-    }
-    .servicio_misela{
-        margin-top: 150px;
-        svg.img-responsive-SVG {
-            margin: auto;
-        }
-    }
-    .servicio_cuadrado{
-        width: 70%;
-        margin-left: 15%;
-        background-color: $color-Celeste;
-        height: 105px;
-    }
-    .owl-carousel{
-        .owl-item.center {
-            opacity: 1;
-            -webkit-transform: scale(1.4);
-            transform: scale(1.4);
-            transform-origin: 50% -50%;
-        }
-        .owl-item {
-            opacity:0.6;
-            transition:all 1500ms ease;
-        }
-        .owl-stage {
-            position: relative;
-            -ms-touch-action: pan-Y;
-            margin-bottom: 11%;
-        }
-    }
-    #Icono1 {
-        position: relative; 
-        height:0; 
-        width: 100%; 
-        padding: 0;
-        padding-bottom: 100%; 
-        padding: 0 0 55%; /* 100% * 55/60 */
-    }
-    #Icono1 svg{
-        position: absolute; 
-        height: 100%; 
-        width: 100%; 
-        left: 0; 
-        top:0;
-    }
-    @media (max-width: 991px){
-        .owl-carousel{
-            .owl-item.center {
-                opacity: 1;
-                -webkit-transform: scale(1);
-                transform: scale(1);
-            }
-        }
-    }
-} 
+.servicios {
+	margin-bottom: 75px;
+	h1 {
+		color: $color-Celeste;
+		margin-top: 147px;
+		margin-bottom: 35px;
+	}
+	h2 {
+		color: $color-Celeste;
+		@extend %font-H2;
+	}
+	p {
+		color: $color-Azul;
+		@extend %font-P2;
+		margin-bottom: 85px;
+	}
+	.BG {
+		height: 283px;
+		position: absolute;
+		background: $color-Blanco;
+		z-index: 35;
+		width: 300px;
+	}
+	.z-index-50 {
+		z-index: 50;
+	}
+	.servicio_line,
+	.servicio_misela,
+	.servicio_cuadrado_content {
+		position: absolute;
+		padding-left: 0;
+		padding-right: 0;
+		pointer-events: none;
+	}
+	.servicio_misela {
+		margin-top: 150px;
+		svg.img-responsive-SVG {
+			margin: auto;
+		}
+	}
+	.servicio_cuadrado {
+		width: 70%;
+		margin-left: 15%;
+		background-color: $color-Celeste;
+		height: 105px;
+	}
+	.owl-carousel {
+		.owl-item.center {
+			opacity: 1;
+			-webkit-transform: scale(1.4);
+			transform: scale(1.4);
+			transform-origin: 50% -50%;
+		}
+		.owl-item {
+			opacity: 0.6;
+			transition: all 1500ms ease;
+		}
+		.owl-stage {
+			position: relative;
+			-ms-touch-action: pan-Y;
+			margin-bottom: 11%;
+		}
+	}
+	#Icono1 {
+		position: relative;
+		height: 0;
+		width: 100%;
+		padding: 0;
+		padding-bottom: 100%;
+		padding: 0 0 55%;
+		/* 100% * 55/60 */
+	}
+	#Icono1 svg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	@media (max-width: 991px) {
+		.owl-carousel {
+			.owl-item.center {
+				opacity: 1;
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+	}
+}
