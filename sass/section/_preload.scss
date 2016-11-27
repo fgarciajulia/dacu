@@ -1,0 +1,62 @@
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #fff;
+    z-index: 10000;
+    animation-fill-mode: forwards;
+}
+.fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all 0.3s 0.5s ease-out;
+    transition: all 0.3s 0.5s ease-out;
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all 0.3s 0.5s ease-out;
+    transition: all 0.3s 0.5s ease-out;
+}
+
+div#loader {
+    z-index: 55555555555555555;
+    position: fixed;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    top: 0px;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+}

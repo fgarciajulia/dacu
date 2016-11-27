@@ -12,15 +12,15 @@ var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('jsDeps', function () {
   return gulp.src([
-    'js/jquery.min.js',
-    'js/bootstrap.min.js',
-    'js/dsvgp.min.js',
-    'js/jquery.easing.min.js',
-    'js/jquery.magnific-popup.js',
-    'js/jquery.superscrollorama.js',
-    'js/jquery.validate.min.js',
-    'js/owl.carousel.js',
-    'js/tm.min.js'
+    'js/deps/jquery.min.js',
+    'js/deps/bootstrap.min.js',
+    'js/deps/dsvgp.min.js',
+    'js/deps/jquery.easing.min.js',
+    'js/deps/jquery.magnific-popup.js',
+    'js/deps/jquery.superscrollorama.js',
+    'js/deps/jquery.validate.min.js',
+    'js/deps/owl.carousel.js',
+    'js/deps/tm.min.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(concat('app.deps.js'))
@@ -37,7 +37,11 @@ gulp.task('jsDeps', function () {
 
 gulp.task('js', function () {
   return gulp.src([
+    'js/home.js',
     'js/Servicios.Animation.js',
+    'js/servicios.js',
+    'js/contacto.js',
+    'js/miselaneas.js',
     'js/Dacu.js',
   ])
   .pipe(sourcemaps.init())
@@ -59,7 +63,7 @@ gulp.task('sass', function () {
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
-    //.pipe(autoprefixer()) // desHabilitar para desarrollo
+    .pipe(autoprefixer()) // desHabilitar para desarrollo
     .pipe(concat('app.min.css'))
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('_dist'));
@@ -87,7 +91,7 @@ gulp.task('watch', ['build'], function () {
   wSASS.on('add', watchLogger);
   wSASS.on('unlink', watchLogger);
 
-  var wJS = gulp.watch(['js/Dacu.js', 'js/Servicios.Animation.js'], ['js']);
+  var wJS = gulp.watch( 'js/*.js', ['js']);
   wJS.on('change', watchLogger);
   wJS.on('add', watchLogger);
   wJS.on('unlink', watchLogger);
@@ -97,6 +101,10 @@ gulp.task('watch', ['build'], function () {
   hJS.on('add', watchLogger);
   hJS.on('unlink', watchLogger);
 
+  var wJS_deps = gulp.watch(['_BuenPunto/js/deps/*.js'], ['jsDeps']);
+  wJS_deps.on('change', watchLogger);
+  wJS_deps.on('add', watchLogger);
+  wJS_deps.on('unlink', watchLogger);
 });
 
 
