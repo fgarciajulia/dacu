@@ -7,10 +7,10 @@ function loaded2() {
 }
 
 var demoImgArray = [
-  'img/Mockup1-1.png',
-  'img/Mockup1-2.png',
+  'img/Mockup1-1.jpg',
+  'img/Mockup1-2.jpg',
   'img/Mockup1-3.png',
-  'img/Mockup1-4.png',
+  'img/Mockup1-4.jpg',
   'img/Mockup1-5.png',
   'img/Mockup2-0.gif'
 ];
