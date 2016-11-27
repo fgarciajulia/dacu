@@ -217,6 +217,12 @@ $(window).ready(function () {
 
 
   /* Mockup 1 */
+  
+  /* Mockup 1 */
+  TweenLite.to('#Line1-poly_1_',
+      0, {
+        stroke: '#333399'
+      }, 0);
   TweenLite.from('#Line1-poly_1_',
     7, {
       drawSVG: '100% 100%',
@@ -341,12 +347,12 @@ $(document).ready(function () {
   }
 });
 
-function PorfolioAltoMiselanea() {
+
+$(document).ready(function PorfolioAltoMiselanea() {
   var AltoMap = $('.porfolio-content').height();
   $('.porfolio #XMLID_1_ rect').css('height',
     AltoMap);
-}
-PorfolioAltoMiselanea();
+});
 
 
 /*===========================================================*/
@@ -514,58 +520,54 @@ $(document).ready(function () {
 
 
 var demoImgArray = [
-  'img/Mockup1-3.png',
   'img/Mockup1-1.png',
   'img/Mockup1-2.png',
-  'img/Mockup1-5.png',
+  'img/Mockup1-3.png',
   'img/Mockup1-4.png',
+  'img/Mockup1-5.png',
   'img/Mockup2-0.gif'
 ];
 
-var imagenes_totales = demoImgArray.length;
-var imagenes_cargadas = 0;
-var porcentaje_imagenes = 0;
-var loadingProgress = 0; //timeline progress - starts at 0
-
+var imagenesCargadas = 0;
+var imagenesTotales = demoImgArray.length;
+var loadingPorcent = 0;
+var loadingProgress = 0;
 preload(demoImgArray);
 
-$(window).load(function () {
-  $('.percentage').text('100%');
-});
 
 /* LOADING */
 function preload(imgArray) {
   $(imgArray).each(function () {
     $('<img>').attr('src', this).load(function () {
-      imagenes_cargadas++;
-      porcentaje_imagenes = Math.floor((imagenes_cargadas / imagenes_totales) * 100);
-      loadingProgress = (imagenes_cargadas / imagenes_totales);
-
-      TweenLite.to(progressTl, 0.7, {
+      imagenesCargadas++;
+      loadingProgress = (imagenesCargadas / imagenesTotales);
+      TweenLite.to(progressTl, 2, {
         progress: loadingProgress,
         ease: Linear.easeNone
       });
-
     });
   });
 }
 var progressTl = new TimelineMax({
   paused: true,
   onUpdate: progressUpdate,
+  onComplete: loadComplete
 });
 
 progressTl
-//tween the progress bar width
-  .to($('.hola'), 1, {
-    width: 100,
-    ease: Linear.easeNone
+  .from($('#logoNav polyline'), 1, {
+    borderBottomColor: '#90e500',
+    stroke: 'white',
+    fill: 'transparent',
+    width: '542px',
   });
 
-//as the progress bar witdh updates and grows we put the precentage loaded in the screen
 function progressUpdate() {
-  //the percentage loaded based on the tween's progress
-  loadingProgress = Math.round(progressTl.progress() * 100);
-  //we put the percentage in the screen
-  $('.percentage').text(loadingProgress + '%');
+  loadingPorcent = Math.round(progressTl.progress() * 100);
+  $('.percentage').text(loadingPorcent + '%');
+}
+
+function loadComplete() {
+  $('.percentage').text('listo');
 }
 //# sourceMappingURL=app.js.map

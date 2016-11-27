@@ -1,27 +1,26 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var sourcemaps = require('gulp-sourcemaps');
-var gutil = require('gulp-util');
-var runSequence = require('run-sequence');
-var fileinclude = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
-var sass = require('gulp-sass');
+var concat = require('gulp-concat');
+var fileinclude = require('gulp-file-include');
+var gulp = require('gulp');
+var gutil = require('gulp-util');
 var htmlmin = require('gulp-htmlmin');
 var minify = require('gulp-minify');
+var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('jsDeps', function () {
   return gulp.src([
     'js/jquery.min.js',
-    'js/jquery.superscrollorama.js',
     'js/bootstrap.min.js',
+    'js/dsvgp.min.js',
     'js/jquery.easing.min.js',
-    'js/TM.min.js',
-    'js/DSVGP.min.js',
-    'js/owl.carousel.js',
     'js/jquery.magnific-popup.js',
+    'js/jquery.superscrollorama.js',
     'js/jquery.validate.min.js',
-    'js/jquery-ui.min.js'
+    'js/owl.carousel.js',
+    'js/tm.min.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(concat('app.deps.js'))

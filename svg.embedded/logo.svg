@@ -1,12 +1,20 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-x="0px" y="0px" width="189.3px" height="42.7px" viewBox="0 0 189.3 42.7"
-enable-background="new 0 0 189.3 42.7" xml:space="preserve" preserveAspectRatio="xMinYMin">
-<g id="Capa_2">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="190px" height="43px" viewBox="-0.85 -0.15 190 43" enable-background="new -0.85 -0.15 190 43"
+ xml:space="preserve" preserveAspectRatio="xMinYMin">
+<g id="logoNav">
 	<g>
-		<rect x="22.5" y="0" stroke="#4848BC"  fill="#333399" width="19.4" height="19.4"/>
-		<rect x="22.5" y="23.3" stroke="#D7D9DD" fill="#D7D9DD" width="19.4" height="19.4"/>
-		<rect x="0" y="23.3" stroke="#0099FF" fill="#0099FF" width="19.4" height="19.4"/>
-		<rect x="0" y="0" stroke="#C99F7E" fill="#C99F7E" width="19.4" height="19.4"/>
+		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.314 23.15,0.85 42.133,0.85 42.133,19.478 
+			23.15,19.478 		"/>
+		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.314 23.15,0.85 42.133,0.85 42.133,19.478 
+			23.133,19.478 		"/>
+		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.478 23.15,0.85 42.133,0.85 42.133,19.478 
+			22.15,19.478 		"/>
+		<polyline fill="#D7D9DD" stroke="#D7D9DD" stroke-width="2" points="22.15,23.222 42.133,23.222 42.133,41.85 23.15,41.85 
+			23.15,23.222 		"/>
+		<polyline fill="#0099FF" stroke="#0099FF" stroke-width="2" points="19.133,23.222 19.133,41.85 0.15,41.85 0.15,23.222 
+			20.133,23.222 		"/>
+		<polyline fill="#C99F7E" stroke="#C99F7E" stroke-width="2" points="20.133,19.478 0.15,19.478 0.15,0.85 19.133,0.85 
+			19.133,19.478 		"/>
 	</g>
 	<text transform="matrix(1 0 0 1 47.417 41.8397)" fill="#333399" font-family="'Titillium Web', sans-serif;''" font-size="59.0754">DACU</text>
 </g>

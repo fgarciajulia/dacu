@@ -4,6 +4,6 @@
 	 xml:space="preserve" preserveAspectRatio="xMinYMin">
 <defs>
 </defs>
-<polyline x="0px" y="0px" id="Line1-poly_1_" fill="none" stroke="#333399" stroke-width="7" stroke-miterlimit="10" points="3.5,1098.7 3.5,3.5 
+<polyline x="0px" y="0px" id="Line1-poly_1_" fill="none" stroke="#000f" stroke-width="7" stroke-miterlimit="10" points="3.5,1098.7 3.5,3.5 
 	833.4,3.5 833.4,1098.7 "/>
 </svg>

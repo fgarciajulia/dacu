@@ -16,7 +16,7 @@
 <svg version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
 	 x="0px" y="0px" width="459px" height="66px" viewBox="0 0 459 66" enable-background="new 0 0 459 66" xml:space="preserve">
-<rect class="hola" fill="#03357C" width="459" height="66"/>
+<rect class="hola" fill="#03357C" width="0" height="66"/>
 </svg>
 
   @@include('body.home.html')
