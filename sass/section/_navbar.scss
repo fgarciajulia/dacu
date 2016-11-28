@@ -28,19 +28,23 @@ nav {
 	}
 }
 
-.navbar-default {
-	height: 70px;
-	background-color: transparent;
-	border-color: transparent;
-	min-height: 71px;
-	padding-top: 0px;
-	.logo svg {
+.logo {
+	padding: 15px 15px;
+	svg {
 		width: 153px;
 		text {
 			font-weight: 600;
 			stroke-width: 0px;
 		}
 	}
+}
+
+.navbar-default {
+	height: 70px;
+	background-color: transparent;
+	border-color: transparent;
+	min-height: 71px;
+	padding-top: 0px;
 	.navbar-nav {
 		&>li>a {
 			color: $color-Celeste;

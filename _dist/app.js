@@ -497,11 +497,14 @@ function PorfolioAltoMiselanea() {
     AltoMap);
 }
 function loaded2() {
-  $('#loader').addClass('fadeOut');
-  $('body').addClass('loaded');
+  $('.prueba').addClass('prueba1');
   setTimeout(function () {
-    $('#loader').addClass('hidden');
-  }, 500);
+    $('body').addClass('loaded');
+    setTimeout(function () {
+      $('#loader').addClass('fadeOut');
+      $('#loader').addClass('hidden');
+    }, 600);
+  }, 1100);
 }
 
 var demoImgArray = [
@@ -561,7 +564,9 @@ function progressUpdate() {
 function loadComplete() {
   $('.percentage').text('listo');
   loaded2();
-  miselaneas();
-  PorfolioAltoMiselanea();
+  setTimeout(function () {
+    miselaneas();
+    PorfolioAltoMiselanea();
+  }, 1300);
 }
 //# sourceMappingURL=app.js.map
