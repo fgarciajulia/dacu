@@ -1,12 +1,12 @@
 function loaded2() {
-  $('.prueba').addClass('prueba1');
-  setTimeout(function () {
-    $('body').addClass('loaded');
-    setTimeout(function () {
-      $('#loader').addClass('fadeOut');
-      $('#loader').addClass('hidden');
-    }, 600);
-  }, 1100);
+  // $('.prueba').addClass('prueba1');
+  // setTimeout(function () {
+  //   $('body').addClass('loaded');
+  //   setTimeout(function () {
+  //     $('#loader').addClass('fadeOut');
+  //     $('#loader').addClass('hidden');
+  //   }, 600);
+  // }, 1100);
 }
 
 var demoImgArray = [
