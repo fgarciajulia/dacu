@@ -3,12 +3,8 @@
  xml:space="preserve" preserveAspectRatio="xMinYMin">
 <g id="logoNav">
 	<g>
-		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.314 23.15,0.85 42.133,0.85 42.133,19.478 
+		<polyline fill="#333399" stroke="#4848BC" stroke-width="2" points="23.15,19.314 23.15,0.85 42.133,0.85 42.133,19.478 
 			23.15,19.478 		"/>
-		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.314 23.15,0.85 42.133,0.85 42.133,19.478 
-			23.133,19.478 		"/>
-		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.478 23.15,0.85 42.133,0.85 42.133,19.478 
-			22.15,19.478 		"/>
 		<polyline fill="#D7D9DD" stroke="#D7D9DD" stroke-width="2" points="22.15,23.222 42.133,23.222 42.133,41.85 23.15,41.85 
 			23.15,23.222 		"/>
 		<polyline fill="#0099FF" stroke="#0099FF" stroke-width="2" points="19.133,23.222 19.133,41.85 0.15,41.85 0.15,23.222 

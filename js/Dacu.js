@@ -28,7 +28,7 @@ preload(demoImgArray);
 /* LOADING */
 function preload(imgArray) {
   $(imgArray).each(function () {
-    $('<img>').attr('src', this).load(function () {
+    $('<img>').attr('src', this).on('load', function () {
       imagenesCargadas++;
       loadingProgress = (imagenesCargadas / imagenesTotales);
       TweenLite.to(progressTl, 2, {
