@@ -101,7 +101,7 @@ gulp.task('watch', ['build'], function () {
   hJS.on('add', watchLogger);
   hJS.on('unlink', watchLogger);
 
-  var wJS_deps = gulp.watch(['_BuenPunto/js/deps/*.js'], ['jsDeps']);
+  var wJS_deps = gulp.watch(['js/deps/*.js'], ['jsDeps']);
   wJS_deps.on('change', watchLogger);
   wJS_deps.on('add', watchLogger);
   wJS_deps.on('unlink', watchLogger);

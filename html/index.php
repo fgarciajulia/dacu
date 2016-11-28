@@ -5,10 +5,10 @@
 
   @@include('head.meta.html')
 
-<link rel="stylesheet" type="text/css" href="app.min.css">
-<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="app.min.css?v=1">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900" rel="stylesheet">
   @@include('body.googleAnalytics.html')
-  <script type="text/javascript" src="app.deps.min.js"></script>
+  <script type="text/javascript" src="app.deps.min.js?v=1"></script>
 </head>
 
 <body data-spy="scroll" id="page-top" data-target=".navbar-fixed-top">
@@ -21,4 +21,4 @@
 </body>
 
 </html>
-<script type="text/javascript" src="app.min.js"></script> 
+<script type="text/javascript" src="app.min.js?v=1"></script> 
