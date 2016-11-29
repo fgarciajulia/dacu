@@ -59,8 +59,13 @@ div#loader {
 	top: calc(50% - 150px);
 	position: absolute;
 	margin-left: 0;
-	&.logo {
-		svg {
+	filter: url(#gooey);
+	.percentage {
+		margin-top: 35px;
+		background: #fff;
+	}
+	&.logoPreload {
+		svg#logoPreload {
 			transition: all 1s;
 			animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
 			width: 441px;
@@ -73,13 +78,16 @@ div#loader {
 	left: 0;
 	top: 0;
 	position: absolute;
+    padding: 15px 15px;
 	@media (min-width: 992px) {
 		margin-left: 8.33333333%;
 	}
-	
-	&.logo {
-		svg {
+	&.logoPreload {
+		svg#logoPreload {
 			width: 153px;
+			.cuadrados {
+				display: none;
+			}
 		}
 	}
 }

@@ -1,21 +1,33 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="190px" height="43px" viewBox="-0.85 -0.15 190 43" enable-background="new -0.85 -0.15 190 43"
- xml:space="preserve" preserveAspectRatio="xMinYMin">
-<g id="logoPreload">
-	<g>
-		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.314 23.15,0.85 42.133,0.85 42.133,19.478 
-			23.15,19.478 		"/>
-		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.314 23.15,0.85 42.133,0.85 42.133,19.478 
-			23.133,19.478 		"/>
-		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="23.15,19.478 23.15,0.85 42.133,0.85 42.133,19.478 
-			22.15,19.478 		"/>
-		<polyline fill="#D7D9DD" stroke="#D7D9DD" stroke-width="2" points="22.15,23.222 42.133,23.222 42.133,41.85 23.15,41.85 
-			23.15,23.222 		"/>
-		<polyline fill="#0099FF" stroke="#0099FF" stroke-width="2" points="19.133,23.222 19.133,41.85 0.15,41.85 0.15,23.222 
-			20.133,23.222 		"/>
-		<polyline fill="#C99F7E" stroke="#C99F7E" stroke-width="2" points="20.133,19.478 0.15,19.478 0.15,0.85 19.133,0.85 
-			19.133,19.478 		"/>
+<svg id="logoPreload" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+				y="0px" width="190.97px" height="81.491px" viewBox="-0.97 0 190.97 81.491" enable-background="new -0.97 0 190.97 81.491"
+				xml:space="preserve" preserveAspectRatio="xMinYMin">
+	<defs>
+		<filter id="gooey">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
+			<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			<feComposite in="SourceGraphic" in2="goo" operator="atop" />
+		</filter>
+	</defs>
+	<rect x="40" y="0" fill="#FFFFFF" width="156.97" height="48.491"></rect>
+	<g class="izquierda">
+		<polyline fill="#333399" stroke="#333399" stroke-width="2" points="24.03,19.464 24.03,1 43.013,1 43.013,19.628 23.03,19.628 "
+		/>
+		<polyline fill="#D7D9DD" stroke="#D7D9DD" stroke-width="2" points="23.03,24 43.013,24 43.013,42.628 24.03,42.628 24.03,24 	"
+		/>
+		<polyline fill="#0099FF" stroke="#0099FF" stroke-width="2" points="19.013,24 19.013,42.628 0.03,42.628 0.03,24 20.013,24 	"
+		/>
+		<polyline fill="#C99F7E" stroke="#C99F7E" stroke-width="2" points="20.013,19.628 0.03,19.628 0.03,1 19.013,1 19.013,19.628 	"
+		/>
 	</g>
-	<text transform="matrix(1 0 0 1 47.417 41.8397)" fill="#333399" font-family="'Titillium Web', sans-serif;''" font-size="59.0754">DACU</text>
-</g>
+	<text transform="matrix(1 0 0 1 47.417 41.8397)" fill="#333399" font-family="'Titillium Web', sans-serif;'" font-size="59.0754">DACU</text>
+	<g class="cuadrados">
+	<polyline class="azul" fill="#333399" stroke="#333399" stroke-width="2" points="161.554,99.702 161.554,71.09 190.97,71.09 190.97,99.956 
+	160.004,99.956 " />
+	<polyline class="crema" fill="#D7D9DD" stroke="#D7D9DD" stroke-width="2" points="108.036,71.09 139.002,71.09 139.002,99.956 109.585,99.956 
+	109.585,71.09 " />
+	<polyline class="celeste" fill="#0099FF" stroke="#0099FF" stroke-width="2" points="83.934,71.09 83.934,99.956 54.518,99.956 54.518,71.09 
+	85.484,71.09 " />
+	<polyline class="naranja" fill="#C99F7E" stroke="#C99F7E" stroke-width="2" points="31.966,99.956 1,99.956 1,71.09 30.416,71.09 30.416,99.956 "
+	/>
+	</g>
 </svg>

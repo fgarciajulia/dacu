@@ -497,14 +497,14 @@ function PorfolioAltoMiselanea() {
     AltoMap);
 }
 function loaded2() {
-  // $('.prueba').addClass('prueba1');
-  // setTimeout(function () {
-  //   $('body').addClass('loaded');
-  //   setTimeout(function () {
-  //     $('#loader').addClass('fadeOut');
-  //     $('#loader').addClass('hidden');
-  //   }, 600);
-  // }, 1100);
+  $('.prueba').addClass('prueba1');
+  setTimeout(function () {
+    $('body').addClass('loaded');
+    setTimeout(function () {
+      $('#loader').addClass('fadeOut');
+      $('#loader').addClass('hidden');
+    }, 600);
+  }, 1100);
 }
 
 var demoImgArray = [
@@ -543,12 +543,12 @@ var progressTl = new TimelineMax({
 });
 
 progressTl
-  .to($('#logoPreload polyline'), 1, {
+  .to($('#logoPreload .izquierda polyline'), 1, {
     borderBottomColor: '#90e500',
     stroke: 'white',
     fill: 'transparent',
     width: '542px',
-  }).to($('#logoPreload polyline'), 1, {
+  }).to($('#logoPreload .izquierda polyline'), 1, {
     borderBottomColor: '#90e500',
     stroke: '#000',
     fill: '#000',
@@ -569,4 +569,33 @@ function loadComplete() {
     PorfolioAltoMiselanea();
   }, 1300);
 }
+
+
+
+var $azul = $('.azul');
+var $celeste = $('.celeste');
+var $crema = $('.crema');
+var $naranja = $('.naranja');
+var start = 0;
+
+var animacionLogoLoading = new TimelineMax({
+  repeat: -1,
+  repeatDelay: 0.05,
+});
+  // center
+animacionLogoLoading.fromTo($celeste, 0.4, {x: 0}, {x: -30, rotation: 90, transformOrigin: '50% 50%', ease: Linear.easeNone }, start);
+animacionLogoLoading.fromTo($crema, 0.4, {x: 0}, {x: 30,  rotation: -90, transformOrigin: '50% 50%', ease: Linear.easeNone}, start);
+// ext 1st
+animacionLogoLoading.to($celeste, 0.4, {x: -60,  rotation: 180, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.45);
+animacionLogoLoading.fromTo($naranja, 0.4, {x: 0}, {x: -30,  rotation: 180, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.45);
+animacionLogoLoading.to($crema, 0.4, {x: 60, rotation: -180, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.45);
+animacionLogoLoading.fromTo($azul, 0.4, {x: 0}, {x: 30, rotation: -90, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.45);
+// ext return
+animacionLogoLoading.to($celeste, 0.4, {x: 30,  rotation: -90, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.9);
+animacionLogoLoading.to($naranja, 0.4, {x: 0,  rotation: -90, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.9);
+animacionLogoLoading.to($crema, 0.4, {x: -30,  rotation: 0, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.9);
+animacionLogoLoading.to($azul, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.9);
+// center again
+animacionLogoLoading.to($celeste, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%',  ease: Linear.easeNone}, start + 1.35);
+animacionLogoLoading.to($crema, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 1.35);
 //# sourceMappingURL=app.js.map
