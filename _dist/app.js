@@ -230,8 +230,7 @@ $(document).ready(function () {
 
   var elementoAnterior = 0;
 
-  owl_Servicios.on('translated.owl.carousel',
-    onTranslatedEvent);
+  owl_Servicios.on('translated.owl.carousel',onTranslatedEvent);
 
   function onTranslatedEvent(event) {
     // Elemento Anterior --> cierre
@@ -598,4 +597,34 @@ animacionLogoLoading.to($azul, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 5
 // center again
 animacionLogoLoading.to($celeste, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%',  ease: Linear.easeNone}, start + 1.35);
 animacionLogoLoading.to($crema, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 1.35);
+
+
+var isPlay = true;
+
+function abajo() {
+  if (!isPlay) {
+    owl_Servicios.trigger('play.owl.autoplay', [100]);
+    isPlay = true;
+  }
+}
+
+function hola() {
+  owl_Servicios.trigger('stop.owl.autoplay');
+  isPlay = false;
+}
+
+
+$(window).scroll(function () {
+  var hT = $('#owl-carousel2').offset().top,
+    hH = $('#owl-carousel2').outerHeight(),
+    wH = $(window).height(),
+    wS = $(this).scrollTop();
+  if (wS > (hT +- wH)) {
+    abajo();
+  }
+  if (wS < (hT +- wH)) {
+    hola();
+  }
+});
+
 //# sourceMappingURL=app.js.map

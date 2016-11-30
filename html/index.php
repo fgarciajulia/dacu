@@ -22,4 +22,4 @@
 </body>
 
 </html>
-<script type="text/javascript" src="app.min.js?v=1"></script> 
+<script type="text/javascript" src="app.js?v=1"></script> 

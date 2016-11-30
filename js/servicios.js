@@ -25,8 +25,7 @@ $(document).ready(function () {
 
   var elementoAnterior = 0;
 
-  owl_Servicios.on('translated.owl.carousel',
-    onTranslatedEvent);
+  owl_Servicios.on('translated.owl.carousel',onTranslatedEvent);
 
   function onTranslatedEvent(event) {
     // Elemento Anterior --> cierre
