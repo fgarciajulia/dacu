@@ -9,7 +9,7 @@
   @@include('body.googleAnalytics.html')
 </head>
 
-<body data-spy="scroll" id="page-top" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
   @@include('body.preload.html')  
   @@include('body.navbar.html')  
   @@include('body.home.html')
