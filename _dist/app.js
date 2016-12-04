@@ -495,15 +495,41 @@ function PorfolioAltoMiselanea() {
   $('.porfolio #XMLID_1_ rect').css('height',
     AltoMap);
 }
+var servicios_preload_Lamp = $('#preload #Lamp_1_');
+var servicios_preload_headerLamp = $('#preload #headerLamp_1_');
+var servicios_icono1_Humo = $('#preload  #humo_2_ path');
+
+
+function cierrePreload() {
+  var TimeCierrePreload = new TimelineMax();
+  TimeCierrePreload.timeScale(1);
+  TimeCierrePreload
+    .to(servicios_preload_Lamp, 1, { fill: '#fff' }, 0)
+    .to(servicios_preload_headerLamp, 1, { rotation: 0, transformOrigin: '20 10' }, 0)
+    .to(servicios_icono1_Humo, 2, { drawSVG: '100% 100%' }, 0);
+
+}
+function OpenPreload() {
+  var TimeOpenPreload = new TimelineMax();
+  TimeOpenPreload.timeScale(1);
+  TimeOpenPreload
+    .to(servicios_preload_Lamp, 1, { fill: '#C9BB9E' }, 0)
+    .to(servicios_preload_headerLamp, 1, { rotation: -25, transformOrigin: '20 10' }, 0)
+    .set(servicios_icono1_Humo, { drawSVG: '0% 0%' }, 0).to(servicios_icono1_Humo, 1, { drawSVG: '10% 50%', ease: Linear.easeNone }).to(servicios_icono1_Humo, 1, { drawSVG: '35% 80%', ease: Linear.easeNone }).to(servicios_icono1_Humo, 2, { drawSVG: '100% 100%', ease: Linear.easeNone })
+
+}
+
+
+
 function loaded2() {
-  $('.prueba').addClass('prueba1');
-  setTimeout(function () {
-    $('body').addClass('loaded');
-    setTimeout(function () {
-      $('#loader').addClass('fadeOut');
-      $('#loader').addClass('hidden');
-    }, 600);
-  }, 1100);
+  OpenPreload();
+  // setTimeout(function () {
+  //   $('body').addClass('loaded');
+  //   setTimeout(function () {
+  //     $('#loader').addClass('fadeOut');
+  //     $('#loader').addClass('hidden');
+  //   }, 600);
+  // }, 1100);
 }
 
 var demoImgArray = [
@@ -581,37 +607,107 @@ var animacionLogoLoading = new TimelineMax({
   repeat: -1,
   repeatDelay: 0.05,
 });
-  // center
-animacionLogoLoading.fromTo($celeste, 0.4, {x: 0}, {x: -30, rotation: 90, transformOrigin: '50% 50%', ease: Linear.easeNone }, start);
-animacionLogoLoading.fromTo($crema, 0.4, {x: 0}, {x: 30,  rotation: -90, transformOrigin: '50% 50%', ease: Linear.easeNone}, start);
+// center
+animacionLogoLoading.fromTo($celeste, 0.4, {
+  x: 0
+}, {
+  x: -30,
+  rotation: 90,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start);
+animacionLogoLoading.fromTo($crema, 0.4, {
+  x: 0
+}, {
+  x: 30,
+  rotation: -90,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start);
 // ext 1st
-animacionLogoLoading.to($celeste, 0.4, {x: -60,  rotation: 180, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.45);
-animacionLogoLoading.fromTo($naranja, 0.4, {x: 0}, {x: -30,  rotation: 180, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.45);
-animacionLogoLoading.to($crema, 0.4, {x: 60, rotation: -180, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.45);
-animacionLogoLoading.fromTo($azul, 0.4, {x: 0}, {x: 30, rotation: -90, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.45);
+animacionLogoLoading.to($celeste, 0.4, {
+  x: -60,
+  rotation: 180,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.45);
+animacionLogoLoading.fromTo($naranja, 0.4, {
+  x: 0
+}, {
+  x: -30,
+  rotation: 180,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.45);
+animacionLogoLoading.to($crema, 0.4, {
+  x: 60,
+  rotation: -180,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.45);
+animacionLogoLoading.fromTo($azul, 0.4, {
+  x: 0
+}, {
+  x: 30,
+  rotation: -90,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.45);
 // ext return
-animacionLogoLoading.to($celeste, 0.4, {x: 30,  rotation: -90, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.9);
-animacionLogoLoading.to($naranja, 0.4, {x: 0,  rotation: -90, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 0.9);
-animacionLogoLoading.to($crema, 0.4, {x: -30,  rotation: 0, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.9);
-animacionLogoLoading.to($azul, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%', ease: Linear.easeNone}, start + 0.9);
+animacionLogoLoading.to($celeste, 0.4, {
+  x: 30,
+  rotation: -90,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.9);
+animacionLogoLoading.to($naranja, 0.4, {
+  x: 0,
+  rotation: -90,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.9);
+animacionLogoLoading.to($crema, 0.4, {
+  x: -30,
+  rotation: 0,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.9);
+animacionLogoLoading.to($azul, 0.4, {
+  x: 0,
+  rotation: 0,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 0.9);
 // center again
-animacionLogoLoading.to($celeste, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%',  ease: Linear.easeNone}, start + 1.35);
-animacionLogoLoading.to($crema, 0.4, {x: 0,  rotation: 0, transformOrigin: '50% 50%' , ease: Linear.easeNone}, start + 1.35);
+animacionLogoLoading.to($celeste, 0.4, {
+  x: 0,
+  rotation: 0,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 1.35);
+animacionLogoLoading.to($crema, 0.4, {
+  x: 0,
+  rotation: 0,
+  transformOrigin: '50% 50%',
+  ease: Linear.easeNone
+}, start + 1.35);
 
 
 var isPlay = true;
 
-function abajo() {
+function play() {
   if (!isPlay) {
     owl_Servicios.trigger('play.owl.autoplay', [100]);
     isPlay = true;
   }
 }
 
-function hola() {
+function pause() {
   owl_Servicios.trigger('stop.owl.autoplay');
   isPlay = false;
 }
+
+pause();
 
 
 $(window).scroll(function () {
@@ -619,12 +715,10 @@ $(window).scroll(function () {
     hH = $('#owl-carousel2').outerHeight(),
     wH = $(window).height(),
     wS = $(this).scrollTop();
-  if (wS > (hT +- wH)) {
-    abajo();
-  }
-  if (wS < (hT +- wH)) {
-    hola();
+  if (((wS + wH) > hT) && (wS > (hT + hH))) {
+    play();
+  } else {
+    pause();
   }
 });
-
 //# sourceMappingURL=app.js.map

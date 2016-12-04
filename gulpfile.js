@@ -42,6 +42,7 @@ gulp.task('js', function () {
     'js/servicios.js',
     'js/contacto.js',
     'js/miselaneas.js',
+    'js/preloadAnimation.js',
     'js/Dacu.js',
   ])
   .pipe(sourcemaps.init())

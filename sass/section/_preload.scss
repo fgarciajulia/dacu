@@ -49,27 +49,44 @@ div#loader {
 }
 
 .flex-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: stretch;
+	align-items: center;
 	height: 100%;
-}
-
-.prueba {
-	transition: all 1s;
-	animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-	left: calc(50% - 220px);
-	top: calc(50% - 150px);
-	position: absolute;
-	margin-left: 0;
-	filter: url(#gooey);
-	.percentage {
-		margin-top: 35px;
-		background: #fff;
-	}
-	&.logoPreload {
-		svg#logoPreload {
-			transition: all 1s;
-			animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-			width: 441px;
-			height: 100px;
+	.prueba.logoPreload {
+		transition: all 1s;
+		animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+		filter: url(#gooey);
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		svg#preload {
+			order: 0;
+			flex: 0 1 auto;
+			align-self: center;
+		}
+		.percentage {
+			margin-top: 35px;
+			background: #fff;
+		}
+		&.logoPreload {
+			height: 100%;
+			width: 100%;
+			.hola {
+				padding-top: 33%;
+				position: relative;
+				width: 80%;
+				svg#preload {
+					transition: all 1s;
+					animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+					position: absolute;
+				}
+			}
 		}
 	}
 }
@@ -78,7 +95,7 @@ div#loader {
 	left: 0;
 	top: 0;
 	position: absolute;
-    padding: 15px 15px;
+	padding: 15px 15px;
 	@media (min-width: 992px) {
 		margin-left: 8.33333333%;
 	}
