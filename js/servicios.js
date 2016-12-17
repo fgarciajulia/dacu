@@ -24,34 +24,39 @@ $(document).ready(function () {
 
 
   var elementoAnterior = 0;
+  var isFirstInit = true;
 
-  owl_Servicios.on('translated.owl.carousel',onTranslatedEvent);
+  owl_Servicios.on('translated.owl.carousel', onTranslatedEvent);
 
   function onTranslatedEvent(event) {
-    // Elemento Anterior --> cierre
-    if (elementoAnterior == 0) {
-      CierreIcon1();
-    }
-    if (elementoAnterior == 1) {
-      CierreIcon2();
-    }
-    if (elementoAnterior == 3) {
-      CierreIcon4();
-    }
-    elementoAnterior = event.page.index;
+    if (isFirstInit) {
+      pause();
+      isFirstInit = false;
+    } else {
+      // Elemento Anterior --> cierre
+      if (elementoAnterior == 0) {
+        CierreIcon1();
+      }
+      if (elementoAnterior == 1) {
+        CierreIcon2();
+      }
+      if (elementoAnterior == 3) {
+        CierreIcon4();
+      }
+      elementoAnterior = event.page.index;
 
-    // Elemento Nuevo --> Apertura
-    if (event.page.index == 0) {
-      OpenIcon1();
-    }
-    // Elemento Nuevo --> Apertura
-    if (event.page.index == 1) {
-      OpenIcon2();
-    }
-    // Elemento Nuevo --> Apertura
-    if (event.page.index == 3) {
-      OpenIcon4();
+      // Elemento Nuevo --> Apertura
+      if (event.page.index == 0) {
+        OpenIcon1();
+      }
+      // Elemento Nuevo --> Apertura
+      if (event.page.index == 1) {
+        OpenIcon2();
+      }
+      // Elemento Nuevo --> Apertura
+      if (event.page.index == 3) {
+        OpenIcon4();
+      }
     }
   }
 });
-

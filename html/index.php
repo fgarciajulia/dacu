@@ -21,5 +21,5 @@
   @@include('body.contacto.html')
 </body>
 
-</html>
 <script type="text/javascript" src="app.js?v=1"></script> 
+</html>

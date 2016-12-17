@@ -1,5 +1,3 @@
-var owl_Home = $('#owl-carousel1');
-var owl_Servicios = $('#owl-carousel2');
 
 var servicios_icono1_Books = $(['#servicios_icono1 > #Books_1_ rect', '#servicios_icono1 > #cuadrados_1_ rect', '#servicios_icono1 > #Diploma_1_ rect']);
 var servicios_icono1_Reloj_min = $('#servicios_icono1 > #Reloj-min_1_');
