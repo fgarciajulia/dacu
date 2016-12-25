@@ -1,6 +1,6 @@
 function loaded2() {
   setTimeout(
-  cierrePreload()
+  cierrePreload
   //   $('body').addClass('loaded');
   //   setTimeout(function () {
   //     $('#loader').addClass('fadeOut');

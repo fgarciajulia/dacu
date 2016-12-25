@@ -45,7 +45,7 @@ gulp.task('js', function () {
     'js/preloadAnimation.js',
     'js/Dacu.js',
   ])
-  .pipe(sourcemaps.init())
+  //.pipe(sourcemaps.init())
   .pipe(concat('app.js'))
   .pipe(minify({
     ext: {
@@ -54,7 +54,7 @@ gulp.task('js', function () {
     },
     exclude: ['tasks'],
   }))
-  .pipe(sourcemaps.write('/'))
+  //.pipe(sourcemaps.write('/'))
   .pipe(gulp.dest('_dist'));
 });
 

@@ -1,7 +1,7 @@
 
-var servicios_icono1_Books = $(['#servicios_icono1 > #Books_1_ rect', '#servicios_icono1 > #cuadrados_1_ rect', '#servicios_icono1 > #Diploma_1_ rect']);
+var servicios_icono1_Books = $('#servicios_icono1 > #Books_1_ rect, #servicios_icono1 > #cuadrados_1_ rect, #servicios_icono1 > #Diploma_1_ rect');
 var servicios_icono1_Reloj_min = $('#servicios_icono1 > #Reloj-min_1_');
-var servicios_icono1_Line_start = $(['#servicios_icono1 > #Lineas_x5F_Start_1_ line', '#servicios_icono1 > #Diploma_1_ line']);
+var servicios_icono1_Line_start = $('#servicios_icono1 > #Lineas-miselaneas line, #servicios_icono1 > #Diploma_1_ line');
 var servicios_icono1_Humo = $('#servicios_icono1 > #humo_2_ path');
 var servicios_icono1_regla = $('#servicios_icono1 #regla_1_');
 var servicios_icono1_pluma = $('#servicios_icono1 #Pluma_1_');
@@ -21,7 +21,7 @@ var servicios_icono2_porcentaje_Line = $('#servicios_icono2 #porcentaje_1_ g lin
 var servicios_icono2_fondo = $('#servicios_icono2 #fondo_1_');
 var servicios_icono2_fondoLineasFan = $('#servicios_icono2 #LineasFanPage_1_ line');
 var servicios_icono2_Frnja = $('#servicios_icono2 #Frnja_1_');
-var servicios_icono2_Imagen = $(['#servicios_icono2 #Imagen_2_','#servicios_icono2 #Imagen_3_', '#servicios_icono2 #Tilde_1_']);
+var servicios_icono2_Imagen = $('#servicios_icono2 #Imagen_2_ , #servicios_icono2 #Imagen_3_ ,  #servicios_icono2 #Tilde_1_');
 
 function CierreIcon1() {
   var TimeCloseIcon1 = new TimelineMax();

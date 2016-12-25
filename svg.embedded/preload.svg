@@ -409,7 +409,7 @@
 				81.1,245.6 			"/>
 		</g>
 	</g>
-	<g>
+	<g id="paracaidas">
 		<path fill="none" stroke="#333399" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M-27.2,36.075
 			c0,0,4.4-39.4,39.3-39.4c0,0,37.3,4.8,37.3,37.3c0,0-11.2-14.9-20.4,2c0,0-9.4-16.7-17.9,0c0,0-11-17.2-19.3,0
 			C-8.2,36.075-16.6,23.275-27.2,36.075z"/>
@@ -430,7 +430,7 @@
 		
 			<rect x="-14.1" y="112.375" fill="none" stroke="#333399" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" width="49.7" height="12.3"/>
 	</g>
-	<g>
+	<g id="libro-play">
 		<rect x="834.75" y="-160.35" fill="#B6ADA8" width="172.3" height="112.5"/>
 		
 			<rect x="841.05" y="-162.05" fill="#EDEEF0" stroke="#333399" stroke-width="2" stroke-miterlimit="10" width="159.5" height="107.2"/>
@@ -725,7 +725,6 @@
 		<polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="702.05,150.45 713.95,162.35 
 			731.55,122.15 		"/>
 	</g>
-	<g>
 		<g id="Lineas_x5F_Start_1_">
 			<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="246.9" y1="-2.5" x2="385.8" y2="-2.5"/>
 			<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="267.6" y1="58.4" x2="310" y2="58.4"/>
@@ -807,6 +806,7 @@
 			
 				<rect x="459.329" y="119.6" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 881.7094 -115.516)" fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="10.9" height="10.5"/>
 		</g>
+	<g class="nubes">
 		<g>
 			<polygon fill="#EDEEF0" stroke="#333399" stroke-width="3" stroke-miterlimit="10" points="719.9,36.75 784.6,36.75 784.6,23.05 
 				768.8,23.05 768.8,13.75 751.4,13.75 751.4,6.25 726.8,6.25 726.8,26.95 719.9,26.95 			"/>
