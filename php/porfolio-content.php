@@ -43,7 +43,6 @@
                                 }
                             fclose($handl);}
                             ?>
-                            <?php include("php/magnificGalery.php"); ?>
                             
                         </div>
                     </div>

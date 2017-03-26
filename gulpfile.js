@@ -37,12 +37,12 @@ gulp.task('jsDeps', function () {
 
 gulp.task('js', function () {
   return gulp.src([
+    'js/preloadAnimation.js',
     'js/home.js',
     'js/Servicios.Animation.js',
     'js/servicios.js',
     'js/contacto.js',
     'js/miselaneas.js',
-    'js/preloadAnimation.js',
     'js/Dacu.js',
   ])
   //.pipe(sourcemaps.init())
