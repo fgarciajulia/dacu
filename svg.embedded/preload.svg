@@ -103,15 +103,6 @@
 					/>
 				</g>
 			</g>
-			<rect x="704" y="415.745" fill="#9B999E" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="164.843" height="39.573"
-			/>
-			<rect x="711.993" y="253.261" fill="#AFAEB4" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="148.07" height="15.724"
-			/>
-			<path fill="#C3C4CA" stroke="#333399" stroke-width="3" stroke-miterlimit="10" d="M704,415.745c0,0,41.8-30.531,32.497-146.76
-			h104.304c0,0-14.807,99.587,27.911,146.76H704z" />
-			<polygon fill="#9B999E" stroke="#333399" stroke-width="3" stroke-miterlimit="10" points="837.525,170.316 837.525,192.723 
-			801.49,192.723 801.49,170.316 773.317,170.316 773.317,192.723 737.283,192.723 737.283,170.316 711.993,170.316 
-			711.993,253.261 860.063,253.261 860.063,170.316 		" />
 			<g id="Techo_x5F_Edi1_1_">
 				<rect x="802.407" y="121.309" fill="#9B999E" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="161.567" height="22.407"
 				/>
@@ -121,6 +112,17 @@
 				/>
 				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="894.787" y1="105.584" x2="894.787" y2="67.584"
 				/>
+			</g>
+			<g id="torre">
+				<rect x="704" y="415.745" fill="#9B999E" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="164.843" height="39.573"
+				/>
+				<path fill="#C3C4CA" stroke="#333399" stroke-width="3" stroke-miterlimit="10" d="M704,415.745c0,0,41.8-30.531,32.497-146.76
+				h104.304c0,0-14.807,99.587,27.911,146.76H704z" />
+				<rect x="711.993" y="253.261" fill="#AFAEB4" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="148.07" height="15.724"
+				/>
+				<polygon fill="#9B999E" stroke="#333399" stroke-width="3" stroke-miterlimit="10" points="837.525,170.316 837.525,192.723 
+				801.49,192.723 801.49,170.316 773.317,170.316 773.317,192.723 737.283,192.723 737.283,170.316 711.993,170.316 
+				711.993,253.261 860.063,253.261 860.063,170.316 		" />
 			</g>
 		</g>
 		<g>
