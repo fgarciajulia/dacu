@@ -1,2 +1,7 @@
 bower_components/
 node_modules/
+_dist/*.css
+_dist/*.js
+_dist/*.map
+_dist/index.php
+.vscode/

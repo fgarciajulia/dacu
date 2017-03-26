@@ -21,7 +21,7 @@ var servicios_icono2_porcentaje_Line = $('#servicios_icono2 #porcentaje_1_ g lin
 var servicios_icono2_fondo = $('#servicios_icono2 #fondo_1_');
 var servicios_icono2_fondoLineasFan = $('#servicios_icono2 #LineasFanPage_1_ line');
 var servicios_icono2_Frnja = $('#servicios_icono2 #Frnja_1_');
-var servicios_icono2_Imagen = $('#servicios_icono2 #Imagen_2_ , #servicios_icono2 #Imagen_3_ ,  #servicios_icono2 #Tilde_1_');
+var servicios_icono2_Imagen = $('#servicios_icono2 #Imagen_2_servicio , #servicios_icono2 #Imagen_3_ ,  #servicios_icono2 #Tilde_1_');
 
 function CierreIcon1() {
   var TimeCloseIcon1 = new TimelineMax();

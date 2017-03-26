@@ -14,12 +14,26 @@ var preloadLineStart = $('#preload #Lineas_x5F_Start_1_ line, #preload #Diploma_
 var preloadNubes = $('#preload .nubes polygon, #preload .nubes line');
 var paracaidas = $('#preload #paracaidas path, #preload #paracaidas line, #preload #paracaidas rect');
 var libro_play = $('#preload #libro-play path, #preload #libro-play line, #preload #libro-play rect, #preload #libro-play polygon');
+var pantalla_redes_fondo = $('#preload #pantalla-redes #fondo_1_');
+var pantalla_redes_fondoLineasFan = $('#preload #pantalla-redes #LineasFanPage_1_ line');
+var pantalla_redes_franja = $('#preload #pantalla-redes .Frnja_1_');
+var pantalla_redes_imagen = $('#preload #pantalla-redes #Imagen_2_ , #preload #pantalla-redes #Imagen_3_ ,  #preload #pantalla-redes #Tilde_1_');
 
 var preload_FondoEdi1 = $('#preload #Edi1_1_ #Fondo_x5F_Edi1_1_');
+var preload_PisoEdi1 = $('#preload #Edi1_1_ .piso-edi');
 var preload_LineEdi1 = $('#preload #Edi1_1_ line');
 var preload_TechoEdi1 = $('#preload #Techo_x5F_Edi1_1_');
 var preload_FondoEdi2 = $('#preload #Edi2_1_ #Fondo_x5F_Edi2_1_');
 var preload_LineEdi2 = $('#preload #Edi2_1_ #LineasEdi2_1_ line, #preload #Edi2_1_ #LineasEdi2_1_  polyline');
+
+var preload_facebook = $('#preload .facebook line, #preload .facebook polyline, #preload .facebook path, #preload .facebook rect');
+var preload_facebook_fondo = $('#preload .facebook-fondo');
+var preload_facebook_cuadrados = $('#preload .facebook-cuadrados rect,#preload .facebook-cuadrados line,#preload .facebook-cuadrados path');
+var preload_facebook_header = $('#preload .facebook-header rect,#preload .facebook-header line,#preload .facebook-header path,#preload .facebook-header circle');
+
+var preload_icono2_Veinti4 = $('#preload #Veinti4_2_');
+var preload_Veinti4_2_circle = $('#preload #Veinti4_2_circle');
+
 var TimeOpenPreload = new TimelineMax();
 var TimeOpenPreload2 = new TimelineMax({repeat:-1});
 var TimeCierrePreload = new TimelineMax();
@@ -27,6 +41,10 @@ var TimeCierrePreload = new TimelineMax();
 function cierrePreload() {
   TimeCierrePreload.timeScale(1);
   TimeCierrePreload
+    .to(pantalla_redes_imagen, 1, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' },0)
+    .to(pantalla_redes_fondoLineasFan, 1, { drawSVG: '50% 50%' },1)
+    .to(pantalla_redes_franja, 1, { scaleX: 0, transformOrigin: '0% 100%'},2)
+    .to(pantalla_redes_fondo, 1,{ scaleY: 0, transformOrigin: '0% 100%' },3)
     .staggerTo(preloadBooks, 1, { scaleX: 0, transformOrigin: '0% 0%' }, 0.1)
     .to(preloadLamp, 1, { fill: '#fff' }, 0)
     .to(preloadHeaderLamp, 1, { rotation: 0, transformOrigin: '20 10' }, 0)
@@ -40,13 +58,21 @@ function cierrePreload() {
     .staggerTo(preloadNubes, 1, { drawSVG: '50% 50%', fill:'rgba(255, 255, 255, 0)' }, 0.1, 0)
     .to(preload_LineEdi1, 1, { drawSVG: '50% 50%' }, 0)
     .to(preload_FondoEdi1, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(preload_PisoEdi1, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 1)
     .to(preload_TechoEdi1, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(preload_PisoEdi1, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 1)
     .to(preload_LineEdi2, 1, { drawSVG: '50% 50%' }, 1)
     .to(preload_FondoEdi2, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 2)
     .to(libro_play, 1,{ scaleX: 0, transformOrigin: '0% 50%' }, 2)
     .to(preloadRelojMin, 1, { rotation: 0, transformOrigin: 'center center' }, 0)
+    .to(preload_facebook, 1,  { drawSVG: '50% 50%' },0)
+    .to(preload_facebook_fondo, 0.5 , {  opacity: 0 },0)
+    .staggerTo(preload_facebook_cuadrados, 0.3 , {  opacity: 0 }, 0.1, 1)
+    .to(preload_facebook_header, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 0)
+    .to(preload_icono2_Veinti4, 1, {  opacity: 0 }, 0)
+    .to(preload_Veinti4_2_circle, 1, {  opacity: 0 }, 0)
     
-     TweenLite.to(TimeOpenPreload2, 3, {timeScale:0})
+  TweenLite.to(TimeOpenPreload2, 3, {timeScale:0});
 }
 function OpenPreload() {
   TimeOpenPreload.timeScale(1);
@@ -58,10 +84,24 @@ function OpenPreload() {
     .set(paracaidas, { drawSVG: '0% 0%', fill:'rgba(255, 255, 255, 0)' })
     .set(preload_LineEdi1, { drawSVG: '50% 50%' })
     .set(preload_FondoEdi1,{ scaleY: 0, transformOrigin: '0% 100%' })
+    .set(preload_PisoEdi1,{ scaleY: 0, transformOrigin: '0% 100%' })
     .set(preload_TechoEdi1,{ scaleY: 0, transformOrigin: '0% 100%' })
     .set(preload_LineEdi2, { drawSVG: '50% 50%' })
     .set(preload_FondoEdi2,{ scaleY: 0, transformOrigin: '0% 100%' })
     .set(libro_play,{ scaleX: 0, transformOrigin: '0% 50%' })
+    .set(libro_play,{ scaleX: 0, transformOrigin: '0% 50%' })
+    .set(pantalla_redes_fondo, { scaleY: 0, transformOrigin: '0% 100%' })
+    .set(pantalla_redes_franja, { scaleX: 0, transformOrigin: '0% 100%'})
+    .set(pantalla_redes_imagen, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' })
+    .set(pantalla_redes_fondoLineasFan,  { drawSVG: '50% 50%' })
+    .set(preload_facebook,  { drawSVG: '50% 50%' })
+    .set(preload_facebook_fondo,  {  opacity: 0 })
+    .set(preload_facebook_cuadrados,  {  opacity: 0 })
+    .set(preload_facebook_header, { scaleY: 0, transformOrigin: '0% 100%'})
+    .set(preload_icono2_Veinti4, {  opacity: 0 })
+    .set(preload_Veinti4_2_circle, {  opacity: 0 })
+
+    
 
     .to(preloadLamp, 1, { fill: '#C9BB9E' }, 0)
     .to(preloadHeaderLamp, 1, { rotation: -25, transformOrigin: '20 10' }, 0)
@@ -76,11 +116,24 @@ function OpenPreload() {
     .to(preloadLineStart, 2, { drawSVG: '0% 100%' }, 0)
     .to(paracaidas, 2, { drawSVG: '0% 100%' }, 0)
     .to(preload_FondoEdi1, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 0)
+    .to(preload_PisoEdi1, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 0)
     .to(preload_LineEdi1, 1, { drawSVG: '0% 100%' }, 1)
     .to(libro_play, 1, {  scaleX: 1, transformOrigin: '0% 50%' }, 0)
     .to(preload_TechoEdi1, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 1)
     .to(preload_FondoEdi2, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 1)
     .to(preload_LineEdi2, 1, { drawSVG: '0% 100%' }, 2)
+    .to(pantalla_redes_fondo, 1,{ scaleY: 1, transformOrigin: '0% 100%' },0)
+    .to(pantalla_redes_imagen, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },1)
+    .to(pantalla_redes_fondoLineasFan, 1, { drawSVG: '0% 100%' },2)
+    .to(pantalla_redes_franja, 1, { scaleX: 1, transformOrigin: '0% 100%'},3)
+    .to(preload_facebook, 1,  { drawSVG: '0% 100%' },0)
+    .to(preload_facebook_fondo, 0.5 ,  {  opacity: 1 },0)
+    .staggerTo(preload_facebook_cuadrados, 0.5 ,  {  opacity: 1 }, 0.1, 0)
+    .to(preload_facebook_header, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 1)
+
+    .to(preload_icono2_Veinti4, 0.5, {  opacity: 1 },0)
+    .to(preload_Veinti4_2_circle, 0.5, {  opacity: 1 },0)
+    .to(preload_icono2_Veinti4, 3, { rotation: 360, transformOrigin: 'center center' }, .5)
 
     
 
