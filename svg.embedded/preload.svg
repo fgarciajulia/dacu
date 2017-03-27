@@ -127,29 +127,24 @@
 		</g>
 		<g>
 			<g>
-				<g id="XMLID_1_">
-					<g>
-						<path fill="#5C5B5F" d="M723.85,151.95v296.3c0,2.7-2.2,4.9-4.9,4.9h-149.7c-2.7,0-4.9-2.2-4.9-4.9v-296.3H723.85z" />
-						<path fill="#C3C4CA" d="M723.85,140.15v11.8h-159.5v-11.8c0-2.7,2.2-4.9,4.9-4.9h149.6
-						C721.65,135.25,723.85,137.45,723.85,140.15z" />
-					</g>
-					<g>
-						<path fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" d="M723.85,151.95v296.3c0,2.7-2.2,4.9-4.9,4.9
+				<path id="IDE-fondo" fill="#5C5B5F"  stroke="#333399" stroke-width="3" stroke-miterlimit="10"  d="M723.85,151.95v296.3c0,2.7-2.2,4.9-4.9,4.9
 						h-149.7c-2.7,0-4.9-2.2-4.9-4.9v-296.3v-11.8c0-2.7,2.2-4.9,4.9-4.9h149.6c2.7,0,4.9,2.2,4.9,4.9v11.8H723.85z" />
-						<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="564.35" y1="151.95" x2="723.85" y2="151.95"
-						/>
-					</g>
-				</g>
 			</g>
-			<rect x="578.15" y="142.25" fill="#FFFFFF" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="5.6" height="5.2"
-			/>
-			<rect x="586.55" y="142.25" fill="#FFFFFF" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="5.6" height="5.2"
-			/>
-			<rect x="595.45" y="142.25" fill="#FFFFFF" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="5.6" height="5.2"
-			/>
-			<line fill="none" stroke="#E88356" stroke-width="3" stroke-miterlimit="10" x1="592.25" y1="176.85" x2="601.85" y2="176.85"
-			/>
-			<g>
+			<g id="IDE-header">
+					<path fill="#C3C4CA" d="M723.85,140.15v11.8h-159.5v-11.8c0-2.7,2.2-4.9,4.9-4.9h149.6
+					C721.65,135.25,723.85,137.45,723.85,140.15z" />
+					<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="564.35" y1="151.95" x2="723.85" y2="151.95"
+					/>
+				<rect x="578.15" y="142.25" fill="#FFFFFF" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="5.6" height="5.2"
+				/>
+				<rect x="586.55" y="142.25" fill="#FFFFFF" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="5.6" height="5.2"
+				/>
+				<rect x="595.45" y="142.25" fill="#FFFFFF" stroke="#333399" stroke-width="3" stroke-miterlimit="10" width="5.6" height="5.2"
+				/>
+			</g>
+			<g id="IDE-code">
+				<line fill="none" stroke="#E88356" stroke-width="3" stroke-miterlimit="10" x1="592.25" y1="176.85" x2="601.85" y2="176.85"
+				/>
 				<line fill="none" stroke="#E88356" stroke-width="3" stroke-miterlimit="10" x1="606.75" y1="176.85" x2="658.85" y2="176.85"
 				/>
 				<line fill="none" stroke="#E88356" stroke-width="3" stroke-miterlimit="10" x1="625.65" y1="184.95" x2="695.75" y2="184.95"
@@ -803,19 +798,10 @@
 			<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="731.75" y1="404.45" x2="731.75" y2="453.85"
 			/>
 		</g>
-		<g>
+		<g id="pestanias">
 			<circle fill="#D7D9DD" stroke="#333399" stroke-width="3" stroke-miterlimit="10" cx="716.75" cy="145.65" r="32.6" />
+			<polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="731.55,122.15 713.95,162.35 702.05,150.45" />
 			<g>
-				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="734.05" y1="103.35" x2="731.35" y2="109.05"
-				/>
-				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="716.35" y1="95.85" x2="716.35" y2="107.55"
-				/>
-				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="703.55" y1="100.15" x2="704.95" y2="105.65"
-				/>
-				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="686.35" y1="102.35" x2="692.05" y2="110.65"
-				/>
-				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="677.75" y1="117.25" x2="682.35" y2="120.65"
-				/>
 				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="731.85" y1="192.55" x2="729.15" y2="181.95"
 				/>
 				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="740.85" y1="181.95" x2="737.35" y2="176.85"
@@ -830,9 +816,17 @@
 				/>
 				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="750.25" y1="108.95" x2="743.05" y2="115.95"
 				/>
+				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="734.05" y1="103.35" x2="731.35" y2="109.05"
+				/>
+				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="716.35" y1="95.85" x2="716.35" y2="107.55"
+				/>
+				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="703.55" y1="100.15" x2="704.95" y2="105.65"
+				/>
+				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="686.35" y1="102.35" x2="692.05" y2="110.65"
+				/>
+				<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="677.75" y1="117.25" x2="682.35" y2="120.65"
+				/>
 			</g>
-			<polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="702.05,150.45 713.95,162.35 
-			731.55,122.15 		" />
 		</g>
 		<g id="Lineas_x5F_Start_1_">
 			<line fill="none" stroke="#333399" stroke-width="3" stroke-miterlimit="10" x1="246.9" y1="-2.5" x2="385.8" y2="-2.5" />
