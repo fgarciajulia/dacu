@@ -9,21 +9,20 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
-
-gulp.task('jsDeps', function () {
+gulp.task('jsdependencias', function () {
   return gulp.src([
-    'js/deps/jquery.min.js',
-    'js/deps/bootstrap.min.js',
-    'js/deps/dsvgp.min.js',
-    'js/deps/jquery.easing.min.js',
-    'js/deps/jquery.magnific-popup.js',
-    'js/deps/jquery.superscrollorama.js',
-    'js/deps/jquery.validate.min.js',
-    'js/deps/owl.carousel.js',
-    'js/deps/tm.min.js'
+    'js/dependencias/jquery.min.js',
+    'js/dependencias/bootstrap.min.js',
+    'js/dependencias/dsvgp.min.js',
+    'js/dependencias/jquery.easing.min.js',
+    'js/dependencias/jquery.magnific-popup.js',
+    'js/dependencias/jquery.superscrollorama.js',
+    'js/dependencias/jquery.validate.min.js',
+    'js/dependencias/owl.carousel.js',
+    'js/dependencias/tm.min.js'
   ])
   .pipe(sourcemaps.init())
-  .pipe(concat('app.deps.js'))
+  .pipe(concat('app.dependencias.js'))
   .pipe(minify({
     ext: {
       src: '.js',
@@ -43,7 +42,7 @@ gulp.task('js', function () {
     'js/servicios.js',
     'js/contacto.js',
     'js/miselaneas.js',
-    'js/Dacu.js',
+    'js/dacu.js',
   ])
   //.pipe(sourcemaps.init())
   .pipe(concat('app.js'))
@@ -59,7 +58,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('sass/Dacu.scss')
+  return gulp.src('sass/dacu.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
@@ -68,10 +67,7 @@ gulp.task('sass', function () {
     .pipe(concat('app.min.css'))
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('_dist'));
-
 });
-
-
 
 var watchLogger = function (event) {
   gutil.log('[' + event.type + '] ' + event.path);
@@ -102,15 +98,15 @@ gulp.task('watch', ['build'], function () {
   hJS.on('add', watchLogger);
   hJS.on('unlink', watchLogger);
 
-  var wJS_deps = gulp.watch(['js/deps/*.js'], ['jsDeps']);
-  wJS_deps.on('change', watchLogger);
-  wJS_deps.on('add', watchLogger);
-  wJS_deps.on('unlink', watchLogger);
+  var wJS_dependencias = gulp.watch(['js/dependencias/*.js'], ['jsdependencias']);
+  wJS_dependencias.on('change', watchLogger);
+  wJS_dependencias.on('add', watchLogger);
+  wJS_dependencias.on('unlink', watchLogger);
 });
 
 
 gulp.task('build', function (cb) {
-  runSequence(['fileinclude'], ['sass'], ['jsDeps'], ['js'], cb);
+  runSequence(['fileinclude'], ['sass'], ['jsdependencias'], ['js'], cb);
 });
 
 

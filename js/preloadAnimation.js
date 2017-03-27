@@ -43,9 +43,11 @@ var preloadSvg = $('svg#preload'),
     repeat: -1
   }),
   TimeCierrePreload = new TimelineMax();
+TimeOpenPreload.eventCallback('onComplete',cierrePreload);
 
 function cierrePreload() {
   TimeCierrePreload.timeScale(1);
+  TimeCierrePreload.eventCallback('onComplete',CierreCompleto);
   TimeCierrePreload
     .to(preload_pantalla_redes_imagen, 1, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' },0)
     .to(preload_pantalla_redes_fondoLineasFan, 1, { drawSVG: '50% 50%' },1)

@@ -18,8 +18,8 @@
   @@include('body.porfolio.html')
   @@include('body.contacto.html')
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900" rel="stylesheet">
-  <script type="text/javascript" src="app.deps.min.js?v=1"></script>
-  <script type="text/javascript" src="app.min.js?v=1"></script> 
+  <script type="text/javascript" src="app.dependencias.min.js?v=1"></script>
+  <script type="text/javascript" src="app.js?v=1"></script> 
   @@include('../php/porfolio-js.php')
 </body>
 </html>

@@ -1,14 +1,10 @@
-function loaded2() {
-  setTimeout(
-  cierrePreload
-  //   $('body').addClass('loaded');
-  //   setTimeout(function () {
-  //     $('#loader').addClass('fadeOut');
-  //     $('#loader').addClass('hidden');
-  //   }, 600);
-  , 5000);
+function loaded3() {
+  $('body').addClass('loaded');
+  setTimeout(function () {
+    $('#loader').addClass('fadeOut');
+    $('#loader').addClass('hidden');
+  }, 600);
 }
-
 var demoImgArray = [
   'img/Mockup1-1.jpg',
   'img/Mockup1-2.jpg',
@@ -35,10 +31,9 @@ var progressTl = new TimelineMax({
 
 progressTl
   .to($(''), 2, {
-    rotation: 0,
     transformOrigin: 'center center'
   }, 0);
-// ???
+// ? ? ?
 
 function preload(imgArray) {
   OpenPreload();
@@ -54,8 +49,6 @@ function preload(imgArray) {
   });
 }
 
-
-
 function progressUpdate() {
   loadingPorcent = Math.round(progressTl.progress() * 100);
   $('.percentage').text(loadingPorcent + '%');
@@ -64,7 +57,10 @@ function progressUpdate() {
 
 function loadComplete() {
   $('.percentage').text('listo');
-  loaded2();
+}
+
+function CierreCompleto() {
+  loaded3();
   setTimeout(function () {
     miselaneas();
     PorfolioAltoMiselanea();
