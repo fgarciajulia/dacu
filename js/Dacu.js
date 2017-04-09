@@ -63,7 +63,6 @@ function CierreCompleto() {
   loaded3();
   setTimeout(function () {
     miselaneas();
-    PorfolioAltoMiselanea();
   }, 1300);
 }
 

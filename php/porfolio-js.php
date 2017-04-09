@@ -8,6 +8,6 @@
         include("php/magnificGalery.php");
       }
     }
-    fclose($handl);
+    fclose($handle);
   }
 ?>

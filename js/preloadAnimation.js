@@ -3,6 +3,7 @@ var preloadSvg = $('svg#preload'),
   preload_headerLamp = $('#preload #headerLamp_1_'),
   preload_icono1Humo = $('#preload  #humo_2_ path'),
   preload_regla = $('#preload #regla_1_'),
+  preload_reloj = $('#preload .reloj circle,#preload .reloj line,#preload .reloj  path'),
   preload_pluma = $('#preload #Pluma_1_'),
   preload_relojMin = $('#preload #Reloj-min_1_'),
   preload_pantone1 = $('#preload #Pantone1_1_'),
@@ -32,11 +33,18 @@ var preloadSvg = $('svg#preload'),
   preload_icono2_Veinti4 = $('#preload #Veinti4_2_'),
   preload_Veinti4_2_circle = $('#preload #Veinti4_2_circle'),
   preload_check_pestanias = $('#preload #pestanias line, #preload #pestanias polyline'),
-  preload_check_circulo = $('#preload #pestanias circle'),
-  
+  preload_check_circulo = $('#preload #pestanias circle'),  
   preload_IDE = $('#preload #IDE-code line'),
   preload_IDE_fondo = $('#preload #IDE-fondo'),
   preload_IDE_header = $('#preload #IDE-header'),
+  preload_diamante = $('#preload .diamante polyline'),
+  preload_diamante_line = $('#preload .diamante line'),
+  preload_celu_fondo = $('#preload .celu .celu-fondo'),
+  preload_celu_pantalla = $('#preload .celu .celu-pantalla,#preload .celu ellipse'),
+  preload_compu_pantalla = $('#preload .compu rect'),
+  preload_compu_fondo = $('#preload .compu path,#preload .compu  polygon'),
+  preload_compu_line = $('#preload .compu line'),
+  preload_papelito = $('#preload .papelito'),
 
   TimeOpenPreload = new TimelineMax(),
   TimeOpenPreload2 = new TimelineMax({
@@ -72,6 +80,7 @@ function cierrePreload() {
     .to(preload_LineEdi2, 1, { drawSVG: '50% 50%' }, 1)
     .to(preload_FondoEdi2, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 2)
     .to(preload_libro_play, 1,{ scaleX: 0, transformOrigin: '0% 50%' }, 2)
+    .to(preload_reloj, 1, { drawSVG: '50% 50%',opacity: 0 },1)
     .to(preload_relojMin, 1, { rotation: 0, transformOrigin: 'center center' }, 0)
     .to(preload_facebook, 1, { drawSVG: '50% 50%' },0)
     .to(preload_facebook_fondo, 0.5 , { opacity: 0 },0)
@@ -85,12 +94,22 @@ function cierrePreload() {
     .staggerTo(preload_IDE, 1 , { drawSVG: '50% 50%'  }, 0.1, 0)
     .to(preload_IDE_fondo, 1,{ scaleY: 0, transformOrigin: '0% 100%' },3)
     .to(preload_IDE_header, 1, { opacity: 0 }, 0)
+    .to(preload_diamante, 1, { drawSVG: '50% 50%' }, 0)
+    .to(preload_diamante, 1, { 'opacity': 0 }, 1)
+    .to(preload_diamante_line, 1, { drawSVG: '0% 0%' }, 1)
+    .to(preload_celu_pantalla, 1,{ scaleY: 0, scaleX: 0,  transformOrigin: '50% 50%' },0)
+    .to(preload_celu_fondo, 1,{ scaleY: 0, scaleX: 0,  transformOrigin: '50% 50%' },.5)
+    .to(preload_compu_fondo, 1,{ scaleY: 0, scaleX: 0,  transformOrigin: '50% 50%' },0)
+    .to(preload_compu_pantalla, 1,{ scaleY: 0, scaleX: 0,  transformOrigin: '50% 50%' },1)
+    .to(preload_compu_line, 1, { drawSVG: '50% 50%' },0)
+    .to(preload_papelito, 1,{ scaleY: 0, scaleX: 0,  transformOrigin: '100% 100%' },0)
     
   TweenLite.to(TimeOpenPreload2, 3, {timeScale:0});
 }
 function OpenPreload() {
   TimeOpenPreload.timeScale(1);
   TimeOpenPreload
+    .set(preload_reloj, { drawSVG: '50% 50%', opacity: 0  })
     .set(preloadSvg, { opacity: 1 })
     .set(preload_books, { scaleX: 0, transformOrigin: '0% 0%' })
     .set(preload_lineStart, { drawSVG: '50% 50%' })
@@ -121,13 +140,22 @@ function OpenPreload() {
     .set(preload_check_circulo, {  scaleX: 0,  scaleY: 0, transformOrigin: '50% 50%' })
     .set(preload_IDE_fondo,{ scaleY: 0, transformOrigin: '0% 100%'})
     .set(preload_IDE_header, { opacity: 0 })
-
+    .set(preload_diamante, { drawSVG: '50% 50%' ,'opacity':0})
+    .set(preload_diamante_line, { drawSVG: '0% 0%' })
+    .set(preload_celu_fondo, {  scaleX: 0,  scaleY: 0, transformOrigin: '50% 50%' })
+    .set(preload_celu_pantalla, {  scaleX: 0,  scaleY: 0, transformOrigin: '50% 50%' })
+    .set(preload_compu_pantalla, {  scaleX: 0,  scaleY: 0, transformOrigin: '50% 50%' })
+    .set(preload_compu_fondo, {  scaleX: 0,  scaleY: 0, transformOrigin: '50% 50%' })
+    .set(preload_compu_line, { drawSVG: '50% 50%' })
+    .set(preload_papelito, {  scaleX: 0,  scaleY: 0, transformOrigin: '100% 100%' })
     
 
     .to(preload_lamp, 1, { fill: '#C9BB9E' }, 0)
     .to(preload_headerLamp, 1, { rotation: -25, transformOrigin: '20 10' }, 0)
     .to(preload_regla, 1, { rotation: 50, transformOrigin: '100% 100%' }, 0)
     .to(preload_pluma, 1, { rotation: -90, transformOrigin: '00 50%' }, 0)
+    .to(preload_reloj, .5, {  opacity: 1 },0)
+    .to(preload_reloj, 1, { drawSVG: '0% 100%' },.5)
     .to(preload_relojMin, 3, { rotation: 240, transformOrigin: 'center center' }, 0)
     .to(preload_pantone3, 1, { rotation: -90, transformOrigin: '10 19' }, 0)
     .to(preload_pantone2, 1, { rotation: -45, transformOrigin: '10 19' }, 0)
@@ -151,7 +179,6 @@ function OpenPreload() {
     .to(preload_facebook_fondo, 0.5 , { opacity: 1 },0)
     .staggerTo(preload_facebook_cuadrados, 0.5 , { opacity: 1 }, 0.1, 0)
     .to(preload_facebook_header, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 1)
-
     .to(preload_icono2_Veinti4, 0.5, { opacity: 1 },0)
     .to(preload_Veinti4_2_circle, 0.5, { opacity: 1 },0)
     .to(preload_icono2_Veinti4, 3, { rotation: 360, transformOrigin: 'center center' }, .5)
@@ -161,6 +188,17 @@ function OpenPreload() {
     .to(preload_IDE_fondo, 1,{ scaleY: 1, transformOrigin: '0% 100%' },0)
     .staggerTo(preload_IDE, 1 , { drawSVG: '0% 100%'  }, 0.1, 1)
     .to(preload_IDE_header, 0.5, { opacity: 1 },.5)
+    .to(preload_diamante, 0.5 , { opacity: 1 },0)
+    .to(preload_diamante, 1, { drawSVG: '0% 100%' }, 0.5)
+    .to(preload_diamante_line, 1, { drawSVG: '0% 100%' }, 1)
+    .to(preload_celu_fondo, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },0)
+    .to(preload_celu_pantalla, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },.5)    
+    .to(preload_compu_pantalla, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },0)
+    .to(preload_compu_fondo, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },1)
+    .to(preload_compu_line, 1, { drawSVG: '0% 100%' },1.5)
+
+    .to(preload_papelito, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '100% 100%' },0)
+
 
     
 

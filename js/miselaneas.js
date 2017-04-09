@@ -85,3 +85,6 @@ function PorfolioAltoMiselanea() {
   $('.porfolio #XMLID_1_ rect').css('height',
     AltoMap);
 }
+$(document).ready(function () {
+  PorfolioAltoMiselanea();
+});
