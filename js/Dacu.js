@@ -60,10 +60,10 @@ function loadComplete() {
 }
 
 function CierreCompleto() {
-  loaded3();
-  setTimeout(function () {
-    miselaneas();
-  }, 1300);
+  // loaded3();
+  // setTimeout(function () {
+  //   miselaneas();
+  // }, 1300);
 }
 
 var isPlay = true;

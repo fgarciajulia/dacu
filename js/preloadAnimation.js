@@ -3,12 +3,13 @@ var preloadSvg = $('svg#preload'),
   preload_headerLamp = $('#preload #headerLamp_1_'),
   preload_icono1Humo = $('#preload  #humo_2_ path'),
   preload_regla = $('#preload #regla_1_'),
-  preload_reloj = $('#preload .reloj circle,#preload .reloj line,#preload .reloj  path'),
   preload_pluma = $('#preload #Pluma_1_'),
+  preload_reloj = $('#preload .reloj circle,#preload .reloj line,#preload .reloj  path'),
+  preload_lampara = $('#preload .lampara circle,#preload .lampara line, #preload .lampara  path, #preload .lampara polygon, #preload .lampara polyline, #preload .lampara ellipse, #preload .lampara rect'),
   preload_relojMin = $('#preload #Reloj-min_1_'),
-  preload_pantone1 = $('#preload #Pantone1_1_'),
-  preload_pantone2 = $('#preload #Pantone2_1_'),
-  preload_pantone3 = $('#preload #Pantone3_1_'),
+  preload_pantone1 = $('#preload #pantone1_1_'),
+  preload_pantone2 = $('#preload #pantone2_1_'),
+  preload_pantone3 = $('#preload #pantone3_1_'),
   preload_books = $('#preload #Books_1_ rect, #preload #cuadrados_1_ rect, #preload #Diploma_1_ rect'),
   preload_lineStart = $('#preload #Lineas_x5F_Start_1_ line, #preload #Diploma_1_ line'),
   preload_nubes = $('#preload .nubes polygon, #preload .nubes line'),
@@ -45,18 +46,24 @@ var preloadSvg = $('svg#preload'),
   preload_compu_fondo = $('#preload .compu path,#preload .compu  polygon'),
   preload_compu_line = $('#preload .compu line'),
   preload_papelito = $('#preload .papelito'),
+  preload_taza = $('#preload .taza'),
+  preload_lapicero = $('#preload .lapicero'),
+  preload_navaja = $('#preload .navaja'),
+  preload_pantone = $('#preload .pantone'),
+  preload_piso = $('#preload .piso line'),
 
   TimeOpenPreload = new TimelineMax(),
-  TimeOpenPreload2 = new TimelineMax({
+  TimeOpenPreloadTaza = new TimelineMax({
     repeat: -1
   }),
   TimeCierrePreload = new TimelineMax();
+  
 TimeOpenPreload.eventCallback('onComplete',cierrePreload);
 
 function cierrePreload() {
-  TimeCierrePreload.timeScale(1);
-  TimeCierrePreload.eventCallback('onComplete',CierreCompleto);
   TimeCierrePreload
+    .timeScale(1)
+    .eventCallback('onComplete', CierreCompleto)
     .to(preload_pantalla_redes_imagen, 1, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' },0)
     .to(preload_pantalla_redes_fondoLineasFan, 1, { drawSVG: '50% 50%' },1)
     .to(preload_pantalla_redes_franja, 1, { scaleX: 0, transformOrigin: '0% 100%'},2)
@@ -80,6 +87,7 @@ function cierrePreload() {
     .to(preload_LineEdi2, 1, { drawSVG: '50% 50%' }, 1)
     .to(preload_FondoEdi2, 1,{ scaleY: 0, transformOrigin: '0% 100%' }, 2)
     .to(preload_libro_play, 1,{ scaleX: 0, transformOrigin: '0% 50%' }, 2)
+    .to(preload_lampara, 1, { drawSVG: '50% 50%',opacity: 0 },1)
     .to(preload_reloj, 1, { drawSVG: '50% 50%',opacity: 0 },1)
     .to(preload_relojMin, 1, { rotation: 0, transformOrigin: 'center center' }, 0)
     .to(preload_facebook, 1, { drawSVG: '50% 50%' },0)
@@ -103,12 +111,17 @@ function cierrePreload() {
     .to(preload_compu_pantalla, 1,{ scaleY: 0, scaleX: 0,  transformOrigin: '50% 50%' },1)
     .to(preload_compu_line, 1, { drawSVG: '50% 50%' },0)
     .to(preload_papelito, 1,{ scaleY: 0, scaleX: 0,  transformOrigin: '100% 100%' },0)
+    .to(preload_taza, 1, { opacity: 0 }, 0)
+    .to(preload_lapicero, 1, { opacity: 0 }, 0)
+    .to(preload_navaja, 1, { opacity: 0 }, 0)
+    .to(preload_pantone, 1, { opacity: 0 }, 0)
+    .to(preload_piso, 2, { drawSVG: '50% 50%' }, 0)
     
-  TweenLite.to(TimeOpenPreload2, 3, {timeScale:0});
+  TweenLite.to(TimeOpenPreloadTaza, 3, {timeScale:0});
 }
 function OpenPreload() {
-  TimeOpenPreload.timeScale(1);
-  TimeOpenPreload
+  TimeOpenPreload.timeScale(1)
+    .set(preload_lampara, { drawSVG: '50% 50%', opacity: 0  })
     .set(preload_reloj, { drawSVG: '50% 50%', opacity: 0  })
     .set(preloadSvg, { opacity: 1 })
     .set(preload_books, { scaleX: 0, transformOrigin: '0% 0%' })
@@ -147,7 +160,12 @@ function OpenPreload() {
     .set(preload_compu_pantalla, {  scaleX: 0,  scaleY: 0, transformOrigin: '50% 50%' })
     .set(preload_compu_fondo, {  scaleX: 0,  scaleY: 0, transformOrigin: '50% 50%' })
     .set(preload_compu_line, { drawSVG: '50% 50%' })
-    .set(preload_papelito, {  scaleX: 0,  scaleY: 0, transformOrigin: '100% 100%' })
+    .set(preload_papelito, {  scaleX: 0,  scaleY: 0, transformOrigin: '0% 0%' })
+    .set(preload_taza, { opacity: 0 })
+    .set(preload_lapicero, { opacity: 0 })
+    .set(preload_navaja, { opacity: 0 })
+    .set(preload_pantone, { opacity: 0 })
+    .set(preload_piso, { drawSVG: '0% 0%', fill:'rgba(255, 255, 255, 0)' })
     
 
     .to(preload_lamp, 1, { fill: '#C9BB9E' }, 0)
@@ -156,6 +174,8 @@ function OpenPreload() {
     .to(preload_pluma, 1, { rotation: -90, transformOrigin: '00 50%' }, 0)
     .to(preload_reloj, .5, {  opacity: 1 },0)
     .to(preload_reloj, 1, { drawSVG: '0% 100%' },.5)
+    .to(preload_lampara, .5, {  opacity: 1 },0)
+    .to(preload_lampara, 1, { drawSVG: '0% 100%' },.5)
     .to(preload_relojMin, 3, { rotation: 240, transformOrigin: 'center center' }, 0)
     .to(preload_pantone3, 1, { rotation: -90, transformOrigin: '10 19' }, 0)
     .to(preload_pantone2, 1, { rotation: -45, transformOrigin: '10 19' }, 0)
@@ -196,13 +216,14 @@ function OpenPreload() {
     .to(preload_compu_pantalla, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },0)
     .to(preload_compu_fondo, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },1)
     .to(preload_compu_line, 1, { drawSVG: '0% 100%' },1.5)
+    .to(preload_papelito, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '0% 0%' },0)
+    .to(preload_taza, 0.5 , { opacity: 1 },0)
+    .to(preload_lapicero, 0.5 , { opacity: 1 },0)
+    .to(preload_navaja, 0.5 , { opacity: 1 },0)
+    .to(preload_pantone, 0.5 , { opacity: 1 },0)
+    .to(preload_piso, 2, { drawSVG: '0% 100%' }, 0);
 
-    .to(preload_papelito, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '100% 100%' },0)
-
-
-    
-
-  TimeOpenPreload2
+  TimeOpenPreloadTaza
     .set(preload_icono1Humo, { drawSVG: '0% 0%' })
     .to(preload_icono1Humo, 1, { drawSVG: '10% 50%', ease: Linear.easeNone })
     .to(preload_icono1Humo, 1, { drawSVG: '35% 80%', ease: Linear.easeNone })
