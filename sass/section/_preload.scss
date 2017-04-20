@@ -40,6 +40,7 @@ div#loader {
 	top: 0px;
 	width: 100%;
 	height: 100%;
+	cursor: pointer;
 }
 
 .container.loader {
@@ -59,32 +60,33 @@ div#loader {
 	.prueba.logoPreload {
 		transition: all 1s;
 		animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-		filter: url(#gooey);
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-items: center;
+		display: table;
+		height: 100%;
 		svg#preload {
 			order: 0;
 			flex: 0 1 auto;
 			align-self: center;
 		}
 		.percentage {
-			margin-top: 35px;
+			margin-top: 15px;
 			background: #fff;
+			text-align: center;
+			font-size: 25px;
+			font-weight: 600;
 		}
 		&.logoPreload {
-			height: 100%;
-			width: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			width: 80%;
 			.hola {
-				padding-top: 33%;
+				padding-top: 47.2%;
 				position: relative;
-				width: 80%;
+				width: 100%;
 				svg#preload {
 					transition: all 1s;
 					animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
 					position: absolute;
+					width: 100%;
 				}
 			}
 		}

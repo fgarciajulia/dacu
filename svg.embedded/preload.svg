@@ -777,6 +777,6 @@
 			</g>
 		</g>
 		<rect x="213.333" y="276.133" fill="none" width="324.167" height="25.867" />
-		<text transform="matrix(1 0 0 1 265.2289 297.6725)" fill="#333399" style="font-family: 'Titillium Web', sans-serif; text-transform: uppercase; font-size:30px">diseño gráfico</text>
+		<text  class="titulo-preload"  transform="matrix(1 0 0 1 265.2289 297.6725)"  text-anchor="middle" fill="#333399" style="font-family: 'Titillium Web', sans-serif; text-transform: uppercase; font-size:30px">Programación Web</text>
 	</g>
 </svg>

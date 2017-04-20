@@ -9,55 +9,55 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('jsdependencias', function () {
+gulp.task('jsdependencias', () => {
   return gulp.src([
-    'js/dependencias/jquery.min.js',
-    'js/dependencias/bootstrap.min.js',
-    'js/dependencias/dsvgp.min.js',
-    'js/dependencias/jquery.easing.min.js',
-    'js/dependencias/jquery.magnific-popup.js',
-    'js/dependencias/jquery.superscrollorama.js',
-    'js/dependencias/jquery.validate.min.js',
-    'js/dependencias/owl.carousel.js',
-    'js/dependencias/tm.min.js'
-  ])
-  .pipe(sourcemaps.init())
-  .pipe(concat('app.dependencias.js'))
-  .pipe(minify({
-    ext: {
-      src: '.js',
-      min: '.min.js'
-    },
-    exclude: ['tasks'],
-  }))
-  .pipe(sourcemaps.write('/'))
-  .pipe(gulp.dest('_dist'));
+      'js/dependencias/jquery.min.js',
+      'js/dependencias/bootstrap.min.js',
+      'js/dependencias/dsvgp.min.js',
+      'js/dependencias/jquery.easing.min.js',
+      'js/dependencias/jquery.magnific-popup.js',
+      'js/dependencias/jquery.superscrollorama.js',
+      'js/dependencias/jquery.validate.min.js',
+      'js/dependencias/owl.carousel.js',
+      'js/dependencias/tm.min.js'
+    ])
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.dependencias.js'))
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      },
+      exclude: ['tasks'],
+    }))
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest('_dist'));
 });
 
-gulp.task('js', function () {
+gulp.task('js', () => {
   return gulp.src([
-    'js/preloadAnimation.js',
-    'js/home.js',
-    'js/Servicios.Animation.js',
-    'js/servicios.js',
-    'js/contacto.js',
-    'js/miselaneas.js',
-    'js/dacu.js',
-  ])
-  //.pipe(sourcemaps.init())
-  .pipe(concat('app.js'))
-  .pipe(minify({
-    ext: {
-      src: '.js',
-      min: '.min.js'
-    },
-    exclude: ['tasks'],
-  }))
-  //.pipe(sourcemaps.write('/'))
-  .pipe(gulp.dest('_dist'));
+      'js/preloadAnimation.js',
+      'js/home.js',
+      'js/Servicios.Animation.js',
+      'js/servicios.js',
+      'js/contacto.js',
+      'js/miselaneas.js',
+      'js/dacu.js',
+    ])
+    //.pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(minify({
+      ext: {
+        src: '.js',
+        min: '.min.js'
+      },
+      exclude: ['tasks'],
+    }))
+    //.pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest('_dist'));
 });
 
-gulp.task('sass', function () {
+gulp.task('sass', () => {
   return gulp.src('sass/dacu.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -69,10 +69,10 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('_dist'));
 });
 
-var watchLogger = function (event) {
+var watchLogger = (event) => {
   gutil.log('[' + event.type + '] ' + event.path);
 };
-gulp.task('fileinclude', function () {
+gulp.task('fileinclude', () => {
   gulp.src(['html/index.php'])
     .pipe(fileinclude())
     .pipe(htmlmin({
@@ -81,14 +81,14 @@ gulp.task('fileinclude', function () {
     .pipe(gulp.dest('_dist'));
 });
 
-gulp.task('watch', ['build'], function () {
+gulp.task('watch', ['build'], () => {
 
   var wSASS = gulp.watch('sass/**/*.scss', ['sass']);
   wSASS.on('change', watchLogger);
   wSASS.on('add', watchLogger);
   wSASS.on('unlink', watchLogger);
 
-  var wJS = gulp.watch( 'js/*.js', ['js']);
+  var wJS = gulp.watch('js/*.js', ['js']);
   wJS.on('change', watchLogger);
   wJS.on('add', watchLogger);
   wJS.on('unlink', watchLogger);
@@ -105,7 +105,7 @@ gulp.task('watch', ['build'], function () {
 });
 
 
-gulp.task('build', function (cb) {
+gulp.task('build', (cb) => {
   runSequence(['fileinclude'], ['sass'], ['jsdependencias'], ['js'], cb);
 });
 
