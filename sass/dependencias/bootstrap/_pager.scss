@@ -8,7 +8,7 @@
   margin: $line-height-computed 0;
   list-style: none;
   text-align: center;
-  @include clearfix;
+      &:before,    &:after {        content: " ";         display: table;     }    &:after {        clear: both;    }
   li {
     display: inline;
     > a,

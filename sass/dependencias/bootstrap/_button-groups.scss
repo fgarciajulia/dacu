@@ -34,7 +34,7 @@
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
   margin-left: -5px; // Offset the first child's margin
-  @include clearfix;
+      &:before,    &:after {        content: " ";         display: table;     }    &:after {        clear: both;    }
 
   .btn,
   .btn-group,
@@ -153,7 +153,7 @@
 
   // Clear floats so dropdown menus can be properly placed
   > .btn-group {
-    @include clearfix;
+        &:before,    &:after {        content: " ";         display: table;     }    &:after {        clear: both;    }
     > .btn {
       float: none;
     }
