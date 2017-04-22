@@ -11,8 +11,21 @@ var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('jsdependencias', () => {
   return gulp.src([
-      'js/dependencias/jquery.min.js',
-      'js/dependencias/bootstrap.min.js',
+      'js/dependencias/jquery.js',
+
+      //'js/dependencias/bootstrap/affix.js',
+      //'js/dependencias/bootstrap/alert.js',
+      //'js/dependencias/bootstrap/button.js',
+      //'js/dependencias/bootstrap/carousel.js',
+      //'js/dependencias/bootstrap/collapse.js',
+      'js/dependencias/bootstrap/dropdown.js',
+      //'js/dependencias/bootstrap/modal.js',
+      //'js/dependencias/bootstrap/scrollspy.js',
+      //'js/dependencias/bootstrap/tab.js',
+      //'js/dependencias/bootstrap/transition.js',
+      //'js/dependencias/bootstrap/tooltip.js',
+      //'js/dependencias/bootstrap/popover.js',
+
       'js/dependencias/dsvgp.min.js',
       'js/dependencias/jquery.easing.min.js',
       'js/dependencias/jquery.magnific-popup.js',
@@ -63,15 +76,12 @@ gulp.task('sass', () => {
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
-    .pipe(autoprefixer()) // desHabilitar para desarrollo
+    //.pipe(autoprefixer()) // desHabilitar para desarrollo
     .pipe(concat('app.min.css'))
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('_dist'));
 });
 
-var watchLogger = (event) => {
-  gutil.log('[' + event.type + '] ' + event.path);
-};
 gulp.task('fileinclude', () => {
   gulp.src(['html/index.php'])
     .pipe(fileinclude())
@@ -81,27 +91,23 @@ gulp.task('fileinclude', () => {
     .pipe(gulp.dest('_dist'));
 });
 
+var watchLogger = (event) => {
+  gutil.log('[' + event.type + '] ' + event.path);
+};
+
 gulp.task('watch', ['build'], () => {
 
   var wSASS = gulp.watch('sass/**/*.scss', ['sass']);
-  wSASS.on('change', watchLogger);
-  wSASS.on('add', watchLogger);
-  wSASS.on('unlink', watchLogger);
+  wSASS.on('change add unlink', watchLogger);
 
   var wJS = gulp.watch('js/*.js', ['js']);
-  wJS.on('change', watchLogger);
-  wJS.on('add', watchLogger);
-  wJS.on('unlink', watchLogger);
+  wJS.on('change add unlink', watchLogger);
 
   var hJS = gulp.watch(['html/**', 'svg.embedded/**', 'php/**'], ['fileinclude']);
-  hJS.on('change', watchLogger);
-  hJS.on('add', watchLogger);
-  hJS.on('unlink', watchLogger);
+  hJS.on('change add unlink', watchLogger);
 
   var wJS_dependencias = gulp.watch(['js/dependencias/*.js'], ['jsdependencias']);
-  wJS_dependencias.on('change', watchLogger);
-  wJS_dependencias.on('add', watchLogger);
-  wJS_dependencias.on('unlink', watchLogger);
+  wJS_dependencias.on('change add unlink', watchLogger);
 });
 
 

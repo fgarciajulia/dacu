@@ -52,7 +52,6 @@ var preloadSvg = $('svg#preload'),
   preload_navaja = $('#preload .navaja'),
   preload_pantone = $('#preload .pantone'),
   preload_piso = $('#preload .piso line'),
-  lineaDeTiempo
 
   TimeOpenPreload = new TimelineMax(),
   TimeOpenPreloadTaza = new TimelineMax({
