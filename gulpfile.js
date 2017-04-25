@@ -71,7 +71,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('sass', () => {
-  return gulp.src('sass/dacu.scss')
+  return gulp.src('sass/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
