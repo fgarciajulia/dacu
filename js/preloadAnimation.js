@@ -7,12 +7,15 @@ var preloadSvg = $('svg#preload'),
   preload_pluma = $('#preload #Pluma_1_'),
   preload_reloj = $('#preload .reloj circle,#preload .reloj line,#preload .reloj  path'),
   preload_lampara = $('#preload .lampara circle,#preload .lampara line, #preload .lampara  path, #preload .lampara polygon, #preload .lampara polyline, #preload .lampara ellipse, #preload .lampara rect'),
+  preload_lampara_gris = $('#preload .lampara .gris'),
   preload_relojMin = $('#preload #Reloj-min_1_'),
   preload_pantone1 = $('#preload #pantone1_1_'),
   preload_pantone2 = $('#preload #pantone2_1_'),
   preload_pantone3 = $('#preload #pantone3_1_'),
-  preload_books = $('#preload #Books_1_ rect, #preload #cuadrados_1_ rect, #preload #Diploma_1_ rect'),
-  preload_lineStart = $('#preload #Lineas_x5F_Start_1_ line, #preload #Diploma_1_ line'),
+  preload_diploma_cuadrado = $('#Diploma_1_ rect'),
+  preload_diploma_linea = $('#Diploma_1_ line'),
+  preload_books = $('#preload #Books_1_ rect, #preload #cuadrados_1_ rect'),
+  preload_lineStart = $('#preload #Lineas_x5F_Start_1_ line'),
   preload_nubes = $('#preload .nubes polygon, #preload .nubes line'),
   preload_paracaidas = $('#preload #paracaidas path, #preload #paracaidas line, #preload #paracaidas rect'),
   preload_libro_play = $('#preload #libro-play path, #preload #libro-play line, #preload #libro-play rect, #preload #libro-play polygon'),
@@ -59,12 +62,11 @@ var preloadSvg = $('svg#preload'),
   }),
   TimeCierrePreload = new TimelineMax();
   
-TimeOpenPreload.eventCallback('onComplete',cierrePreload);
 
 function cierrePreload() {
   TimeCierrePreload
     .timeScale(1)
-    .eventCallback('onComplete', CierreCompleto)
+    .eventCallback('onComplete', aperturaPreload)
     .to(preload_pantalla_redes_imagen, 1, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' },0)
     .to(preload_pantalla_redes_fondoLineasFan, 1, { drawSVG: '50% 50%' },1)
     .to(preload_pantalla_redes_franja, 1, { scaleX: 0, transformOrigin: '0% 100%'},2)
@@ -122,11 +124,14 @@ function cierrePreload() {
 }
 function OpenPreload() {
   TimeOpenPreload.timeScale(1)
+  //.eventCallback('onComplete',cierrePreload)
 
     .set(preload_lampara, { drawSVG: '50% 50%', opacity: 0  })
     .set(preload_reloj, { drawSVG: '50% 50%', opacity: 0  })
     .set(preloadSvg, { opacity: 1 })
     .set(preload_books, { scaleX: 0, transformOrigin: '0% 0%' })
+    .set(preload_diploma_linea, { drawSVG: '50% 50%' })
+    .set(preload_diploma_cuadrado, { scaleX: 0, transformOrigin: '0% 0%' })
     .set(preload_lineStart, { drawSVG: '50% 50%' })
     .set(preload_nubes, { drawSVG: '0% 0%', fill:'rgba(255, 255, 255, 0)' })
     .set(preload_paracaidas, { drawSVG: '0% 0%', fill:'rgba(255, 255, 255, 0)' })
@@ -170,8 +175,8 @@ function OpenPreload() {
     .set(preload_piso, { drawSVG: '0% 0%', fill:'rgba(255, 255, 255, 0)' })
     .set(preload_titulo, {  scaleX:2, scaleY:2,x:275.275, y:100 ,  transformOrigin: '50% 50%'  })
 
-    .to(preload_titulo, 5, { scaleX:1, scaleY:1,x:275.275, y:100 ,  transformOrigin: '50% 50%' })
-    .to(preload_titulo, 2, { x:375.275, y:297.672 }, 'titulo')
+    .to(preload_titulo, 2, { scaleX:1, scaleY:1,x:275.275, y:100 ,  transformOrigin: '50% 50%' })
+    .to(preload_titulo, 1, { x:375.275, y:297.672 }, 'titulo')
     .to(preload_piso, 2, { drawSVG: '0% 100%' }, 'titulo-=2')
     .to(preload_compu_pantalla, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' }, 'compu')
     .to(preload_compu_fondo, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'compu+=1')
@@ -179,24 +184,33 @@ function OpenPreload() {
     .to(preload_papelito, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '0% 0%' },'compu+=1.5')
     .to(preload_check_circulo,1 , {  scaleX: 1,  scaleY: 1, transformOrigin: '50% 50%'  }, 'IDE')
     .to(preload_IDE_fondo, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 'IDE')
-    .staggerTo(preload_IDE, 1 , { drawSVG: '0% 100%'  }, 0.05, 'IDE')
+    .staggerTo(preload_IDE, 1 , { drawSVG: '0% 100%'  }, 0.03, 'IDE')
     .to(preload_IDE_header, 0.5, { opacity: 1 }, 'IDE')
     .staggerTo(preload_check_pestanias, 1 , { drawSVG: '0% 100%'  }, 0.1, 'IDE')
     .add(function () {$(preload_titulo).text('Diseño Gráfico');})
     .to(preload_lampara, .5, {  opacity: 1 }, 'lampara')
-    .to(preload_lampara, 1, { drawSVG: '0% 100%' }, 'lampara+=.5')
-    .to(preload_headerLamp, 2, { rotation: -25, transformOrigin: '20 10' }, 'lampara+=.5')
-    .to(preload_lamp, 1, { fill: '#C9BB9E' }, 'lampara+=1')
+    .staggerTo(preload_lampara, 1, { drawSVG: '0% 100%' },  0.1,'lampara+=1')
+    .to(preload_headerLamp, 2, { rotation: -25, transformOrigin: '20 10' }, 'lampara+=3')
+    .to(preload_lamp, 1, { fill: '#C9BB9E' }, 'lampara+=3')
+    .to(preload_lampara_gris, 1, { fill: '#AFAEB4' }, 'lampara+=3')
+    .to(preload_pantone, 0.5 , { opacity: 1 },'disenio')
+    .to(preload_pantone3, 1, { rotation: -90, transformOrigin: '10 19' }, 'disenio+=.5')
+    .to(preload_pantone2, 1, { rotation: -45, transformOrigin: '10 19' }, 'disenio+=.5')
+    .to(preload_pantone1, 1, { rotation: 0, transformOrigin: '10 19' }, 'disenio+=.5')
+    .to(preload_navaja, 0.5 , { opacity: 1 },'navaja')
+    .to(preload_regla, 1, { rotation: 50, transformOrigin: '100% 100%' }, 'navaja+=.5')
+    .to(preload_pluma, 1, { rotation: -90, transformOrigin: '00 50%' }, 'navaja+=.5')
+    .to(preload_reloj, .5, {  opacity: 1 },'reloj')
+    .to(preload_reloj, 1, { drawSVG: '0% 100%' },'reloj+=.5')
+    .to(preload_relojMin, 5, { rotation: 240, transformOrigin: 'center center' }, 'reloj+=.5')
+    .to(preload_celu_fondo, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'navaja+=2')
+    .to(preload_celu_pantalla, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'navaja+=3')
+    .to(preload_taza, 1 , { opacity: 2 },'navaja+=3')
+    .to(preload_lapicero, 1 , { opacity: 2 },'navaja+=4')
+    .staggerTo(preload_diploma_cuadrado, 2, { scaleX: 1, transformOrigin: '0% 0%' }, .2, 'navaja+=5')
+    .to(preload_diploma_linea, 2, { drawSVG: '0% 100%' }, 'navaja+=5')
 
 
-    .to(preload_regla, 1, { rotation: 50, transformOrigin: '100% 100%' }, 'test')
-    .to(preload_pluma, 1, { rotation: -90, transformOrigin: '00 50%' }, 'test')
-    .to(preload_reloj, .5, {  opacity: 1 },'test')
-    .to(preload_reloj, 1, { drawSVG: '0% 100%' },'test+=.5')
-    .to(preload_relojMin, 3, { rotation: 240, transformOrigin: 'center center' }, 'test')
-    .to(preload_pantone3, 1, { rotation: -90, transformOrigin: '10 19' }, 'test')
-    .to(preload_pantone2, 1, { rotation: -45, transformOrigin: '10 19' }, 'test')
-    .to(preload_pantone1, 1, { rotation: 0, transformOrigin: '10 19' }, 'test')
     .staggerTo(preload_books, 1, { scaleX: 1, transformOrigin: '0% 0%' }, .2, 'test')
     .staggerTo(preload_nubes, 1, { drawSVG: '00% 110%',fill: 'rgb(237, 238, 240)'}, .3, 'test')
     .to(preload_lineStart, 2, { drawSVG: '0% 100%' }, 'test')
@@ -224,12 +238,6 @@ function OpenPreload() {
     .to(preload_diamante, 0.5 , { opacity: 1 },'test')
     .to(preload_diamante, 1, { drawSVG: '0% 100%' }, 'test+=.5')
     .to(preload_diamante_line, 1, { drawSVG: '0% 100%' }, 'test+=1')
-    .to(preload_celu_fondo, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'test')
-    .to(preload_celu_pantalla, 1,{ scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'test+=.5')
-    .to(preload_taza, 0.5 , { opacity: 1 },'test')
-    .to(preload_lapicero, 0.5 , { opacity: 1 },'test')
-    .to(preload_navaja, 0.5 , { opacity: 1 },'test')
-    .to(preload_pantone, 0.5 , { opacity: 1 },'test')
 
   TimeOpenPreloadTaza
     .set(preload_icono1Humo, { drawSVG: '0% 0%' })

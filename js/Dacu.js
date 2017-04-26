@@ -1,10 +1,11 @@
-function loaded3() {
+function aperturaDeTelon() {
   $('body').addClass('loaded');
   setTimeout(function () {
     $('#loader').addClass('fadeOut');
     $('#loader').addClass('hidden');
   }, 600);
 }
+
 var demoImgArray = [
   'img/Mockup1-1.jpg',
   'img/Mockup1-2.jpg',
@@ -59,10 +60,10 @@ function loadComplete() {
   $('.percentage').text('Omitir presentación');
 }
 
-function CierreCompleto() {
-  loaded3();
+function aperturaPreload() {
+  aperturaDeTelon();
   setTimeout(function () {
-    miselaneas();
+    activaMiselaneaHome();
   }, 1300);
 }
 

@@ -1,4 +1,4 @@
-function miselaneas() {
+function activaMiselaneaHome() {
   var controller = $.superscrollorama({
     triggerAtCenter: false,
     playoutAnimations: true,

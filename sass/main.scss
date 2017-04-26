@@ -1,21 +1,20 @@
-/* Helper */
+/* variables */
 
 @import "helper/variables";
-@import "helper/txt";
 
 /*Dependencias*/
 
+@import "dependencias/bootstrap.scss";
 @import "dependencias/owl.carousel";
 @import "dependencias/font-awesome.scss";
-@import "dependencias/bootstrap.scss";
 @import "dependencias/milo-Efect";
 @import "dependencias/input";
+@import "helper/txt";
 
 /* sections */
 
 @import "section/contacto";
 @import "section/footer";
-@import "section/general";
 @import "section/home";
 @import "section/navbar";
 @import "section/porfolio";
@@ -23,3 +22,4 @@
 @import "section/preload";
 @import "section/responsive";
 @import "section/servicios";
+@import "section/general";
