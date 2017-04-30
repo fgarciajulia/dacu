@@ -40,8 +40,10 @@
   }
 
   @@if (debug === 'false')  {
-    <script type="text/javascript" src="js/app.dependencias.min.js"></script>
-    <script type="text/javascript" src="js/app.min.js"></script> 
+    <script type="text/javascript" src="js/app.dependencias.js"></script>
+    <script type="text/javascript" src="js/app.js"></script> 
   }
+
+  @@include('../php/porfolio-js.php')
   </body>
 </html>

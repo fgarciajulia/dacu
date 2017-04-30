@@ -24,9 +24,6 @@ gulp.task('jsdependencias', () => {
     .pipe(gulp.dest('_debug/js'))
     .pipe(concat('app.dependencias.js'))
     .pipe(minify({
-      ext: {
-        min: '.min.js'
-      },
       exclude: ['tasks'],
     }))
     .pipe(gulp.dest('_dist/js'));
@@ -45,9 +42,6 @@ gulp.task('js', () => {
     .pipe(gulp.dest('_debug/js'))
     .pipe(concat('app.js'))
     .pipe(minify({
-      ext: {
-        min: '.min.js'
-      },
       exclude: ['tasks'],
     }))
     .pipe(gulp.dest('_dist/js'));
