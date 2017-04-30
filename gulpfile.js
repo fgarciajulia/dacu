@@ -11,67 +11,50 @@ var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('jsdependencias', () => {
   return gulp.src([
-      'js/dependencias/jquery.js',
-
-      //'js/dependencias/bootstrap/affix.js',
-      //'js/dependencias/bootstrap/alert.js',
-      //'js/dependencias/bootstrap/button.js',
-      //'js/dependencias/bootstrap/carousel.js',
-      //'js/dependencias/bootstrap/collapse.js',
-      'js/dependencias/bootstrap/dropdown.js',
-      //'js/dependencias/bootstrap/modal.js',
-      //'js/dependencias/bootstrap/scrollspy.js',
-      //'js/dependencias/bootstrap/tab.js',
-      //'js/dependencias/bootstrap/transition.js',
-      //'js/dependencias/bootstrap/tooltip.js',
-      //'js/dependencias/bootstrap/popover.js',
-
-      'js/dependencias/dsvgp.min.js',
-      'js/dependencias/jquery.easing.min.js',
-      'js/dependencias/jquery.magnific-popup.js',
-      'js/dependencias/jquery.superscrollorama.js',
-      'js/dependencias/jquery.validate.min.js',
-      'js/dependencias/owl.carousel.js',
-      'js/dependencias/tm.min.js'
+      'src/js/dependencias/jquery.js',
+      'src/js/dependencias/bootstrap/dropdown.js',
+      'src/js/dependencias/dsvgp.min.js',
+      'src/js/dependencias/jquery.easing.min.js',
+      'src/js/dependencias/jquery.magnific-popup.js',
+      'src/js/dependencias/jquery.superscrollorama.js',
+      'src/js/dependencias/jquery.validate.min.js',
+      'src/js/dependencias/owl.carousel.js',
+      'src/js/dependencias/tm.min.js'
     ])
-    .pipe(sourcemaps.init())
+    .pipe(gulp.dest('_debug/js'))
     .pipe(concat('app.dependencias.js'))
     .pipe(minify({
       ext: {
-        src: '.js',
         min: '.min.js'
       },
       exclude: ['tasks'],
     }))
-    .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('_dist'));
+    .pipe(gulp.dest('_dist/js'));
 });
 
 gulp.task('js', () => {
   return gulp.src([
-      'js/preloadAnimation.js',
-      'js/home.js',
-      'js/Servicios.Animation.js',
-      'js/servicios.js',
-      'js/contacto.js',
-      'js/miselaneas.js',
-      'js/dacu.js',
+      'src/js/preloadAnimation.js',
+      'src/js/home.js',
+      'src/js/Servicios.Animation.js',
+      'src/js/servicios.js',
+      'src/js/contacto.js',
+      'src/js/miselaneas.js',
+      'src/js/dacu.js',
     ])
-    //.pipe(sourcemaps.init())
+    .pipe(gulp.dest('_debug/js'))
     .pipe(concat('app.js'))
     .pipe(minify({
       ext: {
-        src: '.js',
         min: '.min.js'
       },
       exclude: ['tasks'],
     }))
-    //.pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('_dist'));
+    .pipe(gulp.dest('_dist/js'));
 });
 
 gulp.task('sass', () => {
-  return gulp.src('sass/main.scss')
+  return gulp.src('src/sass/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
@@ -79,40 +62,61 @@ gulp.task('sass', () => {
     //.pipe(autoprefixer()) // desHabilitar para desarrollo
     .pipe(concat('app.min.css'))
     .pipe(sourcemaps.write('/'))
-    .pipe(gulp.dest('_dist'));
+    .pipe(gulp.dest('_debug/css'))
+    .pipe(gulp.dest('_dist/css'));
 });
 
-gulp.task('fileinclude', () => {
-  gulp.src(['html/index.php'])
-    .pipe(fileinclude())
+gulp.task('fileincludeDebug', () => {
+  gulp.src(['src/html/index.php'])
+    .pipe(fileinclude({
+      context: {
+        debug: 'true'
+      }
+    }))
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest('_dist'));
+    .pipe(gulp.dest('_debug'));
+});
+
+gulp.task('fileinclude', () => {
+  gulp.src(['src/html/index.php'])
+    .pipe(fileinclude({
+      context: {
+        debug: 'false'
+      }
+    }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest('_dist'))
 });
 
 var watchLogger = (event) => {
   gutil.log('[' + event.type + '] ' + event.path);
 };
 
-gulp.task('watch', ['build'], () => {
+gulp.task('watch', ['release'], () => {
 
-  var wSASS = gulp.watch('sass/**/*.scss', ['sass']);
+  var wSASS = gulp.watch('src/sass/**/*.scss', ['sass']);
   wSASS.on('change add unlink', watchLogger);
 
-  var wJS = gulp.watch('js/*.js', ['js']);
+  var wJS = gulp.watch('src/js/*.js', ['js']);
   wJS.on('change add unlink', watchLogger);
 
-  var hJS = gulp.watch(['html/**', 'svg.embedded/**', 'php/**'], ['fileinclude']);
+  var hJS = gulp.watch(['src/html/**', 'src/svg.embedded/**', 'src/php/**'], ['fileinclude']);
   hJS.on('change add unlink', watchLogger);
 
-  var wJS_dependencias = gulp.watch(['js/dependencias/*.js'], ['jsdependencias']);
+  var hJS = gulp.watch(['src/html/**', 'src/svg.embedded/**', 'src/php/**'], ['fileincludeDebug']);
+  hJS.on('change add unlink', watchLogger);
+
+  var wJS_dependencias = gulp.watch(['src/js/dependencias/*.js'], ['jsdependencias']);
   wJS_dependencias.on('change add unlink', watchLogger);
 });
 
 
-gulp.task('build', (cb) => {
-  runSequence(['fileinclude'], ['sass'], ['jsdependencias'], ['js'], cb);
+gulp.task('release', (cb) => {
+  runSequence(['fileinclude'],['fileincludeDebug'], ['sass'], ['jsdependencias'], ['js'], cb);
 });
 
 
