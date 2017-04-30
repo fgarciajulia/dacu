@@ -73,9 +73,6 @@ gulp.task('fileincludeDebug', () => {
         debug: 'true'
       }
     }))
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
     .pipe(gulp.dest('_debug'));
 });
 
