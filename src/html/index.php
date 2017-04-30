@@ -15,8 +15,9 @@
   @@include('body.home.html')
   @@include('body.responsive.html')
   @@include('body.servicios.html')
-  @@include('body.porfolio.html')
+  @@include('porfolio/body.porfolio.html')
   @@include('body.contacto.html')
+  
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900" rel="stylesheet">
 
   @@if (debug === 'true') {
@@ -44,6 +45,6 @@
     <script type="text/javascript" src="js/app.js"></script> 
   }
 
-  @@include('../php/porfolio-js.php')
+  @@include('porfolio/porfolio-js.php')
   </body>
 </html>
