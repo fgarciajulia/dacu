@@ -1,7 +1,5 @@
-var owl_Home = $('#owl-carousel1');
-
-$(document).ready(function () {
-  owl_Home.owlCarousel({
+function owlHome() {
+  $('#owl-home').owlCarousel({
     loop: true,
     items: 1,
     autoplay: true,
@@ -14,17 +12,17 @@ $(document).ready(function () {
     lazyLoad: true,
     margin: 400,
   });
-});
+}
 
-$(window).scroll(function () {
+function navFondo() {
   if ($(document).scrollTop() > 20) {
     $('nav').addClass('Fondo');
   } else {
     $('nav').removeClass('Fondo');
   }
-});
+}
 
-$(function () {
+function animacionesNavegacion() {
   $('nav a').bind('click',
     function (event) {
       var $anchor = $(this);
@@ -33,4 +31,9 @@ $(function () {
       }, 1500, 'easeInOutExpo');
       event.preventDefault();
     });
-});
+}
+
+$(window).scroll(navFondo);
+$(window).load(navFondo);
+$(window).load(owlHome);
+$(window).load(animacionesNavegacion);

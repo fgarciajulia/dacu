@@ -12,14 +12,15 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('jsdependencias', () => {
   return gulp.src([
       'src/js/dependencias/jquery.js',
-      'src/js/dependencias/bootstrap/dropdown.js',
       'src/js/dependencias/dsvgp.min.js',
+      'src/js/dependencias/TweenMax.js',
+      'src/js/dependencias/bootstrap/transition.js',
+      'src/js/dependencias/bootstrap/collapse.js',
       'src/js/dependencias/jquery.easing.min.js',
       'src/js/dependencias/jquery.magnific-popup.js',
       'src/js/dependencias/jquery.superscrollorama.js',
       'src/js/dependencias/jquery.validate.min.js',
       'src/js/dependencias/owl.carousel.js',
-      'src/js/dependencias/tm.min.js'
     ])
     .pipe(gulp.dest('_debug/js'))
     .pipe(concat('app.dependencias.js'))
@@ -107,7 +108,7 @@ gulp.task('watch', ['release'], () => {
 
 
 gulp.task('release', (cb) => {
-  runSequence(['fileinclude'],['fileincludeDebug'], ['sass'], ['jsdependencias'], ['js'], cb);
+  runSequence(['fileinclude'], ['fileincludeDebug'], ['sass'], ['jsdependencias'], ['js'], cb);
 });
 
 

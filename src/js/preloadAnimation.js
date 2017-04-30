@@ -121,7 +121,7 @@ function cierrePreload() {
     .to(preload_pantone, 1, { opacity: 0 }, 0)
     .to(preload_piso, 2, { drawSVG: '50% 50%' }, 0)
     .staggerTo(preload_diploma_cuadrado, 1, { scaleX: 0, transformOrigin: '0% 0%' }, .2, 0)
-    .to(preload_diploma_linea, 1, { drawSVG: '0% 100%' }, 0)
+    .to(preload_diploma_linea, 1, { drawSVG: '0% 0%' }, 0)
     
   TweenLite.to(TimeOpenPreloadTaza, 3, {timeScale:0});
 }
@@ -241,7 +241,7 @@ function OpenPreload() {
     .to(preload_diamante_line, 1, { drawSVG: '0% 100%' }, 'test+=1')
     .staggerTo(preload_nubes, 1, { drawSVG: '00% 110%', fill: 'rgb(237, 238, 240)'}, .5, 'disenio')
     .staggerTo(preload_primeras_lineas, 1, { drawSVG: '0% 100%' }, .5, 'disenio')
-    .staggerTo(preload_lineStart, 1, { drawSVG: '0% 100%' }, .5, 'disenio')
+    .staggerTo(preload_lineStart, 1, { drawSVG: '0% 100%' }, .3, 'disenio')
 
   TimeOpenPreloadTaza
     .set(preload_icono1Humo, { drawSVG: '0% 0%' })

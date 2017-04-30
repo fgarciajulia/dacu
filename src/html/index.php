@@ -22,15 +22,18 @@
 
   @@if (debug === 'true') {
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/dropdown.js"></script>
+    <script type="text/javascript" src="js/TweenMax.js"></script>
     <script type="text/javascript" src="js/dsvgp.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
     <script type="text/javascript" src="js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/tm.min.js"></script>
+    <!--bootstrap-->
+    <script type="text/javascript" src="js/collapse.js"></script>
+    <script type="text/javascript" src="js/transition.js"></script>
     
+    <!--Main-->
     <script type="text/javascript" src="js/preloadAnimation.js" ></script>
     <script type="text/javascript" src="js/home.js" ></script>
     <script type="text/javascript" src="js/Servicios.Animation.js" ></script>
@@ -41,8 +44,8 @@
   }
 
   @@if (debug === 'false')  {
-    <script type="text/javascript" src="js/app.dependencias.js"></script>
-    <script type="text/javascript" src="js/app.js"></script> 
+    <script type="text/javascript" src="js/app.dependencias-min.js"></script>
+    <script type="text/javascript" src="js/app-min.js"></script> 
   }
 
   @@include('porfolio/porfolio-js.php')
