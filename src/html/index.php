@@ -22,12 +22,16 @@
 
   @@if (debug === 'true') {
     <script type="text/javascript" src="js/jquery.js"></script>
+    <!--GreenShock-->
     <script type="text/javascript" src="js/TweenMax.js"></script>
     <script type="text/javascript" src="js/dsvgp.min.js"></script>
+    <script type="text/javascript" src="js/ScrambleTextPlugin.js"></script>
+    <!--JQ-->
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
     <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
     <script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
     <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <!--carousel-->
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <!--bootstrap-->
     <script type="text/javascript" src="js/collapse.js"></script>

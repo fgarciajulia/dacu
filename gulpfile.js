@@ -14,6 +14,7 @@ gulp.task('jsdependencias', () => {
       'src/js/dependencias/jquery.js',
       'src/js/dependencias/dsvgp.min.js',
       'src/js/dependencias/TweenMax.js',
+      'src/js/dependencias/ScrambleTextPlugin.js',
       'src/js/dependencias/bootstrap/transition.js',
       'src/js/dependencias/bootstrap/collapse.js',
       'src/js/dependencias/jquery.easing.min.js',
@@ -102,7 +103,7 @@ gulp.task('watch', ['release'], () => {
   var hJS = gulp.watch(['src/html/**', 'src/svg.embedded/**', 'src/php/**'], ['fileincludeDebug']);
   hJS.on('change add unlink', watchLogger);
 
-  var wJS_dependencias = gulp.watch(['src/js/dependencias/*.js'], ['jsdependencias']);
+  var wJS_dependencias = gulp.watch(['src/js/dependencias/**/*.js'], ['jsdependencias']);
   wJS_dependencias.on('change add unlink', watchLogger);
 });
 

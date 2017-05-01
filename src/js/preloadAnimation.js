@@ -190,7 +190,7 @@ function OpenPreload() {
     .staggerTo(preload_IDE, 1 , { drawSVG: '0% 100%'  }, 0.03, 'IDE')
     .to(preload_IDE_header, 0.5, { opacity: 1 }, 'IDE')
     .staggerTo(preload_check_pestanias, 1 , { drawSVG: '0% 100%'  }, 0.1, 'IDE')
-    .add(function () {$(preload_titulo).text('Diseño Gráfico');})
+    .to(preload_titulo, 3, {scrambleText:{text:'Diseño Gráfico', chars:'lowerCase', revealDelay:0.05, tweenLength:false}}, 'IDE')
     .to(preload_lampara, .5, {  opacity: 1 }, 'lampara-=1')
     .staggerTo(preload_lampara, 1, { drawSVG: '0% 100%' },  0.05,'lampara-=1')
     .to(preload_headerLamp, 2, { rotation: -25, transformOrigin: '20 10' }, 'lampara+=1')
@@ -212,9 +212,9 @@ function OpenPreload() {
     .to(preload_lapicero, 2 , { opacity: 2 },'navaja+=1.5')
     .staggerTo(preload_diploma_cuadrado, 1, { scaleX: 1, transformOrigin: '0% 0%' }, .2, 'navaja+=2')
     .to(preload_diploma_linea, 1, { drawSVG: '0% 100%' }, 'navaja+=2')
-    .add(function () {$(preload_titulo).text('Marketing digital');})
+    .to(preload_titulo, 3, {scrambleText:{text:'Marketing digital', chars:'lowerCase', revealDelay:0.05, tweenLength:false}}, 'IDE')
     .staggerTo(preload_books, 1, { scaleX: 1, transformOrigin: '0% 0%' }, .2, 'marketing')
-
+     
 
     .to(preload_paracaidas, 2, { drawSVG: '0% 100%' }, 'test')
     .to(preload_FondoEdi1, 1,{ scaleY: 1, transformOrigin: '0% 100%' }, 'test')
