@@ -60,13 +60,11 @@ gulp.task('js', () => {
 gulp.task('sass', () => {
   return gulp.src('src/sass/main.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(minify({
-      exclude: ['tasks'],
-    }))
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
     .pipe(concat('app.min.css'))
     .pipe(sourcemaps.write())
-    .pipe(autoprefixer()) 
     .pipe(gulp.dest('_debug/css'))
     .pipe(gulp.dest('_dist/css'));
 });
