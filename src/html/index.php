@@ -20,38 +20,7 @@
   
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900" rel="stylesheet">
 
-  @@if (debug === 'true') {
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <!--GreenShock-->
-    <script type="text/javascript" src="js/TweenMax.js"></script>
-    <script type="text/javascript" src="js/dsvgp.min.js"></script>
-    <script type="text/javascript" src="js/ScrambleTextPlugin.js"></script>
-    <!--JQ-->
-    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
-    <script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <!--carousel-->
-    <script type="text/javascript" src="js/owl.carousel.js"></script>
-    <!--bootstrap-->
-    <script type="text/javascript" src="js/collapse.js"></script>
-    <script type="text/javascript" src="js/transition.js"></script>
-    
-    <!--Main-->
-    <script type="text/javascript" src="js/preloadAnimation.js" ></script>
-    <script type="text/javascript" src="js/home.js" ></script>
-    <script type="text/javascript" src="js/Servicios.Animation.js" ></script>
-    <script type="text/javascript" src="js/servicios.js" ></script>
-    <script type="text/javascript" src="js/contacto.js" ></script>
-    <script type="text/javascript" src="js/miselaneas.js" ></script>
-    <script type="text/javascript" src="js/dacu.js" ></script>
-  }
-
-  @@if (debug === 'false')  {
-    <script type="text/javascript" src="js/app.dependencias-min.js"></script>
-    <script type="text/javascript" src="js/app-min.js"></script> 
-  }
-
-  @@include('porfolio/porfolio-js.php')
+  @@for (var i = 0; i < listJsDependencias.length; i++) {<script type="text/javascript" src="`+folder+listJsDependencias[i]+`"></script>}
+  @@for (var i = 0; i < listJs.length; i++) {<script type="text/javascript" src="`+folder+listJs[i]+`"></script>}
   </body>
 </html>
