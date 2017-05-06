@@ -33,7 +33,7 @@ var listJs = [
 ];
 
 gulp.task('copyStaticFolder', () => {
-  return gulp.src(['src/static/**'])
+  return gulp.src(['src/static/.*','src/static/**'])
     .pipe(gulp.dest('_debug'))
     .pipe(gulp.dest('_dist'));
 });
@@ -103,14 +103,14 @@ gulp.task('watch', ['release'], () => {
   var wSASS = gulp.watch('src/sass/**/*.scss', ['sass']);
   wSASS.on('change add unlink', watchLogger);
 
-  var wJS = gulp.watch('src/js/*.js', ['js']);
-  wJS.on('change add unlink', watchLogger);
-
   var hJS = gulp.watch(['src/html/**', 'src/svg.embedded/**', 'src/php/**'], ['fileinclude']);
   hJS.on('change add unlink', watchLogger);
 
-  var wJS_dependencias = gulp.watch(['src/js/dependencias/**/*.js'], ['jsDependencias']);
-  wJS_dependencias.on('change add unlink', watchLogger);
+  // var wJS = gulp.watch('src/js/*.js', ['js']);
+  // wJS.on('change add unlink', watchLogger);
+
+  // var wJS_dependencias = gulp.watch(['src/js/dependencias/**/*.js'], ['jsDependencias']);
+  // wJS_dependencias.on('change add unlink', watchLogger);
 });
 
 

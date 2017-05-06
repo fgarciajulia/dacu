@@ -58,13 +58,16 @@ function progressUpdate() {
 
 function loadComplete() {
   $('.percentage').text('Omitir presentación');
+  $('#loader').on('click', aperturaPreload);
+  $('#loader').css('cursor', 'pointer');
 }
 
 function aperturaPreload() {
+  $('#loader').off('click', aperturaPreload);
   aperturaDeTelon();
   setTimeout(function () {
     activaMiselaneaHome();
-  }, 1300);
+  }, 1200);
 }
 
 var isPlay = true;

@@ -1,23 +1,25 @@
 function activaMiselaneaHome() {
   var controller = $.superscrollorama({
-    triggerAtCenter: false,
-    playoutAnimations: true,
-  });
-
-
-  var line5 = $(' #Line5-SVG polyline');
+      triggerAtCenter: false,
+      playoutAnimations: true,
+    }),
+    line5 = $(' #Line5-SVG polyline');
 
 
   /* Mockup 1 */
-  TweenLite.to('#Line1-poly_1_',
-    0, {
-      stroke: '#333399'
-    }, 0);
+  TweenLite.set('#Line1-poly_1_', {
+    opacity: 1
+  }, 0);
+  TweenLite.set('#Line1-poly_1_', {
+    stroke: '#333399'
+  }, 0);
   TweenLite.from('#Line1-poly_1_',
     7, {
-      drawSVG: '100% 100%',
-      delay: 0.2
+      drawSVG: '100% 100%'
     });
+  TweenLite.set('#Line2-poly', {
+    opacity: 1
+  }, 0);
   TweenLite.from('#Line2-poly',
     5, {
       drawSVG: '0% 0%',
@@ -27,13 +29,11 @@ function activaMiselaneaHome() {
   /* Title  Diseño Grafico */
   TweenLite.to('#Line3-poly',
     1, {
-      drawSVG: '6% 85%',
-      delay: 0
+      drawSVG: '6% 85%'
     });
   TweenLite.to('#Line4-poly',
     1, {
-      drawSVG: '30% 100%',
-      delay: 0
+      drawSVG: '30% 100%'
     });
 
 
@@ -44,6 +44,9 @@ function activaMiselaneaHome() {
   var miselaSlider = $('.owl-dot');
 
 
+  TweenLite.set(misela1, {
+    opacity: 1
+  }, 0);
   TweenMax.staggerFrom(misela1, 0.5, {
     opacity: 0,
     y: 200,
@@ -85,6 +88,8 @@ function PorfolioAltoMiselanea() {
   $('.porfolio #XMLID_1_ rect').css('height',
     AltoMap);
 }
-$(document).ready(function () {
-  PorfolioAltoMiselanea();
-});
+
+TweenLite.set('#Line2-poly, #Line1-poly_1_,#responsive_misela_cuadraditos_02  rect, .cuadraditos_sereados > rect', {
+  opacity: 0
+}, 0);
+$(document).ready(PorfolioAltoMiselanea);

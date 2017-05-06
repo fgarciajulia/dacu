@@ -22,5 +22,7 @@
 
   @@for (var i = 0; i < listJsDependencias.length; i++) {<script type="text/javascript" src="`+folder+listJsDependencias[i]+`"></script>}
   @@for (var i = 0; i < listJs.length; i++) {<script type="text/javascript" src="`+folder+listJs[i]+`"></script>}
+  @@include('porfolio/porfolio-js.php')
+
   </body>
 </html>
