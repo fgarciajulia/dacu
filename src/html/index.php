@@ -1,7 +1,6 @@
-  <?php function isMobile() {
-    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-  } ?>
-  
+<?php
+  include('php/isMobile.php')
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,9 +13,9 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
   <?php
-  if(!isMobile()){
+  if ($mobile_browser == 0){
   ?>
-      @@include('body.preload.html')
+    @@include('body.preload.html')
   <?php } ?>
 
   @@include('body.navbar.html')  
@@ -30,7 +29,7 @@
 
   @@for (var i = 0; i < listJsDependencias.length; i++) {<script type="text/javascript" src="`+folder+listJsDependencias[i]+`"></script>}
   
-  <?php if(!isMobile()){ ?>
+  <?php if ($mobile_browser == 0){ ?>
   <script type="text/javascript" src="@@folder@@jsPreloadAnimation"></script>
   <?php } ?>
 
