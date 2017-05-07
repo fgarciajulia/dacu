@@ -93,7 +93,7 @@ gulp.task('fileinclude', () => {
       context: {
         folder: '',
         listJsDependencias: ['js/app.dependencias-min.js'],
-        jsPreloadAnimation: 'src/js/preloadAnimation.js',
+        jsPreloadAnimation: 'js/preloadAnimation.js',
         listJs: ['js/app-min.js']
       }
     }))

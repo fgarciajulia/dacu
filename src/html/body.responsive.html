@@ -4,6 +4,7 @@
         <div class="row">
             <div class="cuadrado">
             </div>
+			<?php if ($mobile_browser == 0){ ?>
             <div id="Line2-SVG" class=" col-xs-offset-1 col-xs-6 hidden-xs ">
                 @@include('../svg.embedded/responsive_LineaTop.svg')
             </div>
@@ -13,6 +14,7 @@
             <div id="responsive_misela_cuadraditos_02" class="col-xs-offset-1 col-xs-4 Z-index hidden-xs">
                 @@include('../svg.embedded/responsive_misela_cuadraditos_02.svg')
             </div>
+  			<?php } ?>
         </div>
         <div class="row">
             <div id="Line5-SVG" class="col-xs-offset-1 col-xs-8 Line5Col">
@@ -25,10 +27,11 @@
                 <p class="Items">imagenes en SVG</p>
                 <p class="Items">Experiencia de usuario</p>
             </div>
+			<?php if ($mobile_browser == 0){ ?>
             <div class="col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-3 Mockup2">
                 <img class="hidden-xs img-responsive" src="img/Mockup2-0.gif" alt="Mockup2">
             </div>
-            
+  			<?php } ?>            
         </div>
     </div>
 </div>
