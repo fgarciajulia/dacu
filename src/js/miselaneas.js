@@ -81,15 +81,12 @@ function activaMiselaneaHome() {
   controller.addTween(line5, TweenLite.from($('.line-responsive'), 3, {
     drawSVG: '0% 0%'
   }));
-}
 
-function PorfolioAltoMiselanea() {
   var AltoMap = $('.porfolio-content').height();
-  $('.porfolio #XMLID_1_ rect').css('height',
-    AltoMap);
+  $('.porfolio #XMLID_1_ rect').css('height', AltoMap);
+  
 }
 
 TweenLite.set('#Line2-poly, #Line1-poly_1_,#responsive_misela_cuadraditos_02  rect, .cuadraditos_sereados > rect', {
   opacity: 0
 }, 0);
-$(document).ready(PorfolioAltoMiselanea);

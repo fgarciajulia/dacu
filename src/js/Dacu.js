@@ -6,69 +6,7 @@ function aperturaDeTelon() {
   }, 600);
 }
 
-var demoImgArray = [
-  'img/Mockup1-1.jpg',
-  'img/Mockup1-2.jpg',
-  'img/Mockup1-3.png',
-  'img/Mockup1-4.jpg',
-  'img/Mockup1-5.png',
-  'img/Mockup2-0.gif'
-];
 
-var imagenesCargadas = 0;
-var imagenesTotales = demoImgArray.length;
-var loadingPorcent = 0;
-var loadingProgress = 0;
-preload(demoImgArray);
-
-
-/* LOADING */
-var progressTl = new TimelineMax({
-  paused: true,
-  onUpdate: progressUpdate,
-  onComplete: loadComplete
-});
-
-
-progressTl
-  .to($(''), 2, {
-    transformOrigin: 'center center'
-  }, 0);
-// ? ? ?
-
-function preload(imgArray) {
-  OpenPreload();
-  $(imgArray).each(function () {
-    $('<img>').attr('src', this).on('load', function () {
-      imagenesCargadas++;
-      loadingProgress = (imagenesCargadas / imagenesTotales);
-      TweenLite.to(progressTl, 2, {
-        progress: loadingProgress,
-        ease: Linear.easeNone
-      });
-    });
-  });
-}
-
-function progressUpdate() {
-  loadingPorcent = Math.round(progressTl.progress() * 100);
-  $('.percentage').text(loadingPorcent + '%');
-}
-
-
-function loadComplete() {
-  $('.percentage').text('Omitir presentación');
-  $('#loader').on('click', aperturaPreload);
-  $('#loader').css('cursor', 'pointer');
-}
-
-function aperturaPreload() {
-  $('#loader').off('click', aperturaPreload);
-  aperturaDeTelon();
-  setTimeout(function () {
-    activaMiselaneaHome();
-  }, 1200);
-}
 
 var isPlay = true;
 

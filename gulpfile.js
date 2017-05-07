@@ -23,7 +23,6 @@ var listJsDependencias = [
   'src/js/dependencias/owl.carousel.js',
 ];
 var listJs = [
-  'src/js/preloadAnimation.js',
   'src/js/home.js',
   'src/js/Servicios.Animation.js',
   'src/js/servicios.js',
@@ -33,7 +32,7 @@ var listJs = [
 ];
 
 gulp.task('copyStaticFolder', () => {
-  return gulp.src(['src/static/.*','src/static/**'])
+  return gulp.src(['src/static/.*', 'src/static/**'])
     .pipe(gulp.dest('_debug'))
     .pipe(gulp.dest('_dist'));
 });
@@ -41,6 +40,14 @@ gulp.task('copyStaticFolder', () => {
 gulp.task('jsDependencias', () => {
   return gulp.src(listJsDependencias)
     .pipe(concat('app.dependencias.js'))
+    .pipe(minify({
+      exclude: ['tasks'],
+    }))
+    .pipe(gulp.dest('_dist/js'));
+});
+gulp.task('jsPreloadAnimation', () => {
+  return gulp.src('src/js/preloadAnimation.js')
+    .pipe(concat('preloadAnimation.js'))
     .pipe(minify({
       exclude: ['tasks'],
     }))
@@ -75,6 +82,7 @@ gulp.task('fileinclude', () => {
       context: {
         folder: '../',
         listJsDependencias: listJsDependencias,
+        jsPreloadAnimation:  'src/js/preloadAnimation.js',
         listJs: listJs
       }
     }))
@@ -85,6 +93,7 @@ gulp.task('fileinclude', () => {
       context: {
         folder: '',
         listJsDependencias: ['js/app.dependencias-min.js'],
+        jsPreloadAnimation: 'src/js/preloadAnimation.js',
         listJs: ['js/app-min.js']
       }
     }))
@@ -103,8 +112,11 @@ gulp.task('watch', ['release'], () => {
   var wSASS = gulp.watch('src/sass/**/*.scss', ['sass']);
   wSASS.on('change add unlink', watchLogger);
 
-  var hJS = gulp.watch(['src/html/**', 'src/svg.embedded/**', 'src/php/**'], ['fileinclude']);
-  hJS.on('change add unlink', watchLogger);
+  var hHtml = gulp.watch(['src/html/**', 'src/svg.embedded/**', 'src/php/**'], ['fileinclude']);
+  hHtml.on('change add unlink', watchLogger);
+
+  var hHtml = gulp.watch(['src/static/.*', 'src/static/**'], ['copyStaticFolder']);
+  hHtml.on('change add unlink', watchLogger);
 
   // var wJS = gulp.watch('src/js/*.js', ['js']);
   // wJS.on('change add unlink', watchLogger);
@@ -115,7 +127,7 @@ gulp.task('watch', ['release'], () => {
 
 
 gulp.task('release', (cb) => {
-  runSequence('copyStaticFolder', 'fileinclude', 'sass', 'jsDependencias', 'js', cb);
+  runSequence('copyStaticFolder', 'fileinclude', 'sass', 'jsDependencias', 'jsPreloadAnimation', 'js', cb);
 });
 
 

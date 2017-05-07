@@ -1,8 +1,11 @@
+  <?php function isMobile() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+  } ?>
+  
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
   @@include('head.meta.html')
 
 <link rel="stylesheet" type="text/css" href="css/app.min.css?v=1">
@@ -10,7 +13,12 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  @@include('body.preload.html')  
+  <?php
+  if(!isMobile()){
+  ?>
+      @@include('body.preload.html')
+  <?php } ?>
+
   @@include('body.navbar.html')  
   @@include('body.home.html')
   @@include('body.responsive.html')
@@ -21,7 +29,13 @@
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900" rel="stylesheet">
 
   @@for (var i = 0; i < listJsDependencias.length; i++) {<script type="text/javascript" src="`+folder+listJsDependencias[i]+`"></script>}
+  
+  <?php if(!isMobile()){ ?>
+  <script type="text/javascript" src="@@folder@@jsPreloadAnimation"></script>
+  <?php } ?>
+
   @@for (var i = 0; i < listJs.length; i++) {<script type="text/javascript" src="`+folder+listJs[i]+`"></script>}
+
   @@include('porfolio/porfolio-js.php')
 
   </body>
