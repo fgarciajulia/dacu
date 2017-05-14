@@ -26,18 +26,18 @@ var preloadSvg = $('svg#preload'),
   preload_pantalla_redes_imagen = $('#preload #pantalla-redes #Imagen_2_ , #preload #pantalla-redes #Imagen_3_ ,  #preload #pantalla-redes #Tilde_1_'),
   preload_torre = $('#preload #torre rect , #preload #torre path, #preload #torre  polygon'),
   preload_torreReverse = preload_torre.toArray().reverse(),
-  preload_FondoEdi1 = $('#preload #Edi1_1_ #Fondo_x5F_Edi1_1_'),
-  preload_PisoEdi1 = $('#preload #Edi1_1_ .piso-edi'),
-  preload_LineEdi1 = $('#preload #Edi1_1_ line'),
-  preload_TechoEdi1 = $('#preload #Techo_x5F_Edi1_1_'),
-  preload_FondoEdi2 = $('#preload #Edi2_1_ #Fondo_x5F_Edi2_1_'),
-  preload_LineEdi2 = $('#preload #Edi2_1_ #LineasEdi2_1_ line, #preload #Edi2_1_ #LineasEdi2_1_  polyline'),
+  preload_FondoEdificio1 = $('#preload #Edi1_1_ #Fondo_x5F_Edi1_1_'),
+  preload_PisoEdificio1 = $('#preload #Edi1_1_ .piso-edi'),
+  preload_LineEdificio1 = $('#preload #Edi1_1_ line'),
+  preload_TechoEdificio1 = $('#preload #Techo_x5F_Edi1_1_'),
+  preload_FondoEdificio2 = $('#preload #Edi2_1_ #Fondo_x5F_Edi2_1_'),
+  preload_LineEdificio2 = $('#preload #Edi2_1_ #LineasEdi2_1_ line, #preload #Edi2_1_ #LineasEdi2_1_  polyline'),
   preload_facebook = $('#preload .facebook line, #preload .facebook polyline, #preload .facebook path, #preload .facebook rect'),
   preload_facebook_fondo = $('#preload .facebook-fondo'),
   preload_facebook_cuadrados = $('#preload .facebook-cuadrados rect,#preload .facebook-cuadrados line,#preload .facebook-cuadrados path'),
   preload_facebook_header = $('#preload .facebook-header rect,#preload .facebook-header line,#preload .facebook-header path,#preload .facebook-header circle'),
   preload_icono2_Veinti4 = $('#preload #Veinti4_2_'),
-  preload_Veinti4_2_circle = $('#preload #Veinti4_2_circle'),
+  preload_veinticuatro_circulo = $('#preload #veinticuatro-circulo circle'),
   preload_check_pestanias = $('#preload #pestanias line, #preload #pestanias polyline'),
   preload_check_circulo = $('#preload #pestanias circle'),  
   preload_IDE = $('#preload #IDE-code line'),
@@ -83,13 +83,13 @@ function cierrePreload() {
     .to(preload_lineStart, 2, { drawSVG: '50% 50%' }, 0)
     .to(preload_paracaidas, 2, { drawSVG: '50% 50%' }, 0)
     .staggerTo(preload_nubes, 1, { drawSVG: '50% 50%', fill:'rgba(255, 255, 255, 0)' }, 0.05, 0)
-    .to(preload_LineEdi1, 1, { drawSVG: '50% 50%' }, 0)
-    .to(preload_FondoEdi1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
-    .to(preload_PisoEdi1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
-    .to(preload_TechoEdi1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
-    .to(preload_PisoEdi1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
-    .to(preload_LineEdi2, 1, { drawSVG: '50% 50%' }, 1)
-    .to(preload_FondoEdi2, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 2)
+    .to(preload_LineEdificio1, 1, { drawSVG: '50% 50%' }, 0)
+    .to(preload_FondoEdificio1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(preload_PisoEdificio1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(preload_TechoEdificio1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(preload_PisoEdificio1, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1)
+    .to(preload_LineEdificio2, 1, { drawSVG: '50% 50%' }, 1)
+    .to(preload_FondoEdificio2, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 2)
     .to(preload_libro_play, 1, { scaleX: 0, transformOrigin: '0% 50%' }, 2)
     .to(preload_lampara, 1, { drawSVG: '50% 50%',opacity: 0 },1)
     .to(preload_reloj, 1, { drawSVG: '50% 50%',opacity: 0 },1)
@@ -99,7 +99,7 @@ function cierrePreload() {
     .staggerTo(preload_facebook_cuadrados, 0.3, { opacity: 0 }, 0.1, 1)
     .to(preload_facebook_header, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 0)
     .to(preload_icono2_Veinti4, 1, { opacity: 0 }, 0)
-    .to(preload_Veinti4_2_circle, 1, { opacity: 0 }, 0)
+    .to(preload_veinticuatro_circulo, 1, { opacity: 0 }, 0)
     .staggerTo(preload_torreReverse, 1, { scaleY: 0, transformOrigin: '0% 100%' }, 1, 0)
     .staggerTo(preload_check_pestanias, 1, { drawSVG: '0% 0%'  }, 0.1, 0)
     .to(preload_check_circulo, 1, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' }, 1)
@@ -126,7 +126,7 @@ function cierrePreload() {
   TweenLite.to(TimeOpenPreloadTaza, 3, {timeScale:0});
 }
 function OpenPreload() {
-  TimeOpenPreload.timeScale(0.5)
+  TimeOpenPreload.timeScale(1)
   .eventCallback('onComplete',cierrePreload)
 
     .set(preload_lampara, { drawSVG: '50% 50%', opacity: 0  })
@@ -138,12 +138,12 @@ function OpenPreload() {
     .set(preload_lineStart, { drawSVG: '50% 50%' })
     .set(preload_nubes, { drawSVG: '0% 0%', fill:'rgba(255, 255, 255, 0)' })
     .set(preload_paracaidas, { drawSVG: '0% 0%', fill:'rgba(255, 255, 255, 0)' })
-    .set(preload_LineEdi1, { drawSVG: '50% 50%' })
-    .set(preload_FondoEdi1, { scaleY: 0, transformOrigin: '0% 100%' })
-    .set(preload_PisoEdi1, { scaleY: 0, transformOrigin: '0% 100%' })
-    .set(preload_TechoEdi1, { scaleY: 0, transformOrigin: '0% 100%' })
-    .set(preload_LineEdi2, { drawSVG: '50% 50%' })
-    .set(preload_FondoEdi2, { scaleY: 0, transformOrigin: '0% 100%' })
+    .set(preload_LineEdificio1, { drawSVG: '50% 50%' })
+    .set(preload_FondoEdificio1, { scaleY: 0, transformOrigin: '0% 100%' })
+    .set(preload_PisoEdificio1, { scaleY: 0, transformOrigin: '0% 100%' })
+    .set(preload_TechoEdificio1, { scaleY: 0, transformOrigin: '0% 100%' })
+    .set(preload_LineEdificio2, { drawSVG: '50% 50%' })
+    .set(preload_FondoEdificio2, { scaleY: 0, transformOrigin: '0% 100%' })
     .set(preload_libro_play, { scaleX: 0, transformOrigin: '0% 50%' })
     .set(preload_libro_play, { scaleX: 0, transformOrigin: '0% 50%' })
     .set(preload_pantalla_redes_fondo, { scaleY: 0, transformOrigin: '0% 100%' })
@@ -155,7 +155,7 @@ function OpenPreload() {
     .set(preload_facebook_cuadrados, { opacity: 0 })
     .set(preload_facebook_header, { scaleY: 0, transformOrigin: '0% 100%'})
     .set(preload_icono2_Veinti4, { opacity: 0 })
-    .set(preload_Veinti4_2_circle, { opacity: 0 })
+    .set(preload_veinticuatro_circulo, { opacity: 0 })
     .set(preload_torre, { scaleY: 0, transformOrigin: '0% 100%' })
     .set(preload_torre, { scaleY: 0, transformOrigin: '0% 100%' })
     .set(preload_check_pestanias, { drawSVG: '100% 100%' })
@@ -178,71 +178,71 @@ function OpenPreload() {
     .set(preload_piso, { drawSVG: '50% 50%', fill:'rgba(255, 255, 255, 0)' })
     .set(preload_titulo, {  scaleX:2, scaleY:2,x:275.275, y:100 ,  transformOrigin: '50% 50%'  })
 
-    .to(preload_titulo, 2, {ease: Power2.easeOut, scaleX:1, scaleY:1,x:275.275, y:100 ,  transformOrigin: '50% 50%' })
+    .to(preload_titulo, 2, {scaleX:1, scaleY:1,x:275.275, y:100 ,  transformOrigin: '50% 50%' })
     .to(preload_titulo, 1, {ease: Power2.easeOut, x:375.275, y:297.672 }, 'titulo')
-    .to(preload_piso, 2, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, 'titulo-=2')
+    .to(preload_piso, 2, {ease: Power1.easeOut, drawSVG: '0% 100%' }, 'titulo-=2')
     .to(preload_compu_pantalla, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' }, 'compu')
-    .to(preload_compu_fondo, 1, {ease: Power4.easeOut, scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'compu+=1')
-    .to(preload_compu_line, 1, {ease: Power4.easeOut, drawSVG: '0% 100%' },'compu+=1.5')
-    .to(preload_papelito, 1, {ease: Power4.easeOut, scaleY: 1, scaleX: 1,  transformOrigin: '0% 0%' },'compu+=1.5')
+    .to(preload_compu_fondo, 1, {ease: Power1.easeInOut, scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'compu+=1')
+    .to(preload_compu_line, 1, {ease: Power1.easeInOut, drawSVG: '0% 100%' },'compu+=1.5')
+    .to(preload_papelito, 1, {ease: Power1.easeInOut, scaleY: 1, scaleX: 1,  transformOrigin: '0% 0%' },'compu+=1.5')
     .to(preload_check_circulo,1, {ease: Back.easeOut.config(1.7),  scaleX: 1,  scaleY: 1, transformOrigin: '50% 50%'  }, 'IDE')
-    .to(preload_IDE_fondo, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'IDE')
-    .staggerTo(preload_IDE, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%'  }, 0.03, 'IDE')
-    .to(preload_IDE_header, 0.5,{ease: Back.easeOut.config(1.7), opacity: 1 }, 'IDE')
-    .staggerTo(preload_check_pestanias, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%'  }, 0.1, 'IDE')
-    .to(preload_lampara, .5, {ease: Back.easeOut.config(1.7), opacity: 1 }, 'lampara-=1')
-    .staggerTo(preload_lampara, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' },  0.05,'lampara-=1')
-    .to(preload_titulo, 1, {ease: Back.easeOut.config(1.7),scrambleText:{text:'Diseño Gráfico', chars:'lowerCase'}}, 'lampara')
-    .to(preload_pantone, 0.5, {ease: Back.easeOut.config(1.7), opacity: 1 },'disenio-=.5')
-    .to(preload_pantone3, 1, {ease: Back.easeOut.config(1.7), rotation: -90, transformOrigin: '10 19' }, 'disenio')
-    .to(preload_pantone2, 1, {ease: Back.easeOut.config(1.7), rotation: -45, transformOrigin: '10 19' }, 'disenio')
-    .to(preload_pantone1, 1, {ease: Back.easeOut.config(1.7), rotation: 0, transformOrigin: '10 19' }, 'disenio')
-    .to(preload_navaja, 0.5, {ease: Back.easeOut.config(1.7), opacity: 1 },'navaja-=1')
-    .to(preload_regla, 1, {ease: Back.easeOut.config(1.7), rotation: 50, transformOrigin: '100% 100%' }, 'navaja-=.5')
-    .to(preload_pluma, 1, {ease: Back.easeOut.config(1.7), rotation: -90, transformOrigin: '00 50%' }, 'navaja-=.5')
-    .to(preload_reloj, .5, {ease: Back.easeOut.config(1.7), opacity: 1 },'reloj-=.5')
-    .to(preload_celu_fondo, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'navaja')
-    .to(preload_celu_pantalla, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'navaja+=.5')
-    .to(preload_taza, 2, {ease: Back.easeOut.config(1.7), opacity: 2 },'navaja-=1')
-    .to(preload_lapicero, 2, {ease: Back.easeOut.config(1.7), opacity: 2 },'navaja-=.5')
-    .staggerTo(preload_diploma_cuadrado, 1, {ease: Back.easeOut.config(1.7), scaleX: 1, scaleY: 1, transformOrigin: '50% 50%' }, .2, 'navaja+=.5')
-    .to(preload_diploma_linea, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, 'navaja+=.5')
-    .to(preload_reloj, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' },'reloj')
-    .to(preload_titulo, 1, {ease: Back.easeOut.config(1.7),scrambleText:{text:'Marketing digital', chars:'lowerCase'}}, 'marketing')
-    .to(preload_paracaidas, 2, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, 'test')
+    .to(preload_IDE_fondo, 1, {ease: Power1.easeOut, scaleY: 1, transformOrigin: '0% 100%' }, 'IDE')
+    .staggerTo(preload_IDE, 1, {ease:Power1.easeInOut, drawSVG: '0% 100%'  }, 0.03, 'IDE')
+    .to(preload_IDE_header, 0.5,{opacity: 1 }, 'IDE')
+    .staggerTo(preload_check_pestanias, 1, {ease: Power1.easeInOut, drawSVG: '0% 100%'  }, 0.1, 'IDE')
+    .to(preload_lampara, .5, {opacity: 1 }, 'lampara-=1')
+    .staggerTo(preload_lampara, 1, {ease: Power1.easeInOut, drawSVG: '0% 100%' },  0.05,'lampara-=1')
+    .to(preload_titulo, 1, {scrambleText:{text:'Diseño Gráfico', chars:'lowerCase'}}, 'lampara')
+    .to(preload_pantone, 0.5, {opacity: 1 },'disenio-=.5')
+    .to(preload_pantone3, 2, {ease: Back.easeOut.config(3), rotation: -90, transformOrigin: '10 19' }, 'disenio')
+    .to(preload_pantone2, 2, {ease: Back.easeOut.config(3), rotation: -45, transformOrigin: '10 19' }, 'disenio')
+    .to(preload_pantone1, 2, {ease: Back.easeOut.config(3), rotation: 0, transformOrigin: '10 19' }, 'disenio')
+    .to(preload_navaja, 0.5, {opacity: 1 },'navaja-=1')
+    .to(preload_regla, 2, {ease: Back.easeOut.config(3), rotation: 50, transformOrigin: '100% 100%' }, 'navaja-=.5')
+    .to(preload_pluma, 2, {ease: Back.easeOut.config(3), rotation: -90, transformOrigin: '00 50%' }, 'navaja-=.5')
+    .to(preload_reloj, .5, {opacity: 1 },'reloj-=.5')
+    .to(preload_celu_fondo, 1, {ease: Power1.easeOut, scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'navaja')
+    .to(preload_celu_pantalla, 1, {ease: Power1.easeOut, scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'navaja+=.5')
+    .to(preload_taza, 2, {opacity: 1 },'navaja-=1')
+    .to(preload_lapicero, 2, {opacity: 1 },'navaja-=.5')
+    .staggerTo(preload_diploma_cuadrado, 1, {ease: Power1.easeOut, scaleX: 1, scaleY: 1, transformOrigin: '50% 50%' }, .2, 'navaja+=.5')
+    .to(preload_diploma_linea, 1, {ease: Power1.easeOut, drawSVG: '0% 100%' }, 'navaja+=1')
+    .to(preload_reloj, 1, {ease: Power1.easeOut, drawSVG: '0% 100%' },'reloj')
+    .to(preload_titulo, 1, {ease: Power1.easeOut,scrambleText:{text:'Marketing digital', chars:'lowerCase'}}, 'marketing')
+    .to(preload_veinticuatro_circulo, 0.5, { opacity: 1 },'marketing+=1')
+    .to(preload_icono2_Veinti4, 0.5, { opacity: 1 },'marketing+=1')
+    .to(preload_icono2_Veinti4, 3, {ease: Power1.easeOut, rotation: 360, transformOrigin: 'center center' },'marketing+=1.5')
      
 
-    .to(preload_FondoEdi1, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test')
-    .to(preload_PisoEdi1, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test')
-    .to(preload_LineEdi1, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, 'test+=1')
-    .to(preload_libro_play, 1, {ease: Back.easeOut.config(1.7), scaleX: 1, transformOrigin: '0% 50%' }, 'test')
-    .to(preload_TechoEdi1, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test+=1')
-    .to(preload_FondoEdi2, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test+=1')
-    .to(preload_LineEdi2, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, 'test+=2')
-    .to(preload_pantalla_redes_fondo, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' },'test')
-    .to(preload_pantalla_redes_imagen, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'test+=1')
-    .to(preload_pantalla_redes_fondoLineasFan, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' },'test+=2')
-    .to(preload_pantalla_redes_franja, 1, {ease: Back.easeOut.config(1.7), scaleX: 1, transformOrigin: '0% 100%'},'test+=3')
-    .to(preload_facebook, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' },'test')
-    .to(preload_facebook_fondo, 0.5, {ease: Back.easeOut.config(1.7), opacity: 1 },'test')
-    .staggerTo(preload_facebook_cuadrados, 0.5, {ease: Back.easeOut.config(1.7), opacity: 1 }, 0.1, 'test')
-    .to(preload_facebook_header, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test+=1')
-    .to(preload_icono2_Veinti4, 0.5, { ease: Back.easeOut.config(1.7),opacity: 1 },'test')
-    .to(preload_Veinti4_2_circle, 0.5, { ease: Back.easeOut.config(1.7),opacity: 1 },'test')
-    .to(preload_icono2_Veinti4, 3, {ease: Back.easeOut.config(1.7), rotation: 360, transformOrigin: 'center center' }, 'test+=.5')
-    .staggerTo(preload_torre, 2, {ease: Back.easeOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 2, 'test')
-    .to(preload_diamante, 0.5, {ease: Back.easeOut.config(1.7), opacity: 1 },'test')
-    .to(preload_diamante, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, 'test+=.5')
-    .to(preload_diamante_line, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, 'test+=1')
+    .to(preload_paracaidas, 2, {ease: Power1.easeOut, drawSVG: '0% 100%' }, 'test')
+    .to(preload_FondoEdificio1, 1, {ease: Back.easeInOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test')
+    .to(preload_PisoEdificio1, 1, {ease: Power1.easeOut, scaleY: 1, transformOrigin: '0% 100%' }, 'test')
+    .to(preload_LineEdificio1, 1, {ease: Power1.easeOut, drawSVG: '0% 100%' }, 'test+=1')
+    .to(preload_libro_play, 1, {ease: Back.easeInOut.config(1.7), scaleX: 1, transformOrigin: '0% 50%' }, 'test')
+    .to(preload_TechoEdificio1, 1, {ease: Back.easeInOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test+=1')
+    .to(preload_FondoEdificio2, 1, {ease: Back.easeInOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test+=1')
+    .to(preload_LineEdificio2, 1, {ease: Back.easeInOut.config(1.7), drawSVG: '0% 100%' }, 'test+=2')
+    .to(preload_pantalla_redes_fondo, 1, {ease: Back.easeInOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' },'test')
+    .to(preload_pantalla_redes_imagen, 1, {ease: Back.easeInOut.config(1.7), scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'test+=1')
+    .to(preload_pantalla_redes_fondoLineasFan, 1, {ease: Back.easeInOut.config(1.7), drawSVG: '0% 100%' },'test+=2')
+    .to(preload_pantalla_redes_franja, 1, {ease: Back.easeInOut.config(1.7), scaleX: 1, transformOrigin: '0% 100%'},'test+=3')
+    .to(preload_facebook, 1, {ease: Back.easeInOut.config(1.7), drawSVG: '0% 100%' },'test')
+    .to(preload_facebook_fondo, 0.5, { opacity: 1 },'test')
+    .staggerTo(preload_facebook_cuadrados, 0.5, { opacity: 1 }, 0.1, 'test')
+    .to(preload_facebook_header, 1, {ease: Back.easeInOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 'test+=1')
+    .staggerTo(preload_torre, 2, {ease: Back.easeInOut.config(1.7), scaleY: 1, transformOrigin: '0% 100%' }, 2, 'test')
+    .to(preload_diamante, 0.5, { opacity: 1 },'test')
+    .to(preload_diamante, 1, {ease: Back.easeInOut.config(1.7), drawSVG: '0% 100%' }, 'test+=.5')
+    .to(preload_diamante_line, 1, {ease: Back.easeInOut.config(1.7), drawSVG: '0% 100%' }, 'test+=1')
     // no secuencial
-    .to(preload_headerLamp, 2, {ease: Back.easeOut.config(1.7), rotation: -25, transformOrigin: '20 10' }, 'lampara+=1')
-    .to(preload_lamp, 1, {ease: Back.easeOut.config(1.7), fill: '#C9BB9E' }, 'lampara+=1')
-    .to(preload_lampara_gris, 1, {ease: Back.easeOut.config(1.7), fill: '#AFAEB4' }, 'lampara+=1')
-    .staggerTo(preload_nubes, 1, {ease: Back.easeOut.config(1.7), drawSVG: '00% 110%', fill: 'rgb(237, 238, 240)'}, .5, 'disenio')
-    .staggerTo(preload_primeras_lineas, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, .5, 'disenio')
-    .staggerTo(preload_lineStart, 1, {ease: Back.easeOut.config(1.7), drawSVG: '0% 100%' }, .3, 'disenio')
-    .staggerTo(preload_books, 1, {ease: Back.easeOut.config(1.7), scaleX: 1, transformOrigin: '0% 0%' }, .2, 'marketing-=.5')
-    .to(preload_relojMin, 5, {ease: Back.easeOut.config(1.7), rotation: 240, transformOrigin: 'center center' }, 'reloj')
+    .to(preload_headerLamp, 2, {ease: Back.easeInOut.config(1.7), rotation: -25, transformOrigin: '20 10' }, 'lampara+=1')
+    .to(preload_lamp, 3, {ease: Back.easeInOut.config(4), fill: '#C9BB9E' }, 'lampara+=1')
+    .to(preload_lampara_gris, 1, {ease: Back.easeInOut.config(1.7), fill: '#AFAEB4' }, 'lampara+=1')
+    .staggerTo(preload_nubes, 1, {ease: Power1.easeOut, drawSVG: '00% 110%', fill: 'rgb(237, 238, 240)'}, .5, 'disenio')
+    .staggerTo(preload_primeras_lineas, 1, {ease: Power1.easeOut, drawSVG: '0% 100%' }, .5, 'disenio')
+    .staggerTo(preload_lineStart, 1, {ease: Power1.easeOut, drawSVG: '0% 100%' }, .3, 'disenio')
+    .staggerTo(preload_books, 1, {ease: Power1.easeOut, scaleX: 1, transformOrigin: '0% 0%' }, .2, 'marketing-=.5')
+    .to(preload_relojMin, 5, {ease: Back.easeInOut.config(1.7), rotation: 240, transformOrigin: 'center center' }, 'reloj')
 
   TimeOpenPreloadTaza
     .set(preload_icono1Humo, { drawSVG: '0% 0%' })
@@ -311,7 +311,7 @@ function progressUpdate() {
 
 function loadComplete() {
   $('.percentage').text('Omitir presentación');
-  $('#loader').on('click', aperturaPreload);
+  //$('#loader').on('click', aperturaPreload);
   $('#loader').css('cursor', 'pointer');
 }
 
