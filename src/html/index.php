@@ -8,6 +8,7 @@
   @@include('head.meta.html')
 
 <link rel="stylesheet" type="text/css" href="css/app.min.css?v=1">
+<link rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
   @@include('body.googleAnalytics.html')
 </head>
 
@@ -30,6 +31,7 @@
   @@for (var i = 0; i < listJsDependencias.length; i++) {<script type="text/javascript" src="`+folder+listJsDependencias[i]+`"></script>}
   
   <?php if ($mobile_browser == 0){ ?>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="@@folder@@jsPreloadAnimation"></script>
   <?php } ?>
 

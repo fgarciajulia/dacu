@@ -20,8 +20,10 @@
         "TweenMax": true,
         "TimelineMax": true,
         "classie": true,
-        "Linear": true
-        
+        "Linear": true,
+        "Power2": true,
+        "Power4": true,
+        "Back": true
     },
     "extends": "eslint:recommended",
     "rules": {

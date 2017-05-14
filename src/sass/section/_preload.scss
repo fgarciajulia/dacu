@@ -56,7 +56,7 @@ div#loader {
 	align-content: stretch;
 	align-items: center;
 	height: 100%;
-	.prueba.logoPreload {
+	.container-preload.logoPreload {
 		transition: all 1s;
 		animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
 		display: table;
@@ -80,7 +80,7 @@ div#loader {
 			@media (max-width: 992px) {
 				width: 95%;
 			}
-			.hola {
+			.preload-content {
 				padding-top: 47.2%;
 				position: relative;
 				width: 100%;
@@ -95,7 +95,7 @@ div#loader {
 	}
 }
 
-.prueba.prueba1 {
+.container-preload.container-preload1 {
 	left: 0;
 	top: 0;
 	position: absolute;

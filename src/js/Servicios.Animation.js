@@ -59,9 +59,9 @@ function OpenIcon1() {
 function CierreIcon2() {
   var TimeCloseIcon2 = new TimelineLite();
   TimeCloseIcon2
-    .to(servicios_icono2_Frnja, 1, { scaleX: 0, transformOrigin: '0% 100%'},'hola')
-    .to(servicios_icono2_Imagen, 1, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' },'hola')
-    .to(servicios_icono2_fondoLineasFan, 1, { drawSVG: '50% 50%' },'hola')
+    .to(servicios_icono2_Frnja, 1, { scaleX: 0, transformOrigin: '0% 100%'},'preload-content')
+    .to(servicios_icono2_Imagen, 1, { scaleX: 0, scaleY: 0, transformOrigin: '50% 50%' },'preload-content')
+    .to(servicios_icono2_fondoLineasFan, 1, { drawSVG: '50% 50%' },'preload-content')
     .to(servicios_icono2_fondo, 1,{ scaleY: 0, transformOrigin: '0% 100%' })
     .to(servicios_icono2_Billete, 1, { y:0 }, 0.1, 0)
     .to(servicios_icono2_Lineas, 2, { drawSVG: '50% 50%' }, 0)
@@ -77,9 +77,9 @@ function OpenIcon2() {
   var TimeIcon2 = new TimelineLite();
   TimeIcon2
     .to(servicios_icono2_fondo, 1,{ scaleY: 1, transformOrigin: '0% 100%' })
-    .to(servicios_icono2_fondoLineasFan, 1, { drawSVG: '0% 100%' },'hola')
-    .to(servicios_icono2_Frnja, 1, { scaleX: 1, transformOrigin: '0% 100%'},'hola')
-    .to(servicios_icono2_Imagen, 1, { scaleX: 1, scaleY: 1, transformOrigin: '50% 50%' },'hola')
+    .to(servicios_icono2_fondoLineasFan, 1, { drawSVG: '0% 100%' },'preload-content')
+    .to(servicios_icono2_Frnja, 1, { scaleX: 1, transformOrigin: '0% 100%'},'preload-content')
+    .to(servicios_icono2_Imagen, 1, { scaleX: 1, scaleY: 1, transformOrigin: '50% 50%' },'preload-content')
     .to(servicios_icono2_nubes, 2, { x: 25 })
     .to(servicios_icono2_Billete, 1, { y:50 }, 0.1, 0)
     .to(servicios_icono2_Lineas, 2, { drawSVG: '0% 100%' }, 0)
