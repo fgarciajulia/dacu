@@ -9,6 +9,7 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var clean = require('gulp-clean');
+var strip_comments = require('gulp-strip-json-comments');
 
 var listJsDependencias = [
   'src/js/dependencias/jquery.js',
@@ -75,9 +76,11 @@ gulp.task('sass', () => {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('app.min.css'))
-    .pipe(sourcemaps.write())
+    .pipe(strip_comments())
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('_dist/css'))
+    .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('_debug/css'))
-    .pipe(gulp.dest('_dist/css'));
 });
 
 gulp.task('fileinclude', () => {

@@ -304,7 +304,7 @@ function preload() {
 
 function progressUpdate() {
   var loadingPorcent = Math.round(progressTl.progress() * 100);
-  $('.percentage').text(loadingPorcent + '%');
+  $('.percentage').text('Cargando ' + loadingPorcent + '%');
 }
 
 
