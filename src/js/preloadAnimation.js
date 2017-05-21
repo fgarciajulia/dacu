@@ -113,11 +113,10 @@ function OpenPreload() {
     .set(preload_navaja, { opacity: 0 })
     .set(preload_pantone, { opacity: 0 })
     .set(preload_piso, { drawSVG: '50% 50%', fill:'rgba(255, 255, 255, 0)' })
-    .set(preload_titulo, {  scaleX:2, scaleY:2,x:275.275, y:100 ,  transformOrigin: '50% 50%'  })
-
-    .to(preload_titulo, 2, {scaleX:1, scaleY:1,x:275.275, y:100 ,  transformOrigin: '50% 50%' })
-    .to(preload_titulo, 1, {ease: Power2.easeOut, x:375.275, y:297.672 }, 'titulo')
-    .to(preload_piso, 2, {ease: Power1.easeOut, drawSVG: '0% 100%' }, 'titulo-=2')
+    .set(preload_titulo,  {scaleX:1, scaleY:1,x:375.275, y:297.672,  transformOrigin: '50% 50%' })
+    
+    .to(preload_titulo, 2, {ease: Power1.easeOut,scrambleText:{text:'Programación Web', chars:'lowerCase'}}, 'titulo')
+    .to(preload_piso, 2, {ease: Power1.easeOut, drawSVG: '0% 100%' }, 'titulo-=1')
     .to(preload_compu_pantalla, 1, {ease: Back.easeOut.config(1.7), scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' }, 'compu')
     .to(preload_compu_fondo, 1, {ease: Power1.easeInOut, scaleY: 1, scaleX: 1,  transformOrigin: '50% 50%' },'compu+=1')
     .to(preload_compu_line, 1, {ease: Power1.easeInOut, drawSVG: '0% 100%' },'compu+=1.5')
@@ -309,7 +308,7 @@ function progressUpdate() {
 
 
 function loadComplete() {
-  $('.percentage').text('Omitir presentación');
+  $('.percentage').text('Omitir presentación').css('color','#17422b');
   $('#loader').on('click', aperturaPreload);
   $('#loader').css('cursor', 'pointer');
 }

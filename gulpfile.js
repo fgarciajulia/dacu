@@ -18,6 +18,7 @@ var listJsDependencias = [
   'src/js/dependencias/ScrambleTextPlugin.js',
   'src/js/dependencias/bootstrap/transition.js',
   'src/js/dependencias/bootstrap/collapse.js',
+  'src/js/dependencias/bootstrap/scrollspy.js',
   'src/js/dependencias/jquery.easing.min.js',
   'src/js/dependencias/jquery.magnific-popup.js',
   'src/js/dependencias/jquery.superscrollorama.js',
