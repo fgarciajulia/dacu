@@ -85,7 +85,7 @@ gulp.task('sass', () => {
 
 gulp.task('fileinclude', () => {
   gulp
-    .src('src/html/index.php')
+    .src('src/views/index.php')
     .pipe(fileinclude({
       context: {
         folder: '../',
@@ -97,7 +97,7 @@ gulp.task('fileinclude', () => {
     .pipe(gulp.dest('_debug'));
 
   gulp
-    .src('src/html/index.php')
+    .src('src/views/index.php')
     .pipe(fileinclude({
       context: {
         folder: '',
@@ -120,7 +120,7 @@ gulp.task('watch', ['release'], () => {
   wSASS.on('change add unlink', watchLogger);
 
   var hHtml = gulp.watch([
-    'src/html/**', 'src/svg.embedded/**', 'src/php/**'
+    'src/views/**', 'src/svg.embedded/**', 'src/php/**'
   ], ['fileinclude']);
   hHtml.on('change add unlink', watchLogger);
 
