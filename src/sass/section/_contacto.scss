@@ -9,7 +9,6 @@
 	}
 	p {
 		color: $color-Blanco;
-		@extend %font-P3;
 		&.Items {
 			float: left;
 			margin-left: 25px;
@@ -94,13 +93,11 @@
 
 @media (max-width: 1560px) {
 	.contacto {
-		p {
-			&.Items {
+		p.Items {
 				float: none;
 				margin-left: 0px;
 				margin-bottom: 18px;
 			}
-		}
 	}
 }
 

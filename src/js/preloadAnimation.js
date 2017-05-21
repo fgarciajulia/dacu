@@ -1,5 +1,4 @@
-
-
+var TimeOpenPreload = new TimelineMax();
 function OpenPreload() {
   var preloadSvg = $('svg#preload'),
     preload_titulo = $('#preload .titulo-preload'),
@@ -59,8 +58,7 @@ function OpenPreload() {
     preload_lapicero = $('#preload .lapicero'),
     preload_navaja = $('#preload .navaja'),
     preload_pantone = $('#preload .pantone'),
-    preload_piso = $('#preload .piso line'),
-    TimeOpenPreload = new TimelineMax();
+    preload_piso = $('#preload .piso line');
 
   TimeOpenPreload.timeScale(1)
     .eventCallback('onComplete', aperturaPreload)
@@ -316,6 +314,7 @@ function loadComplete() {
 function aperturaPreload() {
   
   $('#loader').off('click', aperturaPreload);
+  TimeOpenPreload.stop();
   aperturaDeTelon();
   setTimeout(function () {
     activaMiselaneaHome();
