@@ -24,19 +24,17 @@
 .loaded #loader-wrapper .loader-section {
 	&.section-left {
 		transform: translateX(-100%);
-		transition: all 0.3s 0.5s ease-out;
+		transition: all .8s ease-out;
 	}
 	&.section-right {
 		transform: translateX(100%);
-		transition: all 0.3s 0.5s ease-out;
+		transition: all .8s ease-out;
 	}
 }
 
 div#loader {
 	z-index: 55555555555555555;
 	position: fixed;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
 	top: 0px;
 	width: 100%;
 	height: 100%;
@@ -67,11 +65,12 @@ div#loader {
 			align-self: center;
 		}
 		.percentage {
-			margin-top: 15px;
-			background: #fff;
-			text-align: center;
-			font-size: 25px;
-			font-weight: 600;
+    text-align: center;
+    font-size: 29px;
+    font-weight: 600;
+    color: #b20000;
+    text-decoration: underline;
+    margin-top: 26px;
 		}
 		&.logoPreload {
 			display: table-cell;

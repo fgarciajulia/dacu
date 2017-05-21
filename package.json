@@ -12,12 +12,12 @@
     "bower": "^1.7.9",
     "eslint": "^3.0.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^1.0.0",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-minify": "0.0.15",
+    "gulp-minify": "1.0.0",
     "gulp-sass": "^3.1.0",
     "sass-lint": "^1.10.2",
     "gulp-sourcemaps": "^2.6.0",
@@ -25,5 +25,8 @@
     "gulp-watch": "^4.3.8",
     "run-sequence": "^1.2.2",
     "typescript": "^2.0.10"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.3.2"
   }
 }

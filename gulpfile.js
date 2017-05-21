@@ -8,6 +8,7 @@ var minify = require('gulp-minify');
 var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var clean = require('gulp-clean');
 
 var listJsDependencias = [
   'src/js/dependencias/jquery.js',
@@ -20,7 +21,7 @@ var listJsDependencias = [
   'src/js/dependencias/jquery.magnific-popup.js',
   'src/js/dependencias/jquery.superscrollorama.js',
   'src/js/dependencias/jquery.validate.min.js',
-  'src/js/dependencias/owl.carousel.js',
+  'src/js/dependencias/owl.carousel.js'
 ];
 var listJs = [
   'src/js/home.js',
@@ -28,48 +29,51 @@ var listJs = [
   'src/js/servicios.js',
   'src/js/contacto.js',
   'src/js/miselaneas.js',
-  'src/js/dacu.js',
+  'src/js/dacu.js'
 ];
 
+gulp.task('cleanDistAndDebug', () => {
+  return gulp
+    .src(['_dist', '_debug'])
+    .pipe(clean());
+});
+
 gulp.task('copyStaticFolder', () => {
-  return gulp.src(['src/static/.*', 'src/static/**'])
+  return gulp
+    .src(['src/static/.*', 'src/static/**'])
     .pipe(gulp.dest('_debug'))
     .pipe(gulp.dest('_dist'));
 });
 
 gulp.task('jsDependencias', () => {
-  return gulp.src(listJsDependencias)
+  return gulp
+    .src(listJsDependencias)
     .pipe(concat('app.dependencias.js'))
-    .pipe(minify({
-      exclude: ['tasks'],
-    }))
+    .pipe(minify({exclude: ['tasks']}))
     .pipe(gulp.dest('_dist/js'));
 });
 gulp.task('jsPreloadAnimation', () => {
-  return gulp.src('src/js/preloadAnimation.js')
+  return gulp
+    .src('src/js/preloadAnimation.js')
     .pipe(concat('preloadAnimation.js'))
-    .pipe(minify({
-      exclude: ['tasks'],
-    }))
+    .pipe(minify({exclude: ['tasks']}))
     .pipe(gulp.dest('_dist/js'));
 });
 
 gulp.task('js', () => {
-  return gulp.src(listJs)
+  return gulp
+    .src(listJs)
     .pipe(gulp.dest('_debug/js'))
     .pipe(concat('app.js'))
-    .pipe(minify({
-      exclude: ['tasks'],
-    }))
+    .pipe(minify({exclude: ['tasks']}))
     .pipe(gulp.dest('_dist/js'));
 });
 
 gulp.task('sass', () => {
-  return gulp.src('src/sass/main.scss')
+  return gulp
+    .src('src/sass/main.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('app.min.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('_debug/css'))
@@ -77,18 +81,20 @@ gulp.task('sass', () => {
 });
 
 gulp.task('fileinclude', () => {
-  gulp.src(['src/html/index.php'])
+  gulp
+    .src('src/html/index.php')
     .pipe(fileinclude({
       context: {
         folder: '../',
         listJsDependencias: listJsDependencias,
-        jsPreloadAnimation:  'src/js/preloadAnimation.js',
+        jsPreloadAnimation: 'src/js/preloadAnimation.js',
         listJs: listJs
       }
     }))
     .pipe(gulp.dest('_debug'));
 
-  gulp.src('src/html/index.php')
+  gulp
+    .src('src/html/index.php')
     .pipe(fileinclude({
       context: {
         folder: '',
@@ -97,9 +103,7 @@ gulp.task('fileinclude', () => {
         listJs: ['js/app-min.js']
       }
     }))
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('_dist'))
 });
 
@@ -112,23 +116,19 @@ gulp.task('watch', ['release'], () => {
   var wSASS = gulp.watch('src/sass/**/*.scss', ['sass']);
   wSASS.on('change add unlink', watchLogger);
 
-  var hHtml = gulp.watch(['src/html/**', 'src/svg.embedded/**', 'src/php/**'], ['fileinclude']);
+  var hHtml = gulp.watch([
+    'src/html/**', 'src/svg.embedded/**', 'src/php/**'
+  ], ['fileinclude']);
   hHtml.on('change add unlink', watchLogger);
 
-  var hHtml = gulp.watch(['src/static/.*', 'src/static/**'], ['copyStaticFolder']);
+  var hHtml = gulp.watch([
+    'src/static/.*', 'src/static/**'
+  ], ['copyStaticFolder']);
   hHtml.on('change add unlink', watchLogger);
-
-  // var wJS = gulp.watch('src/js/*.js', ['js']);
-  // wJS.on('change add unlink', watchLogger);
-
-  // var wJS_dependencias = gulp.watch(['src/js/dependencias/**/*.js'], ['jsDependencias']);
-  // wJS_dependencias.on('change add unlink', watchLogger);
 });
-
 
 gulp.task('release', (cb) => {
-  runSequence('copyStaticFolder', 'fileinclude', 'sass', 'jsDependencias', 'jsPreloadAnimation', 'js', cb);
+  runSequence('cleanDistAndDebug', 'copyStaticFolder', 'fileinclude', 'sass', 'jsDependencias', 'jsPreloadAnimation', 'js', cb);
 });
-
 
 gulp.task('default', ['watch']);

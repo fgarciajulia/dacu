@@ -34,6 +34,6 @@ function animacionesNavegacion() {
 }
 
 $(window).scroll(navFondo);
-$(window).load(navFondo);
-$(window).load(owlHome);
-$(window).load(animacionesNavegacion);
+$(document).ready(navFondo);
+$(document).ready(owlHome);
+$(document).ready(animacionesNavegacion);

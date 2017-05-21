@@ -1,10 +1,4 @@
-function aperturaDeTelon() {
-  $('body').addClass('loaded');
-  setTimeout(function () {
-    $('#loader').addClass('fadeOut');
-    $('#loader').addClass('hidden');
-  }, 600);
-}
+
 
 
 
