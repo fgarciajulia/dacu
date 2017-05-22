@@ -1,5 +1,6 @@
 var TimeOpenPreload = new TimelineMax();
 function OpenPreload() {
+  $('body').css('overflow', 'hidden');
   var preloadSvg = $('svg#preload'),
     preload_titulo = $('#preload .titulo-preload'),
     preload_lamp = $('#preload #Lamp_1_'),
@@ -314,6 +315,7 @@ function loadComplete() {
 function aperturaPreload() {
   
   $('#loader').off('click', aperturaPreload);
+  $('body').css('overflow', 'auto');
   TimeOpenPreload.stop();
   aperturaDeTelon();
   setTimeout(function () {
